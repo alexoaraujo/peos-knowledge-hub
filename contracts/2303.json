@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "2303",
+  "title": "Backlog Priorizado",
+  "content_sha256": "a3e3dbaa244e17e8ed3468c6566c0add9e07d064dbda529e09c18458bb404db3",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Backlog Priorizado com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver backlog priorizado em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

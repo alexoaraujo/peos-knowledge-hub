@@ -1,0 +1,100 @@
+{
+  "library_version": "2.1.0",
+  "request": "Classificar escopo, projeto, fontes, riscos, restrições e dependências do PEOS Knowledge Hub",
+  "pmu_id": "PMU-001",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "485d4ed3da6483c972db657b01100c554f6a3d1d2f27c427381a944c398666d6",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-004"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "0001",
+      "content_version": "1.0.0",
+      "sha256": "387ddff3f576349ae74aa01bb032e67998c2d86cd1189a50ca7524bf62228eca"
+    },
+    {
+      "id": "0002",
+      "content_version": "1.0.0",
+      "sha256": "8fc28afc10de6c1101bd27d2cccb4417b7cc3f8853a97a043cd585ddd3cb73c9"
+    },
+    {
+      "id": "0003",
+      "content_version": "1.0.0",
+      "sha256": "e605f733b402cda9806bf17887bc80f4245c706c3002695a9de137daa13b32d5"
+    },
+    {
+      "id": "0004",
+      "content_version": "1.0.0",
+      "sha256": "768c930e86f17cf70956e42fe068946190bfbb7756bee369c84edaf83004828d"
+    },
+    {
+      "id": "0010",
+      "content_version": "1.0.0",
+      "sha256": "1be85c95f215542e13bb938b33b86a138bdb59288b5907a3c61129fbb7a77c13"
+    },
+    {
+      "id": "0020",
+      "content_version": "1.0.0",
+      "sha256": "a09703a2584bc882e58eaef91c7ba6f0f9947a36258406543868a7e2e77b2bbe"
+    }
+  ],
+  "workflow_id": "WF-001",
+  "steps": [
+    {
+      "name": "Interpretar intenção e riscos",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Recuperar estado e evidências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Selecionar módulos especializados",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Construir plano com dependências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Executar apenas ações autorizadas",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Aplicar gates e reportar",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3611",
+  "title": "Handoff UX/UI para Engenharia e Critérios de Aceite",
+  "content_sha256": "c12b0902bfab73a48ffa0184b85335bce9790d5c1c17ce9a2211c193d53571ad",
+  "status": "CURATED",
+  "goal": "Converter artefatos de design aprovados em contratos implementáveis, testáveis e com estados completos.",
+  "when_to_use": "Passagem entre UX, design system, frontend, QA e produto.",
+  "inputs": "telas e protótipos; tokens; fluxos; regras de negócio; requisitos acessíveis",
+  "output_contract": "especificação por componente; estados; tokens; payloads esperados; comportamento; checklist de QA; aceite",
+  "acceptance_criteria": "Cada elemento relevante tem fonte, estados e teste; comportamento responsivo e acessibilidade ficam explicitados.",
+  "guardrails": "Não confunda desenho com implementação; valide dependências de API, permissão e persistência com engenharia.",
+  "related_ids": [
+    "0404",
+    "0104",
+    "0502"
+  ],
+  "source_links": [
+    "BPD-056",
+    "BPD-059"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

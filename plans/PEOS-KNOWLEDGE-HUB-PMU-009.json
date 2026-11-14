@@ -1,0 +1,95 @@
+{
+  "library_version": "2.1.0",
+  "request": "Planejar DevOps GitHub Actions, CI estática, quality gates e release verificável do PEOS Knowledge Hub",
+  "pmu_id": "PMU-009",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "ea208e9a3711483d941156d901752bf45368558f96bcaf2ce5dec62b94d4e5ac",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-009"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "0010",
+      "content_version": "1.0.0",
+      "sha256": "1be85c95f215542e13bb938b33b86a138bdb59288b5907a3c61129fbb7a77c13"
+    },
+    {
+      "id": "0020",
+      "content_version": "1.0.0",
+      "sha256": "a09703a2584bc882e58eaef91c7ba6f0f9947a36258406543868a7e2e77b2bbe"
+    },
+    {
+      "id": "1105",
+      "content_version": "1.0.0",
+      "sha256": "9085fe94e1c3dfe7951b48358e784ec9f3e878512de561356761e06761f29f88"
+    },
+    {
+      "id": "1603",
+      "content_version": "1.0.0",
+      "sha256": "a5eedc0e7a227fbe99c67075a6889d72a6b67ba0f0917e29267b98a2c86d18f1"
+    },
+    {
+      "id": "2102",
+      "content_version": "1.0.0",
+      "sha256": "444694786d0af16396af0e88cf27bbaaca17c443d8dabef6f00fc10303686013"
+    }
+  ],
+  "workflow_id": "WF-009",
+  "steps": [
+    {
+      "name": "Ambientes e configurações",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Pipeline e supply chain",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Migrações e testes",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Métricas, alertas e SLO",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Backup/restore e rollback",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Go/No-Go com evidências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

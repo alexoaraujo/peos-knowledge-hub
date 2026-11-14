@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3605",
+  "title": "Redesign de Produto com Preservação Funcional",
+  "content_sha256": "0aa496d987f4d44d76f06eb47520dc3055f8195423aa1f651b0a35726d40aae5",
+  "status": "CURATED",
+  "goal": "Conduzir redesign de interface a partir de inventário funcional, dados de uso e critérios comparativos de experiência.",
+  "when_to_use": "Renovação visual e estrutural de produto existente preservando contratos e funcionalidades comprovadas.",
+  "inputs": "telas existentes; inventário de funções; problemas reportados; métricas; restrições técnicas",
+  "output_contract": "baseline antes/depois; matriz de impactos; propostas de redesign; migração incremental; plano de validação",
+  "acceptance_criteria": "100% das funções críticas da baseline têm destino validado; comparação antes/depois e critérios mensuráveis documentados.",
+  "guardrails": "Não remover recursos nem alterar fluxos críticos sem registro de decisão; acessibilidade e regressões são gates.",
+  "related_ids": [
+    "0005",
+    "2504"
+  ],
+  "source_links": [
+    "BPD-054"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

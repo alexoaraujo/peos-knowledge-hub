@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "0513",
+  "title": "Monorepo com Turborepo ou Nx",
+  "content_sha256": "2e3e5916cb48b21fd8ca9561a0130e79061f594c54e3227c6dbaafebfeb68b51",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "planejar, analisar, implementar ou auditar **Monorepo com Turborepo ou Nx** com evidências, critérios de sucesso e validação reproduzível.",
+  "when_to_use": "quando [PROJETO], [SISTEMA], [REPOSITÓRIO], [AMBIENTE] ou [PROBLEMA] exigir trabalho específico de Monorepo com Turborepo ou Nx.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [ARQUITETURA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], [RESTRIÇÕES], métricas, logs e evidências disponíveis.",
+  "output_contract": "baseline, evidências, análise especializada, decisão, plano priorizado, implementação/procedimento, testes, riscos, rollback e próxima ação.",
+  "acceptance_criteria": "nenhuma afirmação crítica sem evidência; critérios de sucesso explícitos; P0 tratados; mudanças críticas reversíveis; validação comportamental; itens não verificados identificados; resultado reproduzível.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

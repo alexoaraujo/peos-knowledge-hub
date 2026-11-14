@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "0816",
+  "title": "Modelagem Dimensional e Slowly Changing Dimensions",
+  "content_sha256": "8b4b99b692815d6713ab2ea3c2ddb06f0d8d4a9ffcb9a93cc9da22cac466207b",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "planejar, analisar, implementar ou auditar **Modelagem Dimensional e Slowly Changing Dimensions** com evidências, critérios de sucesso e validação reproduzível.",
+  "when_to_use": "quando [PROJETO], [SISTEMA], [REPOSITÓRIO], [AMBIENTE] ou [PROBLEMA] exigir trabalho específico de Modelagem Dimensional e Slowly Changing Dimensions.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [ARQUITETURA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], [RESTRIÇÕES], métricas, logs e evidências disponíveis.",
+  "output_contract": "baseline, evidências, análise especializada, decisão, plano priorizado, implementação/procedimento, testes, riscos, rollback e próxima ação.",
+  "acceptance_criteria": "nenhuma afirmação crítica sem evidência; critérios de sucesso explícitos; P0 tratados; mudanças críticas reversíveis; validação comportamental; itens não verificados identificados; resultado reproduzível.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

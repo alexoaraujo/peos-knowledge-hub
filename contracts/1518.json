@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "1518",
+  "title": "Kubernetes Security Review",
+  "content_sha256": "ac9cecf8e74cde4270a35243cfea81a7e2d9325e03e3570e6c04626989035444",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "planejar, analisar, implementar ou auditar **Kubernetes Security Review** com evidências, critérios de sucesso e validação reproduzível.",
+  "when_to_use": "quando [PROJETO], [SISTEMA], [REPOSITÓRIO], [AMBIENTE] ou [PROBLEMA] exigir trabalho específico de Kubernetes Security Review.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [ARQUITETURA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], [RESTRIÇÕES], métricas, logs e evidências disponíveis.",
+  "output_contract": "baseline, evidências, análise especializada, decisão, plano priorizado, implementação/procedimento, testes, riscos, rollback e próxima ação.",
+  "acceptance_criteria": "nenhuma afirmação crítica sem evidência; critérios de sucesso explícitos; P0 tratados; mudanças críticas reversíveis; validação comportamental; itens não verificados identificados; resultado reproduzível.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

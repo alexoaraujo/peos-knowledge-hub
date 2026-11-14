@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "0620",
+  "title": "Schemas de Eventos e Compatibilidade",
+  "content_sha256": "d4cbc4bd13f31adf037fe3a9a22b0c0d1c97c272102443febf2443502f9f7723",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "planejar, analisar, implementar ou auditar **Schemas de Eventos e Compatibilidade** com evidências, critérios de sucesso e validação reproduzível.",
+  "when_to_use": "quando [PROJETO], [SISTEMA], [REPOSITÓRIO], [AMBIENTE] ou [PROBLEMA] exigir trabalho específico de Schemas de Eventos e Compatibilidade.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [ARQUITETURA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], [RESTRIÇÕES], métricas, logs e evidências disponíveis.",
+  "output_contract": "baseline, evidências, análise especializada, decisão, plano priorizado, implementação/procedimento, testes, riscos, rollback e próxima ação.",
+  "acceptance_criteria": "nenhuma afirmação crítica sem evidência; critérios de sucesso explícitos; P0 tratados; mudanças críticas reversíveis; validação comportamental; itens não verificados identificados; resultado reproduzível.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,788 @@
+namespace,id,title,group,sector,category,subcategory,status,related_canonical_ids,content_path
+MASTER,0001,Criar Projeto de Software do Zero,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0001.md
+MASTER,0002,Auditoria Completa de Projeto,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0002.md
+MASTER,0003,Continuidade de Projeto,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0003.md
+MASTER,0004,Diagnóstico de Problemas,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0004.md
+MASTER,0005,Refatoração Incremental Segura,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0005.md
+MASTER,0006,Pesquisa Técnica Profunda,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0006.md
+MASTER,0007,Comparação de Tecnologias,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0007.md
+MASTER,0008,Modernização de Sistema,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0008.md
+MASTER,0009,Migração Técnica,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0009.md
+MASTER,0010,Validação Final e Gate de Qualidade,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Criação, diagnóstico e evolução",ACTIVE,,prompts/0000-0099/0010.md
+MASTER,0011,Tomada de Decisão Técnica,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0011.md
+MASTER,0012,Checklist Técnico Completo,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0012.md
+MASTER,0013,Documentação Técnica Completa,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0013.md
+MASTER,0014,Investigação de Incidente,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0014.md
+MASTER,0015,Auditoria Mestre de Segurança,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0015.md
+MASTER,0016,Auditoria Mestre de Performance,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0016.md
+MASTER,0017,Arquitetura Cloud Well-Architected,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0017.md
+MASTER,0018,Workflow Agentic com IA,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0018.md
+MASTER,0019,Onboarding de Repositório para IA,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0019.md
+MASTER,0020,Release Readiness / Go-No-Go,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Decisão, auditoria e release",ACTIVE,,prompts/0000-0099/0020.md
+MASTER,0021,Execução Evidence-First,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0021.md
+MASTER,0022,Descoberta da Fonte de Verdade,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0022.md
+MASTER,0023,Mapeamento de Impacto de Mudança,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0023.md
+MASTER,0024,Qualificação de Ambiente Técnico,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0024.md
+MASTER,0025,Plano P0/P1/P2 com Gates,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0025.md
+MASTER,0026,Handoff Técnico entre Sessões ou Agentes,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0026.md
+MASTER,0027,Plano de Remediação Técnica,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0027.md
+MASTER,0028,Production Readiness Review,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,"Execução, evidências e gates",ACTIVE,,prompts/0000-0099/0028.md
+MASTER,0101,Levantamento de Requisitos,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Requisitos e análise,ACTIVE,,prompts/0100-0199/0101.md
+MASTER,0102,Requisitos Funcionais,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Requisitos e análise,ACTIVE,,prompts/0100-0199/0102.md
+MASTER,0103,Requisitos Não Funcionais,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Requisitos e análise,ACTIVE,,prompts/0100-0199/0103.md
+MASTER,0104,Critérios de Aceite,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Requisitos e análise,ACTIVE,,prompts/0100-0199/0104.md
+MASTER,0105,Análise de Sistemas,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Requisitos e análise,ACTIVE,,prompts/0100-0199/0105.md
+MASTER,0106,Análise de Dívida Técnica,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Qualidade e manutenção,ACTIVE,,prompts/0100-0199/0106.md
+MASTER,0107,Análise de Dependências,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Qualidade e manutenção,ACTIVE,,prompts/0100-0199/0107.md
+MASTER,0108,Code Review Profissional,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Qualidade e manutenção,ACTIVE,,prompts/0100-0199/0108.md
+MASTER,0109,Debugging de Código,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Qualidade e manutenção,ACTIVE,,prompts/0100-0199/0109.md
+MASTER,0110,"Clean Code, SOLID e Design Patterns",G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Qualidade e manutenção,ACTIVE,,prompts/0100-0199/0110.md
+MASTER,0111,Compreensão Estruturada de Codebase,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0111.md
+MASTER,0112,Análise de Impacto de Código,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0112.md
+MASTER,0113,Análise de Manutenibilidade,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0113.md
+MASTER,0114,Estratégia de Tratamento de Erros,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0114.md
+MASTER,0115,Concorrência e Condições de Corrida,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0115.md
+MASTER,0116,Feature Flags e Entrega Progressiva,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0116.md
+MASTER,0117,Configuração por Ambiente,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0117.md
+MASTER,0118,Análise Estática e Linters,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0118.md
+MASTER,0119,Compatibilidade e Versionamento Semântico,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0119.md
+MASTER,0120,Revisão de Pull Request por Risco,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Engenharia de código e práticas avançadas,ACTIVE,,prompts/0100-0199/0120.md
+MASTER,0201,Seleção de Estilo Arquitetural,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,"Estilos, domínio e modularização",ACTIVE,,prompts/0200-0299/0201.md
+MASTER,0202,Domain-Driven Design (DDD),G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,"Estilos, domínio e modularização",ACTIVE,,prompts/0200-0299/0202.md
+MASTER,0203,Clean Architecture,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,"Estilos, domínio e modularização",ACTIVE,,prompts/0200-0299/0203.md
+MASTER,0204,Monólito Modular,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,"Estilos, domínio e modularização",ACTIVE,,prompts/0200-0299/0204.md
+MASTER,0205,Microservices,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,"Estilos, domínio e modularização",ACTIVE,,prompts/0200-0299/0205.md
+MASTER,0206,Event-Driven Architecture,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Distribuição e decisões arquiteturais,ACTIVE,,prompts/0200-0299/0206.md
+MASTER,0207,Serverless Architecture,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Distribuição e decisões arquiteturais,ACTIVE,,prompts/0200-0299/0207.md
+MASTER,0208,SaaS Multi-Tenant,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Distribuição e decisões arquiteturais,ACTIVE,,prompts/0200-0299/0208.md
+MASTER,0209,Alta Disponibilidade e Disaster Recovery,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Distribuição e decisões arquiteturais,ACTIVE,,prompts/0200-0299/0209.md
+MASTER,0210,ADR — Architecture Decision Record,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Distribuição e decisões arquiteturais,ACTIVE,,prompts/0200-0299/0210.md
+MASTER,0211,Modelagem C4,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Modelagem e padrões arquiteturais,ACTIVE,,prompts/0200-0299/0211.md
+MASTER,0212,Bounded Contexts e Context Mapping,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Modelagem e padrões arquiteturais,ACTIVE,,prompts/0200-0299/0212.md
+MASTER,0213,CQRS,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Modelagem e padrões arquiteturais,ACTIVE,,prompts/0200-0299/0213.md
+MASTER,0214,Event Sourcing,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Modelagem e padrões arquiteturais,ACTIVE,,prompts/0200-0299/0214.md
+MASTER,0215,Strangler Fig para Modernização,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Modelagem e padrões arquiteturais,ACTIVE,,prompts/0200-0299/0215.md
+MASTER,0216,Arquitetura Zero Trust,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquiteturas especializadas,ACTIVE,,prompts/0200-0299/0216.md
+MASTER,0217,Arquitetura Cell-Based,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquiteturas especializadas,ACTIVE,,prompts/0200-0299/0217.md
+MASTER,0218,Arquitetura Edge,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquiteturas especializadas,ACTIVE,,prompts/0200-0299/0218.md
+MASTER,0219,Orquestração de Workflows Distribuídos,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquiteturas especializadas,ACTIVE,,prompts/0200-0299/0219.md
+MASTER,0220,Architecture Fitness Functions,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquiteturas especializadas,ACTIVE,,prompts/0200-0299/0220.md
+MASTER,0301,Node.js + NestJS,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0301.md
+MASTER,0302,Node.js + Express,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0302.md
+MASTER,0303,Python + FastAPI,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0303.md
+MASTER,0304,Python + Django,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0304.md
+MASTER,0305,Java + Spring Boot,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0305.md
+MASTER,0306,.NET Backend,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0306.md
+MASTER,0307,Go Backend,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0307.md
+MASTER,0308,PHP + Laravel,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Frameworks e runtimes,ACTIVE,,prompts/0300-0399/0308.md
+MASTER,0309,"Autenticação, Autorização e RBAC",G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0309.md
+MASTER,0310,"Filas, Jobs, Webhooks e Cache",G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0310.md
+MASTER,0311,"Validação, DTOs e Contratos Backend",G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0311.md
+MASTER,0312,Idempotência Backend,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0312.md
+MASTER,0313,Rate Limiting e Quotas,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0313.md
+MASTER,0314,Uploads e Processamento de Arquivos,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0314.md
+MASTER,0315,WebSockets e Realtime Backend,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0315.md
+MASTER,0316,Transações e Unit of Work,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Serviços seguros e padrões backend,ACTIVE,,prompts/0300-0399/0316.md
+MASTER,0317,"Paginação, Filtros e Ordenação",G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Operação e engenharia de serviços,ACTIVE,,prompts/0300-0399/0317.md
+MASTER,0318,NestJS Modularização e Dependency Injection,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Operação e engenharia de serviços,ACTIVE,,prompts/0300-0399/0318.md
+MASTER,0319,FastAPI Assíncrono e Concorrência,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Operação e engenharia de serviços,ACTIVE,,prompts/0300-0399/0319.md
+MASTER,0320,Spring Boot Production Readiness,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Operação e engenharia de serviços,ACTIVE,,prompts/0300-0399/0320.md
+MASTER,0321,.NET APIs e Middleware,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Operação e engenharia de serviços,ACTIVE,,prompts/0300-0399/0321.md
+MASTER,0322,Go Concorrente para Serviços,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Operação e engenharia de serviços,ACTIVE,,prompts/0300-0399/0322.md
+MASTER,0401,React,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0401.md
+MASTER,0402,Next.js,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0402.md
+MASTER,0403,Vue / Angular,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0403.md
+MASTER,0404,Design System e Componentização,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0404.md
+MASTER,0405,Acessibilidade Web,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0405.md
+MASTER,0406,Performance Frontend,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0406.md
+MASTER,0407,Formulários e Validação,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0407.md
+MASTER,0408,Gerenciamento de Estado,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0408.md
+MASTER,0409,Dashboards e Interfaces de Dados,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0409.md
+MASTER,0410,SEO Técnico,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,"Interfaces, UX e qualidade",ACTIVE,,prompts/0400-0499/0410.md
+MASTER,0411,"SSR, CSR, SSG e Streaming",G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0411.md
+MASTER,0412,Next.js App Router e React Server Components,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0412.md
+MASTER,0413,Caching e Revalidation no Frontend,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0413.md
+MASTER,0414,Autenticação e Sessão no Frontend,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0414.md
+MASTER,0415,Internacionalização e Localização,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0415.md
+MASTER,0416,Progressive Web App,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0416.md
+MASTER,0417,Micro-Frontends,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0417.md
+MASTER,0418,Core Web Vitals,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Renderização e experiência web,ACTIVE,,prompts/0400-0499/0418.md
+MASTER,0419,Error Boundaries e Recuperação de UI,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Resiliência e design de interface,ACTIVE,,prompts/0400-0499/0419.md
+MASTER,0420,Data Fetching e Sincronização de Estado Remoto,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Resiliência e design de interface,ACTIVE,,prompts/0400-0499/0420.md
+MASTER,0421,Segurança de Browser Storage,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Resiliência e design de interface,ACTIVE,,prompts/0400-0499/0421.md
+MASTER,0422,Design Tokens e Theming,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Resiliência e design de interface,ACTIVE,,prompts/0400-0499/0422.md
+MASTER,0501,Arquitetura Full Stack,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Full Stack e entrega,ACTIVE,,prompts/0500-0599/0501.md
+MASTER,0502,Implementação de Feature Ponta a Ponta,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Full Stack e entrega,ACTIVE,,prompts/0500-0599/0502.md
+MASTER,0503,Autenticação Full Stack,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Full Stack e entrega,ACTIVE,,prompts/0500-0599/0503.md
+MASTER,0504,Monorepo,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Full Stack e entrega,ACTIVE,,prompts/0500-0599/0504.md
+MASTER,0505,Aplicação Mobile,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Full Stack e entrega,ACTIVE,,prompts/0500-0599/0505.md
+MASTER,0506,Deploy Full Stack,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Full Stack e entrega,ACTIVE,,prompts/0500-0599/0506.md
+MASTER,0507,React Native,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Aplicações mobile,ACTIVE,,prompts/0500-0599/0507.md
+MASTER,0508,Flutter,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Aplicações mobile,ACTIVE,,prompts/0500-0599/0508.md
+MASTER,0509,Expo,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Aplicações mobile,ACTIVE,,prompts/0500-0599/0509.md
+MASTER,0510,Mobile Offline-First,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Aplicações mobile,ACTIVE,,prompts/0500-0599/0510.md
+MASTER,0511,Push Notifications Mobile,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Aplicações mobile,ACTIVE,,prompts/0500-0599/0511.md
+MASTER,0512,Segurança de Aplicações Mobile,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Aplicações mobile,ACTIVE,,prompts/0500-0599/0512.md
+MASTER,0513,Monorepo com Turborepo ou Nx,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Monorepos e integração de aplicações,ACTIVE,,prompts/0500-0599/0513.md
+MASTER,0514,Backend for Frontend (BFF),G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Monorepos e integração de aplicações,ACTIVE,,prompts/0500-0599/0514.md
+MASTER,0515,Observabilidade Full Stack,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Monorepos e integração de aplicações,ACTIVE,,prompts/0500-0599/0515.md
+MASTER,0516,Preview Environments Full Stack,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Monorepos e integração de aplicações,ACTIVE,,prompts/0500-0599/0516.md
+MASTER,0601,Design de API REST,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0601.md
+MASTER,0602,OpenAPI / Swagger,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0602.md
+MASTER,0603,GraphQL,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0603.md
+MASTER,0604,OAuth 2.x / OIDC,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0604.md
+MASTER,0605,Webhooks Confiáveis,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0605.md
+MASTER,0606,Integração com Sistema Externo,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0606.md
+MASTER,0607,Revisão de Contrato de API,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0607.md
+MASTER,0608,"Versionamento, Segurança e Testes de API",G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Design e contratos de APIs,ACTIVE,,prompts/0600-0699/0608.md
+MASTER,0609,gRPC e Protocol Buffers,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Protocolos e APIs avançadas,ACTIVE,,prompts/0600-0699/0609.md
+MASTER,0610,WebSockets e APIs Realtime,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Protocolos e APIs avançadas,ACTIVE,,prompts/0600-0699/0610.md
+MASTER,0611,AsyncAPI e APIs Assíncronas,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Protocolos e APIs avançadas,ACTIVE,,prompts/0600-0699/0611.md
+MASTER,0612,Idempotency Keys em APIs,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Protocolos e APIs avançadas,ACTIVE,,prompts/0600-0699/0612.md
+MASTER,0613,Paginação e Filtering em APIs,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Protocolos e APIs avançadas,ACTIVE,,prompts/0600-0699/0613.md
+MASTER,0614,Rate Limits e Quotas de API,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Protocolos e APIs avançadas,ACTIVE,,prompts/0600-0699/0614.md
+MASTER,0615,"Retries, Timeouts e Circuit Breakers",G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Resiliência e governança de APIs,ACTIVE,,prompts/0600-0699/0615.md
+MASTER,0616,API Gateway,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Resiliência e governança de APIs,ACTIVE,,prompts/0600-0699/0616.md
+MASTER,0617,Contract Testing de APIs,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Resiliência e governança de APIs,ACTIVE,,prompts/0600-0699/0617.md
+MASTER,0618,Governança de APIs,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Resiliência e governança de APIs,ACTIVE,,prompts/0600-0699/0618.md
+MASTER,0619,Mapeamento de Integrações Empresariais,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Resiliência e governança de APIs,ACTIVE,,prompts/0600-0699/0619.md
+MASTER,0620,Schemas de Eventos e Compatibilidade,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,Resiliência e governança de APIs,ACTIVE,,prompts/0600-0699/0620.md
+MASTER,0701,Modelagem Relacional,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0701.md
+MASTER,0702,PostgreSQL Schema Design,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0702.md
+MASTER,0703,Otimização de Queries SQL,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0703.md
+MASTER,0704,Estratégia de Índices,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0704.md
+MASTER,0705,Migrations Seguras,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0705.md
+MASTER,0706,"Backup, Restore e PITR","G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0706.md
+MASTER,0707,Replicação e Alta Disponibilidade,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0707.md
+MASTER,0708,Segurança de Banco de Dados,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0708.md
+MASTER,0709,MySQL / SQL Server / Oracle,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0709.md
+MASTER,0710,"MongoDB, Redis e NoSQL","G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Modelagem e administração de dados,ACTIVE,,prompts/0700-0799/0710.md
+MASTER,0711,PostgreSQL Row-Level Security,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0711.md
+MASTER,0712,Connection Pooling PostgreSQL,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0712.md
+MASTER,0713,Isolation Levels e Deadlocks,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0713.md
+MASTER,0714,"VACUUM, ANALYZE e Autovacuum","G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0714.md
+MASTER,0715,Particionamento PostgreSQL,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0715.md
+MASTER,0716,EXPLAIN e EXPLAIN ANALYZE,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0716.md
+MASTER,0717,Migração Zero-Downtime de Schema,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0717.md
+MASTER,0718,Auditoria e Retenção de Dados,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,PostgreSQL e operações avançadas,ACTIVE,,prompts/0700-0799/0718.md
+MASTER,0719,Redis Design e Performance,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Bancos especializados,ACTIVE,,prompts/0700-0799/0719.md
+MASTER,0720,MongoDB Data Modeling,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Bancos especializados,ACTIVE,,prompts/0700-0799/0720.md
+MASTER,0721,Vector Database Selection,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Bancos especializados,ACTIVE,,prompts/0700-0799/0721.md
+MASTER,0722,SQLite para Aplicações e Edge,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Bancos especializados,ACTIVE,,prompts/0700-0799/0722.md
+MASTER,0801,ETL / ELT,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Pipelines e governança de dados,ACTIVE,,prompts/0800-0899/0801.md
+MASTER,0802,Pipeline de Dados,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Pipelines e governança de dados,ACTIVE,,prompts/0800-0899/0802.md
+MASTER,0803,Qualidade de Dados,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Pipelines e governança de dados,ACTIVE,,prompts/0800-0899/0803.md
+MASTER,0804,Data Lake / Data Warehouse,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Pipelines e governança de dados,ACTIVE,,prompts/0800-0899/0804.md
+MASTER,0805,Governança e Linhagem,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Pipelines e governança de dados,ACTIVE,,prompts/0800-0899/0805.md
+MASTER,0806,Observabilidade de Dados,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Pipelines e governança de dados,ACTIVE,,prompts/0800-0899/0806.md
+MASTER,0807,Change Data Capture — CDC,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Streaming e plataformas de processamento,ACTIVE,,prompts/0800-0899/0807.md
+MASTER,0808,Apache Kafka para Data Pipelines,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Streaming e plataformas de processamento,ACTIVE,,prompts/0800-0899/0808.md
+MASTER,0809,dbt Analytics Engineering,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Streaming e plataformas de processamento,ACTIVE,,prompts/0800-0899/0809.md
+MASTER,0810,Apache Airflow,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Streaming e plataformas de processamento,ACTIVE,,prompts/0800-0899/0810.md
+MASTER,0811,Apache Spark,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Streaming e plataformas de processamento,ACTIVE,,prompts/0800-0899/0811.md
+MASTER,0812,Batch vs Streaming,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Streaming e plataformas de processamento,ACTIVE,,prompts/0800-0899/0812.md
+MASTER,0813,Schema Registry e Evolução de Schema,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Contratos e modelagem analítica,ACTIVE,,prompts/0800-0899/0813.md
+MASTER,0814,Data Contracts,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Contratos e modelagem analítica,ACTIVE,,prompts/0800-0899/0814.md
+MASTER,0815,Lakehouse Architecture,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Contratos e modelagem analítica,ACTIVE,,prompts/0800-0899/0815.md
+MASTER,0816,Modelagem Dimensional e Slowly Changing Dimensions,"G04 — Dados, analytics e IA",Dados e pipelines,Data Engineering,Contratos e modelagem analítica,ACTIVE,,prompts/0800-0899/0816.md
+MASTER,0901,Análise Exploratória de Dados,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0901.md
+MASTER,0902,Feature Engineering,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0902.md
+MASTER,0903,Seleção de Modelo,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0903.md
+MASTER,0904,Treinamento e Validação,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0904.md
+MASTER,0905,Métricas e Avaliação,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0905.md
+MASTER,0906,NLP,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0906.md
+MASTER,0907,Visão Computacional,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0907.md
+MASTER,0908,MLOps,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Ciclo de vida de ML,ACTIVE,,prompts/0900-0999/0908.md
+MASTER,0909,Séries Temporais e Forecasting,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0909.md
+MASTER,0910,Sistemas de Recomendação,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0910.md
+MASTER,0911,Detecção de Anomalias,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0911.md
+MASTER,0912,Dados Desbalanceados,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0912.md
+MASTER,0913,Experiment Tracking e Reprodutibilidade,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0913.md
+MASTER,0914,Interpretabilidade de Modelos,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0914.md
+MASTER,0915,Model Drift e Data Drift,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0915.md
+MASTER,0916,Serving de Modelos em Produção,"G04 — Dados, analytics e IA",Analytics e ML,Data Science e Machine Learning,Modelagem avançada e MLOps,ACTIVE,,prompts/0900-0999/0916.md
+MASTER,1001,Power BI,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,"BI, SQL e painéis",ACTIVE,,prompts/1000-1099/1001.md
+MASTER,1002,KPIs e Métricas,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,"BI, SQL e painéis",ACTIVE,,prompts/1000-1099/1002.md
+MASTER,1003,SQL Analítico,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,"BI, SQL e painéis",ACTIVE,,prompts/1000-1099/1003.md
+MASTER,1004,Dashboard Executivo,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,"BI, SQL e painéis",ACTIVE,,prompts/1000-1099/1004.md
+MASTER,1005,Qualidade e Governança de BI,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,"BI, SQL e painéis",ACTIVE,,prompts/1000-1099/1005.md
+MASTER,1006,Tableau,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1006.md
+MASTER,1007,Looker e Camada Semântica,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1007.md
+MASTER,1008,DAX Avançado,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1008.md
+MASTER,1009,Power Query e Transformações,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1009.md
+MASTER,1010,Modelo Estrela para BI,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1010.md
+MASTER,1011,Storytelling Executivo com Dados,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1011.md
+MASTER,1012,Segurança e Row-Level Security em BI,"G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1012.md
+MASTER,1013,"Refresh, Incremental Load e SLA de BI","G04 — Dados, analytics e IA",Analytics e ML,Business Intelligence,Analytics e governança avançados,ACTIVE,,prompts/1000-1099/1013.md
+MASTER,1101,Estratégia CI/CD,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1101.md
+MASTER,1102,GitHub Actions — Pipeline CI/CD,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1102.md
+MASTER,1103,GitLab CI,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1103.md
+MASTER,1104,"Ambientes, Secrets e Variáveis",G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1104.md
+MASTER,1105,Deploy e Rollback,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1105.md
+MASTER,1106,Estratégia de Release,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1106.md
+MASTER,1107,Segurança de Pipeline,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1107.md
+MASTER,1108,Troubleshooting de Pipeline,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Pipelines e releases,ACTIVE,,prompts/1100-1199/1108.md
+MASTER,1109,Trunk-Based Development,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Entrega contínua e GitOps,ACTIVE,,prompts/1100-1199/1109.md
+MASTER,1110,GitOps,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Entrega contínua e GitOps,ACTIVE,,prompts/1100-1199/1110.md
+MASTER,1111,Blue-Green Deployment,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Entrega contínua e GitOps,ACTIVE,,prompts/1100-1199/1111.md
+MASTER,1112,Canary Deployment,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Entrega contínua e GitOps,ACTIVE,,prompts/1100-1199/1112.md
+MASTER,1113,CI para Monorepos,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Entrega contínua e GitOps,ACTIVE,,prompts/1100-1199/1113.md
+MASTER,1114,Cache e Performance de Pipeline,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Entrega contínua e GitOps,ACTIVE,,prompts/1100-1199/1114.md
+MASTER,1115,OIDC em CI/CD,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Governança e promoção de ambientes,ACTIVE,,prompts/1100-1199/1115.md
+MASTER,1116,SBOM e Provenance no Pipeline,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Governança e promoção de ambientes,ACTIVE,,prompts/1100-1199/1116.md
+MASTER,1117,Artifact Management,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Governança e promoção de ambientes,ACTIVE,,prompts/1100-1199/1117.md
+MASTER,1118,Promoção entre Ambientes,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Governança e promoção de ambientes,ACTIVE,,prompts/1100-1199/1118.md
+MASTER,1201,Dockerfile de Produção,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1201.md
+MASTER,1202,Docker Compose,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1202.md
+MASTER,1203,Segurança Docker,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1203.md
+MASTER,1204,Deployment Kubernetes,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1204.md
+MASTER,1205,Segurança Kubernetes,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1205.md
+MASTER,1206,Helm,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1206.md
+MASTER,1207,Observabilidade Kubernetes,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1207.md
+MASTER,1208,Escalabilidade e Resiliência Kubernetes,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Containerização e fundamentos Kubernetes,ACTIVE,,prompts/1200-1299/1208.md
+MASTER,1209,Docker Multi-Stage e Imagens Mínimas,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1209.md
+MASTER,1210,Docker Rootless e Least Privilege,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1210.md
+MASTER,1211,Multi-Architecture Container Images,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1211.md
+MASTER,1212,Container Registry Governance,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1212.md
+MASTER,1213,Kubernetes Networking,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1213.md
+MASTER,1214,Kubernetes Storage e Stateful Workloads,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1214.md
+MASTER,1215,Ingress e Gateway API,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1215.md
+MASTER,1216,Operators e CRDs,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1216.md
+MASTER,1217,"Autoscaling HPA, VPA e Event-Driven",G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1217.md
+MASTER,1218,Upgrade Seguro de Cluster Kubernetes,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,Kubernetes avançado,ACTIVE,,prompts/1200-1299/1218.md
+MASTER,1301,Terraform,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1301.md
+MASTER,1302,Auditoria de Infrastructure as Code,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1302.md
+MASTER,1303,Automação Bash,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1303.md
+MASTER,1304,Automação PowerShell,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1304.md
+MASTER,1305,Cron e Jobs Agendados,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1305.md
+MASTER,1306,RPA,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1306.md
+MASTER,1307,Workflow de Automação,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1307.md
+MASTER,1308,Automação com Agentes de IA,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,IaC e automação operacional,ACTIVE,,prompts/1300-1399/1308.md
+MASTER,1309,Terraform Modules,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1309.md
+MASTER,1310,Terraform State e Remote Backend,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1310.md
+MASTER,1311,Terraform Import e Adoção de Recursos,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1311.md
+MASTER,1312,Terraform Tests e Validação,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1312.md
+MASTER,1313,Terraform Drift Detection,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1313.md
+MASTER,1314,Estratégia de Ambientes em Terraform,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1314.md
+MASTER,1315,Ansible Playbooks,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1315.md
+MASTER,1316,Pulumi,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1316.md
+MASTER,1317,Packer e Imagens Imutáveis,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1317.md
+MASTER,1318,Policy as Code para IaC,G05 — Plataforma e operações,Automação e entrega,IaC e Automação,Infraestrutura e testes avançados,ACTIVE,,prompts/1300-1399/1318.md
+MASTER,1401,Comparação AWS vs Azure vs GCP,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1401.md
+MASTER,1402,Arquitetura AWS,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1402.md
+MASTER,1403,Arquitetura Azure,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1403.md
+MASTER,1404,Arquitetura Google Cloud,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1404.md
+MASTER,1405,Vercel,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1405.md
+MASTER,1406,Cloudflare,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1406.md
+MASTER,1407,Netlify / Render / Railway,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1407.md
+MASTER,1408,Neon / Supabase,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Plataformas cloud e provedores,ACTIVE,,prompts/1400-1499/1408.md
+MASTER,1409,AWS IAM,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1409.md
+MASTER,1410,AWS VPC e Networking,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1410.md
+MASTER,1411,AWS ECS e EKS,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1411.md
+MASTER,1412,AWS Lambda e Serverless,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1412.md
+MASTER,1413,AWS RDS e Aurora,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1413.md
+MASTER,1414,"AWS S3, CloudFront e WAF",G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1414.md
+MASTER,1415,Azure Entra ID e RBAC,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1415.md
+MASTER,1416,Azure VNet e Networking,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1416.md
+MASTER,1417,Azure AKS,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,Operação e segurança de cloud,ACTIVE,,prompts/1400-1499/1417.md
+MASTER,1418,Azure Functions,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1418.md
+MASTER,1419,Azure SQL e Storage,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1419.md
+MASTER,1420,Google Cloud IAM e VPC,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1420.md
+MASTER,1421,Google Kubernetes Engine — GKE,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1421.md
+MASTER,1422,Google Cloud Run,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1422.md
+MASTER,1423,Google Cloud SQL,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1423.md
+MASTER,1424,Vercel Environments e Deployment Protection,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1424.md
+MASTER,1425,Neon Branching e Preview Databases,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1425.md
+MASTER,1426,Supabase RLS e Auth,G05 — Plataforma e operações,Cloud e runtime,Cloud Computing,"Ambientes, previews e cloud avançada",ACTIVE,,prompts/1400-1499/1426.md
+MASTER,1501,Auditoria AppSec,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1501.md
+MASTER,1502,Threat Modeling e OWASP,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1502.md
+MASTER,1503,Gestão de Secrets,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1503.md
+MASTER,1504,IAM e Least Privilege,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1504.md
+MASTER,1505,Segurança de APIs,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1505.md
+MASTER,1506,Auditoria de Segurança de Banco de Dados,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1506.md
+MASTER,1507,Hardening de Infraestrutura,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1507.md
+MASTER,1508,Resposta a Incidentes de Segurança,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1508.md
+MASTER,1509,Secure Code Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1509.md
+MASTER,1510,Dependências e Software Supply Chain,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Fundamentos e auditoria AppSec,ACTIVE,,prompts/1500-1599/1510.md
+MASTER,1511,OWASP Top 10:2025 Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1511.md
+MASTER,1512,OWASP ASVS Verification,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1512.md
+MASTER,1513,OWASP SAMM Maturity Assessment,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1513.md
+MASTER,1514,"SAST, DAST e SCA Strategy",G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1514.md
+MASTER,1515,Secret Scanning e Credential Hygiene,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1515.md
+MASTER,1516,"SBOM, Provenance e Attestations",G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1516.md
+MASTER,1517,Container Security Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1517.md
+MASTER,1518,Kubernetes Security Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,"Avaliações, frameworks e supply chain",ACTIVE,,prompts/1500-1599/1518.md
+MASTER,1519,Cloud Security Posture Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1519.md
+MASTER,1520,STRIDE Threat Modeling,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1520.md
+MASTER,1521,"Sessões, Cookies e Authentication Security",G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1521.md
+MASTER,1522,Cryptography Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1522.md
+MASTER,1523,"XSS, CSRF e Browser Security",G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1523.md
+MASTER,1524,Injection e Input Validation,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1524.md
+MASTER,1525,Broken Access Control Review,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1525.md
+MASTER,1526,Vulnerability Management Program,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Ameaças e controles avançados,ACTIVE,,prompts/1500-1599/1526.md
+MASTER,1601,Estratégia de Testes,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1601.md
+MASTER,1602,Testes Unitários,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1602.md
+MASTER,1603,Testes de Integração,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1603.md
+MASTER,1604,E2E com Playwright,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1604.md
+MASTER,1605,E2E com Cypress,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1605.md
+MASTER,1606,Testes de API / Postman,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1606.md
+MASTER,1607,Carga e Performance,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1607.md
+MASTER,1608,Testes de Segurança,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1608.md
+MASTER,1609,Cobertura e Qualidade,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1609.md
+MASTER,1610,Edge Cases e Testes Negativos,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Fundamentos e testes automatizados,ACTIVE,,prompts/1600-1699/1610.md
+MASTER,1611,Jest,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Ferramentas e testes avançados,ACTIVE,,prompts/1600-1699/1611.md
+MASTER,1612,Vitest,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Ferramentas e testes avançados,ACTIVE,,prompts/1600-1699/1612.md
+MASTER,1613,Selenium,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Ferramentas e testes avançados,ACTIVE,,prompts/1600-1699/1613.md
+MASTER,1614,Visual Regression Testing,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Ferramentas e testes avançados,ACTIVE,,prompts/1600-1699/1614.md
+MASTER,1615,Consumer-Driven Contract Testing,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Ferramentas e testes avançados,ACTIVE,,prompts/1600-1699/1615.md
+MASTER,1616,Mutation Testing,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Ferramentas e testes avançados,ACTIVE,,prompts/1600-1699/1616.md
+MASTER,1617,Property-Based Testing,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,"Qualidade, dados e gates",ACTIVE,,prompts/1600-1699/1617.md
+MASTER,1618,Test Data Management,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,"Qualidade, dados e gates",ACTIVE,,prompts/1600-1699/1618.md
+MASTER,1619,Flaky Test Reduction,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,"Qualidade, dados e gates",ACTIVE,,prompts/1600-1699/1619.md
+MASTER,1620,Accessibility Testing,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,"Qualidade, dados e gates",ACTIVE,,prompts/1600-1699/1620.md
+MASTER,1621,Database Testing,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,"Qualidade, dados e gates",ACTIVE,,prompts/1600-1699/1621.md
+MASTER,1622,Quality Gates de CI,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,"Qualidade, dados e gates",ACTIVE,,prompts/1600-1699/1622.md
+MASTER,1701,Engenharia de Prompts Profissional,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1701.md
+MASTER,1702,Avaliação e Otimização de Prompt,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1702.md
+MASTER,1703,RAG,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1703.md
+MASTER,1704,Agentes de IA,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1704.md
+MASTER,1705,Function Calling / Tool Calling,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1705.md
+MASTER,1706,Embeddings e Vector Databases,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1706.md
+MASTER,1707,Análise de Documentos com IA,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1707.md
+MASTER,1708,Classificação e Extração de Dados,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1708.md
+MASTER,1709,Segurança contra Prompt Injection,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1709.md
+MASTER,1710,Evals e Regressão de LLM,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Prompts, agentes e RAG",ACTIVE,,prompts/1700-1799/1710.md
+MASTER,1711,System e Developer Instructions,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1711.md
+MASTER,1712,Governança de Biblioteca de Prompts,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1712.md
+MASTER,1713,Structured Outputs e JSON Schemas,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1713.md
+MASTER,1714,Design de Tool Schemas,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1714.md
+MASTER,1715,Context Engineering,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1715.md
+MASTER,1716,Planejamento e Decomposição para Agentes,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1716.md
+MASTER,1717,Memória e Estado de Agentes,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1717.md
+MASTER,1718,Chunking para RAG,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Contexto, estruturação e coordenação",ACTIVE,,prompts/1700-1799/1718.md
+MASTER,1719,Retrieval Evaluation,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1719.md
+MASTER,1720,Hybrid Search,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1720.md
+MASTER,1721,Reranking,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1721.md
+MASTER,1722,Avaliação de Embeddings,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1722.md
+MASTER,1723,LLM Observability,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1723.md
+MASTER,1724,Otimização de Latência e Custo de LLM,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1724.md
+MASTER,1725,Human-in-the-Loop,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1725.md
+MASTER,1726,Red Team de Aplicações LLM,"G04 — Dados, analytics e IA",IA e sistemas cognitivos,Inteligência Artificial e LLM,"Busca, observabilidade e governança",ACTIVE,,prompts/1700-1799/1726.md
+MASTER,1801,Troubleshooting TCP/IP,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1801.md
+MASTER,1802,DNS,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1802.md
+MASTER,1803,DHCP,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1803.md
+MASTER,1804,VPN,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1804.md
+MASTER,1805,Firewall e Proxy,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1805.md
+MASTER,1806,Routing e Switching,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1806.md
+MASTER,1807,Latência e Conectividade,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1807.md
+MASTER,1808,Segurança de Rede,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes e conectividade,ACTIVE,,prompts/1800-1899/1808.md
+MASTER,1809,IPv6,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1809.md
+MASTER,1810,TLS e Certificados de Rede,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1810.md
+MASTER,1811,Load Balancers,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1811.md
+MASTER,1812,Reverse Proxy,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1812.md
+MASTER,1813,CDN e Edge Networking,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1813.md
+MASTER,1814,Zero Trust Network Access,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1814.md
+MASTER,1815,BGP Troubleshooting,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1815.md
+MASTER,1816,Packet Capture com tcpdump/Wireshark,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1816.md
+MASTER,1817,"MTU, Fragmentação e Path MTU",G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1817.md
+MASTER,1818,Network Observability,G05 — Plataforma e operações,Infraestrutura e redes,Redes,Redes modernas e diagnóstico,ACTIVE,,prompts/1800-1899/1818.md
+MASTER,1901,Auditoria Linux,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1901.md
+MASTER,1902,Windows Server,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1902.md
+MASTER,1903,Usuários e Permissões,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1903.md
+MASTER,1904,Serviços e Processos,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1904.md
+MASTER,1905,Análise de Logs de Sistema,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1905.md
+MASTER,1906,Storage e Filesystems,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1906.md
+MASTER,1907,Backup de Sistemas,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1907.md
+MASTER,1908,Automação de SysAdmin,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,Administração de sistemas,ACTIVE,,prompts/1900-1999/1908.md
+MASTER,1909,systemd,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1909.md
+MASTER,1910,Nginx,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1910.md
+MASTER,1911,Apache HTTP Server,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1911.md
+MASTER,1912,SSH Hardening,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1912.md
+MASTER,1913,Patch Management,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1913.md
+MASTER,1914,Certificados e PKI Operacional,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1914.md
+MASTER,1915,Cron e systemd Timers,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1915.md
+MASTER,1916,Disco Cheio e Capacity de Storage,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1916.md
+MASTER,1917,Debugging de Processos Linux,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1917.md
+MASTER,1918,PowerShell para Administração Windows,G05 — Plataforma e operações,Infraestrutura e redes,Administração de Sistemas,"Serviços, segurança e confiabilidade",ACTIVE,,prompts/1900-1999/1918.md
+MASTER,2001,Auditoria de Repositório GitHub,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2001.md
+MASTER,2002,Estratégia de Branches,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2002.md
+MASTER,2003,Commits Profissionais,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2003.md
+MASTER,2004,Pull Request,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2004.md
+MASTER,2005,Code Review de PR,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2005.md
+MASTER,2006,"Merge, Rebase e Conflitos",G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2006.md
+MASTER,2007,Tags e Releases,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2007.md
+MASTER,2008,Issues e GitHub Projects,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2008.md
+MASTER,2009,GitHub Actions — Governança e Automação do Repositório,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2009.md
+MASTER,2010,Segurança de Repositório,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Git, PRs e governança",ACTIVE,,prompts/2000-2099/2010.md
+MASTER,2011,GitHub Rulesets e Branch Protection,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2011.md
+MASTER,2012,CODEOWNERS,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2012.md
+MASTER,2013,Dependabot,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2013.md
+MASTER,2014,GitHub Secret Scanning,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2014.md
+MASTER,2015,GitHub Code Scanning,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2015.md
+MASTER,2016,GitHub Environments e Required Reviewers,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2016.md
+MASTER,2017,OIDC no GitHub Actions,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2017.md
+MASTER,2018,Reusable Workflows,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Proteção de repositórios e Actions,ACTIVE,,prompts/2000-2099/2018.md
+MASTER,2019,Artifact Attestations,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Artefatos, templates e repositórios",ACTIVE,,prompts/2000-2099/2019.md
+MASTER,2020,Issue e Pull Request Templates,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Artefatos, templates e repositórios",ACTIVE,,prompts/2000-2099/2020.md
+MASTER,2021,Migração de Repositório Git,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Artefatos, templates e repositórios",ACTIVE,,prompts/2000-2099/2021.md
+MASTER,2022,Git LFS e Arquivos Grandes,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,"Artefatos, templates e repositórios",ACTIVE,,prompts/2000-2099/2022.md
+MASTER,2101,"SLI, SLO e SLA",G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2101.md
+MASTER,2102,Arquitetura de Observabilidade,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2102.md
+MASTER,2103,Estratégia de Logs,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2103.md
+MASTER,2104,Métricas e Traces,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2104.md
+MASTER,2105,Alertas Acionáveis,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2105.md
+MASTER,2106,Resposta a Incidentes SRE,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2106.md
+MASTER,2107,Postmortem Sem Culpa,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2107.md
+MASTER,2108,Capacity Planning,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2108.md
+MASTER,2109,Reliability Review,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2109.md
+MASTER,2110,Game Day / Chaos / Recovery Drill,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Práticas SRE e incidentes,ACTIVE,,prompts/2100-2199/2110.md
+MASTER,2111,OpenTelemetry Instrumentation,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2111.md
+MASTER,2112,OpenTelemetry Collector,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2112.md
+MASTER,2113,Prometheus,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2113.md
+MASTER,2114,Grafana,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2114.md
+MASTER,2115,RED e USE Methods,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2115.md
+MASTER,2116,Burn Rate Alerts,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2116.md
+MASTER,2117,Error Budgets,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2117.md
+MASTER,2118,On-Call Engineering,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,"Instrumentação, métricas e alerta",ACTIVE,,prompts/2100-2199/2118.md
+MASTER,2119,Synthetic Monitoring,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Monitoramento e rastreamento,ACTIVE,,prompts/2100-2199/2119.md
+MASTER,2120,Real User Monitoring — RUM,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Monitoramento e rastreamento,ACTIVE,,prompts/2100-2199/2120.md
+MASTER,2121,Continuous Profiling,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Monitoramento e rastreamento,ACTIVE,,prompts/2100-2199/2121.md
+MASTER,2122,Distributed Tracing,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Monitoramento e rastreamento,ACTIVE,,prompts/2100-2199/2122.md
+MASTER,2201,Triagem de Chamado,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte e resolução,ACTIVE,,prompts/2200-2299/2201.md
+MASTER,2202,Reprodução de Erro,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte e resolução,ACTIVE,,prompts/2200-2299/2202.md
+MASTER,2203,Análise de Logs para Suporte,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte e resolução,ACTIVE,,prompts/2200-2299/2203.md
+MASTER,2204,Base de Conhecimento,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte e resolução,ACTIVE,,prompts/2200-2299/2204.md
+MASTER,2205,Escalonamento Técnico,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte e resolução,ACTIVE,,prompts/2200-2299/2205.md
+MASTER,2206,Resolução e Encerramento,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte e resolução,ACTIVE,,prompts/2200-2299/2206.md
+MASTER,2207,Classificação de Incidentes de Suporte,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte avançado e canais,ACTIVE,,prompts/2200-2299/2207.md
+MASTER,2208,Comunicação com Usuário durante Incidente,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte avançado e canais,ACTIVE,,prompts/2200-2299/2208.md
+MASTER,2209,Troubleshooting Remoto,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte avançado e canais,ACTIVE,,prompts/2200-2299/2209.md
+MASTER,2210,Suporte Windows Desktop,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte avançado e canais,ACTIVE,,prompts/2200-2299/2210.md
+MASTER,2211,Suporte Linux Desktop,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte avançado e canais,ACTIVE,,prompts/2200-2299/2211.md
+MASTER,2212,Suporte a SaaS e Aplicações Web,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Suporte Técnico e Help Desk,Suporte avançado e canais,ACTIVE,,prompts/2200-2299/2212.md
+MASTER,2301,Plano de Projeto de TI,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2301.md
+MASTER,2302,Escopo e Controle de Mudanças,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2302.md
+MASTER,2303,Backlog Priorizado,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2303.md
+MASTER,2304,Planejamento de Sprint Scrum,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2304.md
+MASTER,2305,Fluxo Kanban,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2305.md
+MASTER,2306,Roadmap,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2306.md
+MASTER,2307,"Épicos, Histórias e Tarefas","G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2307.md
+MASTER,2308,Riscos e Dependências,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2308.md
+MASTER,2309,Estimativas e Priorização,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2309.md
+MASTER,2310,Jira + Confluence,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão e planejamento,ACTIVE,,prompts/2300-2399/2310.md
+MASTER,2311,Jira Workflow Design,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2311.md
+MASTER,2312,Arquitetura de Espaços Confluence,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2312.md
+MASTER,2313,Story Slicing,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2313.md
+MASTER,2314,Sprint Review,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2314.md
+MASTER,2315,Retrospectiva Técnica,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2315.md
+MASTER,2316,Dependency Mapping,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2316.md
+MASTER,2317,RACI Técnico,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2317.md
+MASTER,2318,Technical Program Plan,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Gestão ágil e coordenação,ACTIVE,,prompts/2300-2399/2318.md
+MASTER,2401,README Profissional,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2401.md
+MASTER,2402,ADR,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2402.md
+MASTER,2403,Documentação de API,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2403.md
+MASTER,2404,Documentação de Banco,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2404.md
+MASTER,2405,Documentação de Infraestrutura,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2405.md
+MASTER,2406,Runbook,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2406.md
+MASTER,2407,Playbook / SOP,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2407.md
+MASTER,2408,Changelog e Release Notes,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2408.md
+MASTER,2409,Diagramas de Arquitetura,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2409.md
+MASTER,2410,Manual Técnico,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentos e artefatos técnicos,ACTIVE,,prompts/2400-2499/2410.md
+MASTER,2411,Guia de Onboarding Técnico,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2411.md
+MASTER,2412,Troubleshooting Guide,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2412.md
+MASTER,2413,Data Dictionary,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2413.md
+MASTER,2414,Documentação de Segurança,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2414.md
+MASTER,2415,Disaster Recovery Plan,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2415.md
+MASTER,2416,Incident Report,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2416.md
+MASTER,2417,Documentação de Exemplos de API,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2417.md
+MASTER,2418,Docs as Code,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Conteúdos especializados e docs as code,ACTIVE,,prompts/2400-2499/2418.md
+MASTER,2501,Auditoria de Repositório,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2501.md
+MASTER,2502,Auditoria de Código,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2502.md
+MASTER,2503,Auditoria de Arquitetura,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2503.md
+MASTER,2504,Auditoria de Frontend,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2504.md
+MASTER,2505,Auditoria de Backend,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2505.md
+MASTER,2506,Auditoria de Banco de Dados,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2506.md
+MASTER,2507,Auditoria de Infraestrutura,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2507.md
+MASTER,2508,Auditoria de CI/CD,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2508.md
+MASTER,2509,Auditoria de Segurança,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2509.md
+MASTER,2510,Auditoria de Testes,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2510.md
+MASTER,2511,Auditoria de Documentação,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2511.md
+MASTER,2512,"Auditoria de Produção, Custos e Performance","G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias técnicas e operacionais,ACTIVE,,prompts/2500-2599/2512.md
+MASTER,2513,Auditoria de Dependências,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2513.md
+MASTER,2514,Auditoria de Secrets,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2514.md
+MASTER,2515,Auditoria de IAM,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2515.md
+MASTER,2516,Auditoria Cloud,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2516.md
+MASTER,2517,Auditoria de Containers,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2517.md
+MASTER,2518,Auditoria Kubernetes,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2518.md
+MASTER,2519,Auditoria de Observabilidade,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2519.md
+MASTER,2520,Auditoria de Disaster Recovery,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2520.md
+MASTER,2521,Auditoria de Privacidade e Dados,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2521.md
+MASTER,2522,Auditoria de Sistema com IA,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditorias especializadas,ACTIVE,,prompts/2500-2599/2522.md
+MASTER,2601,Diagnóstico de Bug,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2601.md
+MASTER,2602,Falha de Deploy,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2602.md
+MASTER,2603,Problema de Banco de Dados,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2603.md
+MASTER,2604,Problema de API,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2604.md
+MASTER,2605,Problema de Autenticação,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2605.md
+MASTER,2606,Problema de Rede,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2606.md
+MASTER,2607,Problema de Infraestrutura,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2607.md
+MASTER,2608,Problema de Performance,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2608.md
+MASTER,2609,Problema em Produção,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2609.md
+MASTER,2610,Root Cause Analysis (RCA),"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Diagnóstico geral e RCA,ACTIVE,,prompts/2600-2699/2610.md
+MASTER,2611,Memory Leak,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2611.md
+MASTER,2612,CPU Spike,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2612.md
+MASTER,2613,Disk Full,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2613.md
+MASTER,2614,Connection Pool Exhaustion,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2614.md
+MASTER,2615,Deadlock de Banco,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2615.md
+MASTER,2616,DNS Intermitente,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2616.md
+MASTER,2617,TLS e Certificado Expirado,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2617.md
+MASTER,2618,CORS,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2618.md
+MASTER,2619,Pico de HTTP 5xx,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2619.md
+MASTER,2620,Queue Backlog,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2620.md
+MASTER,2621,Kubernetes CrashLoopBackOff,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2621.md
+MASTER,2622,Tela em Branco no Frontend,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Falhas e diagnósticos especializados,ACTIVE,,prompts/2600-2699/2622.md
+MASTER,2701,Baseline de Performance,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance e arquitetura de escala,ACTIVE,,prompts/2700-2799/2701.md
+MASTER,2702,Plano de Escalabilidade,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance e arquitetura de escala,ACTIVE,,prompts/2700-2799/2702.md
+MASTER,2703,Resiliência e Fault Tolerance,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance e arquitetura de escala,ACTIVE,,prompts/2700-2799/2703.md
+MASTER,2704,Capacity Planning Técnico,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance e arquitetura de escala,ACTIVE,,prompts/2700-2799/2704.md
+MASTER,2705,Otimização de Custos e Recursos,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance e arquitetura de escala,ACTIVE,,prompts/2700-2799/2705.md
+MASTER,2706,Análise de Gargalos,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance e arquitetura de escala,ACTIVE,,prompts/2700-2799/2706.md
+MASTER,2707,Plano de Load Test,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2707.md
+MASTER,2708,Performance de Banco de Dados,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2708.md
+MASTER,2709,Profiling de Backend,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2709.md
+MASTER,2710,Performance Web e Frontend,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2710.md
+MASTER,2711,Cache Tuning,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2711.md
+MASTER,2712,Throughput de Filas,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2712.md
+MASTER,2713,Latency Budget,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2713.md
+MASTER,2714,Autoscaling Validation,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance especializada,ACTIVE,,prompts/2700-2799/2714.md
+MASTER,2801,Modernização de Legado,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Estratégias de modernização,ACTIVE,,prompts/2800-2899/2801.md
+MASTER,2802,Estratégia de Migração,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Estratégias de modernização,ACTIVE,,prompts/2800-2899/2802.md
+MASTER,2803,Upgrade de Dependências,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Estratégias de modernização,ACTIVE,,prompts/2800-2899/2803.md
+MASTER,2804,Upgrade de Framework,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Estratégias de modernização,ACTIVE,,prompts/2800-2899/2804.md
+MASTER,2805,Migração de Banco de Dados,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Estratégias de modernização,ACTIVE,,prompts/2800-2899/2805.md
+MASTER,2806,Migração para Cloud,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Estratégias de modernização,ACTIVE,,prompts/2800-2899/2806.md
+MASTER,2807,Monólito para Monólito Modular,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2807.md
+MASTER,2808,Decomposição de Microservices,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2808.md
+MASTER,2809,On-Premises para Cloud,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2809.md
+MASTER,2810,Migração de Versão de API,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2810.md
+MASTER,2811,Migração de Autenticação,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2811.md
+MASTER,2812,Upgrade de Runtime Node.js,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2812.md
+MASTER,2813,Major Upgrade PostgreSQL,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2813.md
+MASTER,2814,Migração Zero-Downtime,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Migrações especializadas e compatibilidade,ACTIVE,,prompts/2800-2899/2814.md
+MASTER,2901,Developer Experience Audit,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Fundamentos de Developer Experience,ACTIVE,,prompts/2900-2999/2901.md
+MASTER,2902,Platform Engineering,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Fundamentos de Developer Experience,ACTIVE,,prompts/2900-2999/2902.md
+MASTER,2903,Golden Path,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Fundamentos de Developer Experience,ACTIVE,,prompts/2900-2999/2903.md
+MASTER,2904,Self-Service para Desenvolvedores,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Fundamentos de Developer Experience,ACTIVE,,prompts/2900-2999/2904.md
+MASTER,2905,Internal Developer Portal,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2905.md
+MASTER,2906,Service Catalog,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2906.md
+MASTER,2907,Project Templates e Scaffolding,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2907.md
+MASTER,2908,Local Development Environment,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2908.md
+MASTER,2909,Preview Environments,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2909.md
+MASTER,2910,Ephemeral Environments,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2910.md
+MASTER,2911,Platform SLOs,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2911.md
+MASTER,2912,Agent-Ready Repository,G02 — Engenharia e arquitetura,Transformação e plataformas,Platform Engineering e Developer Experience,Plataformas internas e autosserviço,ACTIVE,,prompts/2900-2999/2912.md
+MASTER,3001,Auditoria FinOps,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Gestão e governança de custos,ACTIVE,,prompts/3000-3099/3001.md
+MASTER,3002,Otimização de Custos Cloud,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Gestão e governança de custos,ACTIVE,,prompts/3000-3099/3002.md
+MASTER,3003,Unit Economics de Infraestrutura,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Gestão e governança de custos,ACTIVE,,prompts/3000-3099/3003.md
+MASTER,3004,"Budget, Forecast e Anomalias","G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Gestão e governança de custos,ACTIVE,,prompts/3000-3099/3004.md
+MASTER,3005,Cost Allocation e Tagging,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Custos técnicos especializados,ACTIVE,,prompts/3000-3099/3005.md
+MASTER,3006,Rightsizing,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Custos técnicos especializados,ACTIVE,,prompts/3000-3099/3006.md
+MASTER,3007,Commitment Discounts e Reservas,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Custos técnicos especializados,ACTIVE,,prompts/3000-3099/3007.md
+MASTER,3008,Egress Cost Analysis,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Custos técnicos especializados,ACTIVE,,prompts/3000-3099/3008.md
+MASTER,3009,Kubernetes Cost Optimization,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Custos técnicos especializados,ACTIVE,,prompts/3000-3099/3009.md
+MASTER,3010,Database Cost Optimization,"G01 — Estratégia, gestão e governança",Economia e FinOps,FinOps e Custos,Custos técnicos especializados,ACTIVE,,prompts/3000-3099/3010.md
+MASTER,3101,Governança Técnica,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade",Governança técnica e privacidade,ACTIVE,,prompts/3100-3199/3101.md
+MASTER,3102,Mapeamento de Compliance,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade",Governança técnica e privacidade,ACTIVE,,prompts/3100-3199/3102.md
+MASTER,3103,Privacidade e Data Protection,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade",Governança técnica e privacidade,ACTIVE,,prompts/3100-3199/3103.md
+MASTER,3104,Registro de Riscos Técnicos,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade",Governança técnica e privacidade,ACTIVE,,prompts/3100-3199/3104.md
+MASTER,3105,LGPD Mapping,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3105.md
+MASTER,3106,Data Classification,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3106.md
+MASTER,3107,Retention e Data Lifecycle,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3107.md
+MASTER,3108,Third-Party / Vendor Risk,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3108.md
+MASTER,3109,Audit Evidence Management,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3109.md
+MASTER,3110,Segregation of Duties,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3110.md
+MASTER,3111,Change Management Controls,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3111.md
+MASTER,3112,AI Risk Governance,"G01 — Estratégia, gestão e governança",Governança e planejamento,"Governança, Risco e Privacidade","Compliance, risco e evidências",ACTIVE,,prompts/3100-3199/3112.md
+MASTER,3201,Apache Kafka Architecture,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Kafka e entrega de eventos,ACTIVE,,prompts/3200-3299/3201.md
+MASTER,3202,Kafka Producer Reliability,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Kafka e entrega de eventos,ACTIVE,,prompts/3200-3299/3202.md
+MASTER,3203,Kafka Consumer Groups,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Kafka e entrega de eventos,ACTIVE,,prompts/3200-3299/3203.md
+MASTER,3204,Kafka Transactions e Exactly-Once Semantics,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Kafka e entrega de eventos,ACTIVE,,prompts/3200-3299/3204.md
+MASTER,3205,RabbitMQ Quorum Queues,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",RabbitMQ e mensageria confiável,ACTIVE,,prompts/3200-3299/3205.md
+MASTER,3206,RabbitMQ Publisher Confirms e Consumer Acks,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",RabbitMQ e mensageria confiável,ACTIVE,,prompts/3200-3299/3206.md
+MASTER,3207,Dead Letter Queues,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",RabbitMQ e mensageria confiável,ACTIVE,,prompts/3200-3299/3207.md
+MASTER,3208,Outbox Pattern,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",RabbitMQ e mensageria confiável,ACTIVE,,prompts/3200-3299/3208.md
+MASTER,3209,Saga Pattern,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Consistência e padrões distribuídos,ACTIVE,,prompts/3200-3299/3209.md
+MASTER,3210,Event Schema Governance,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Consistência e padrões distribuídos,ACTIVE,,prompts/3200-3299/3210.md
+MASTER,3211,"Ordering, Deduplication e Idempotência","G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Consistência e padrões distribuídos,ACTIVE,,prompts/3200-3299/3211.md
+MASTER,3212,Backpressure em Sistemas Assíncronos,"G04 — Dados, analytics e IA",Mensageria e sistemas distribuídos,"Mensageria, Streaming e Sistemas Distribuídos",Consistência e padrões distribuídos,ACTIVE,,prompts/3200-3299/3212.md
+MASTER,3301,Arquitetura IAM,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Identidades e federação,ACTIVE,,prompts/3300-3399/3301.md
+MASTER,3302,OAuth 2.x Security Review,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Identidades e federação,ACTIVE,,prompts/3300-3399/3302.md
+MASTER,3303,OpenID Connect,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Identidades e federação,ACTIVE,,prompts/3300-3399/3303.md
+MASTER,3304,SAML 2.0,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Identidades e federação,ACTIVE,,prompts/3300-3399/3304.md
+MASTER,3305,Single Sign-On — SSO,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Identidades e federação,ACTIVE,,prompts/3300-3399/3305.md
+MASTER,3306,Multi-Factor Authentication,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Autorização e identidades privilegiadas,ACTIVE,,prompts/3300-3399/3306.md
+MASTER,3307,RBAC Design,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Autorização e identidades privilegiadas,ACTIVE,,prompts/3300-3399/3307.md
+MASTER,3308,ABAC Design,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Autorização e identidades privilegiadas,ACTIVE,,prompts/3300-3399/3308.md
+MASTER,3309,Service Accounts e Machine Identities,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Autorização e identidades privilegiadas,ACTIVE,,prompts/3300-3399/3309.md
+MASTER,3310,Privileged Access Management,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Autorização e identidades privilegiadas,ACTIVE,,prompts/3300-3399/3310.md
+MASTER,3401,Software Supply Chain Threat Model,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Proveniência e dependências,ACTIVE,,prompts/3400-3499/3401.md
+MASTER,3402,SBOM Program,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Proveniência e dependências,ACTIVE,,prompts/3400-3499/3402.md
+MASTER,3403,SLSA e Build Provenance,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Proveniência e dependências,ACTIVE,,prompts/3400-3499/3403.md
+MASTER,3404,Dependency Pinning e Lockfiles,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Proveniência e dependências,ACTIVE,,prompts/3400-3499/3404.md
+MASTER,3405,Package Registry Security,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Proveniência e dependências,ACTIVE,,prompts/3400-3499/3405.md
+MASTER,3406,Artifact Signing e Verification,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Integridade e builds,ACTIVE,,prompts/3400-3499/3406.md
+MASTER,3407,Reproducible Builds,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Integridade e builds,ACTIVE,,prompts/3400-3499/3407.md
+MASTER,3408,Third-Party Component Risk,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Integridade e builds,ACTIVE,,prompts/3400-3499/3408.md
+MASTER,3409,Build Environment Hardening,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Integridade e builds,ACTIVE,,prompts/3400-3499/3409.md
+MASTER,3410,Release Integrity Verification,G06 — Segurança e identidade,Segurança e supply chain,Software Supply Chain,Integridade e builds,ACTIVE,,prompts/3400-3499/3410.md
+MASTER,3501,AGENTS.md para Coding Agents,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Instruções e especificação para agentes,ACTIVE,,prompts/3500-3599/3501.md
+MASTER,3502,GitHub Copilot Repository Instructions,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Instruções e especificação para agentes,ACTIVE,,prompts/3500-3599/3502.md
+MASTER,3503,GitHub Copilot Prompt Files,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Instruções e especificação para agentes,ACTIVE,,prompts/3500-3599/3503.md
+MASTER,3504,Path-Specific AI Instructions,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Instruções e especificação para agentes,ACTIVE,,prompts/3500-3599/3504.md
+MASTER,3505,Task Specification para Coding Agent,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Instruções e especificação para agentes,ACTIVE,,prompts/3500-3599/3505.md
+MASTER,3506,Agentic Code Review,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3506.md
+MASTER,3507,Agentic Debugging,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3507.md
+MASTER,3508,Agentic Refactoring,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3508.md
+MASTER,3509,Agentic Test Generation,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3509.md
+MASTER,3510,Agentic Repository Audit,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3510.md
+MASTER,3511,Multi-Agent Engineering Workflow,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3511.md
+MASTER,3512,AI Coding Change Validation,G08 — Documentação e coding agents,Agentes de desenvolvimento,Coding Agents e Engenharia Assistida por IA,Execução e validação por agentes,ACTIVE,,prompts/3500-3599/3512.md
+MASTER,3601,Pesquisa UX e Descoberta de Necessidades,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,Pesquisa e arquitetura da experiência,ACTIVE,,prompts/3600-3699/3601.md
+MASTER,3602,Arquitetura da Informação e Fluxos de Usuário,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,Pesquisa e arquitetura da experiência,ACTIVE,,prompts/3600-3699/3602.md
+MASTER,3603,Wireframes Funcionais e Especificação de Telas,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,"Wireframes, visual e redesign",ACTIVE,,prompts/3600-3699/3603.md
+MASTER,3604,"Composição Visual, Layout e Hierarquia UX",G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,"Wireframes, visual e redesign",ACTIVE,,prompts/3600-3699/3604.md
+MASTER,3605,Redesign de Produto com Preservação Funcional,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,"Wireframes, visual e redesign",ACTIVE,,prompts/3600-3699/3605.md
+MASTER,3606,Prototipação Interativa e Contratos de Interação,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,Prototipação e interação,ACTIVE,,prompts/3600-3699/3606.md
+MASTER,3607,Design Responsivo Mobile-First por Tarefa,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,Experiências adaptativas e responsivas,ACTIVE,,prompts/3600-3699/3607.md
+MASTER,3608,Design de Tabelas e Dados Densos Responsivos,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,Experiências adaptativas e responsivas,ACTIVE,,prompts/3600-3699/3608.md
+MASTER,3609,Padrões de Navegação Responsiva e Menus,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,Experiências adaptativas e responsivas,ACTIVE,,prompts/3600-3699/3609.md
+MASTER,3610,Pesquisa de Usabilidade e Avaliação de Fluxos,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,"Pesquisa de usabilidade, handoff e inclusão",ACTIVE,,prompts/3600-3699/3610.md
+MASTER,3611,Handoff UX/UI para Engenharia e Critérios de Aceite,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,"Pesquisa de usabilidade, handoff e inclusão",ACTIVE,,prompts/3600-3699/3611.md
+MASTER,3612,UX Inclusiva e Acessibilidade de Jornadas,G09 — Design de produto e experiência,Design de produto e experiência do usuário,Design de Produto e UX/UI,"Pesquisa de usabilidade, handoff e inclusão",ACTIVE,,prompts/3600-3699/3612.md
+BPD,BPD-001,Transformar ideia em projeto,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Ideação do projeto,EDITORIAL_REVIEW_REQUIRED,0001;0101,colecoes/programacao-design/prompts/BPD-001.md
+BPD,BPD-002,Analisar viabilidade,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Ideação do projeto,EDITORIAL_REVIEW_REQUIRED,0006;0011,colecoes/programacao-design/prompts/BPD-002.md
+BPD,BPD-003,Definir escopo,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Ideação do projeto,EDITORIAL_REVIEW_REQUIRED,2302;0101,colecoes/programacao-design/prompts/BPD-003.md
+BPD,BPD-004,Descobrir funcionalidades,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Ideação do projeto,EDITORIAL_REVIEW_REQUIRED,0101;0102,colecoes/programacao-design/prompts/BPD-004.md
+BPD,BPD-005,Criar visão do produto,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Ideação do projeto,EDITORIAL_REVIEW_REQUIRED,2301;0011,colecoes/programacao-design/prompts/BPD-005.md
+BPD,BPD-006,Requisitos funcionais,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Levantamento de requisitos,EDITORIAL_REVIEW_REQUIRED,0102,colecoes/programacao-design/prompts/BPD-006.md
+BPD,BPD-007,Requisitos não funcionais,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Levantamento de requisitos,EDITORIAL_REVIEW_REQUIRED,0103,colecoes/programacao-design/prompts/BPD-007.md
+BPD,BPD-008,Regras de negócio,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Levantamento de requisitos,EDITORIAL_REVIEW_REQUIRED,0105;0102,colecoes/programacao-design/prompts/BPD-008.md
+BPD,BPD-009,Casos de uso,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Levantamento de requisitos,EDITORIAL_REVIEW_REQUIRED,0101;0104,colecoes/programacao-design/prompts/BPD-009.md
+BPD,BPD-010,Critérios de aceite,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Levantamento de requisitos,EDITORIAL_REVIEW_REQUIRED,0104,colecoes/programacao-design/prompts/BPD-010.md
+BPD,BPD-011,Planejamento completo,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Planejamento técnico,EDITORIAL_REVIEW_REQUIRED,2301;0025,colecoes/programacao-design/prompts/BPD-011.md
+BPD,BPD-012,Dividir em fases,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Planejamento técnico,EDITORIAL_REVIEW_REQUIRED,2306;2301,colecoes/programacao-design/prompts/BPD-012.md
+BPD,BPD-013,Criar backlog,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Planejamento técnico,EDITORIAL_REVIEW_REQUIRED,2303;2307,colecoes/programacao-design/prompts/BPD-013.md
+BPD,BPD-014,Roadmap,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Planejamento técnico,EDITORIAL_REVIEW_REQUIRED,2306,colecoes/programacao-design/prompts/BPD-014.md
+BPD,BPD-015,Dependências,"G01 — Estratégia, gestão e governança",Governança e planejamento,Gestão de Projetos de TI,Planejamento técnico,EDITORIAL_REVIEW_REQUIRED,2308;2316,colecoes/programacao-design/prompts/BPD-015.md
+BPD,BPD-016,Arquitetura completa,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquitetura de software,EDITORIAL_REVIEW_REQUIRED,0201;0501,colecoes/programacao-design/prompts/BPD-016.md
+BPD,BPD-017,Comparar arquiteturas,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquitetura de software,EDITORIAL_REVIEW_REQUIRED,0201;0007,colecoes/programacao-design/prompts/BPD-017.md
+BPD,BPD-018,Arquitetura modular,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquitetura de software,EDITORIAL_REVIEW_REQUIRED,0204;0212,colecoes/programacao-design/prompts/BPD-018.md
+BPD,BPD-019,Clean Architecture,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquitetura de software,EDITORIAL_REVIEW_REQUIRED,0203,colecoes/programacao-design/prompts/BPD-019.md
+BPD,BPD-020,Domain-Driven Design,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Arquitetura de software,EDITORIAL_REVIEW_REQUIRED,0202;0212,colecoes/programacao-design/prompts/BPD-020.md
+BPD,BPD-021,Escolher stack,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Escolha de tecnologias,EDITORIAL_REVIEW_REQUIRED,0007;0011,colecoes/programacao-design/prompts/BPD-021.md
+BPD,BPD-022,Frontend,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Escolha de tecnologias,EDITORIAL_REVIEW_REQUIRED,0401;0402,colecoes/programacao-design/prompts/BPD-022.md
+BPD,BPD-023,Backend,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Escolha de tecnologias,EDITORIAL_REVIEW_REQUIRED,0301;0303,colecoes/programacao-design/prompts/BPD-023.md
+BPD,BPD-024,Banco de dados,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Escolha de tecnologias,EDITORIAL_REVIEW_REQUIRED,0701;0702,colecoes/programacao-design/prompts/BPD-024.md
+BPD,BPD-025,Tecnologias alternativas,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Escolha de tecnologias,EDITORIAL_REVIEW_REQUIRED,0007;0011,colecoes/programacao-design/prompts/BPD-025.md
+BPD,BPD-026,Estrutura de pastas,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Estrutura de projeto,EDITORIAL_REVIEW_REQUIRED,0019;2907,colecoes/programacao-design/prompts/BPD-026.md
+BPD,BPD-027,Monorepo,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Estrutura de projeto,EDITORIAL_REVIEW_REQUIRED,0504;0513,colecoes/programacao-design/prompts/BPD-027.md
+BPD,BPD-028,Convenções,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Estrutura de projeto,EDITORIAL_REVIEW_REQUIRED,0110;2003,colecoes/programacao-design/prompts/BPD-028.md
+BPD,BPD-029,Configurações,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Estrutura de projeto,EDITORIAL_REVIEW_REQUIRED,1104;0117,colecoes/programacao-design/prompts/BPD-029.md
+BPD,BPD-030,Variáveis de ambiente,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Estrutura de projeto,EDITORIAL_REVIEW_REQUIRED,1104;1503,colecoes/programacao-design/prompts/BPD-030.md
+BPD,BPD-031,Modelagem,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Banco de dados,EDITORIAL_REVIEW_REQUIRED,0701,colecoes/programacao-design/prompts/BPD-031.md
+BPD,BPD-032,Schema,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Banco de dados,EDITORIAL_REVIEW_REQUIRED,0702,colecoes/programacao-design/prompts/BPD-032.md
+BPD,BPD-033,ERD,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Banco de dados,EDITORIAL_REVIEW_REQUIRED,0701;2409,colecoes/programacao-design/prompts/BPD-033.md
+BPD,BPD-034,Índices,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Banco de dados,EDITORIAL_REVIEW_REQUIRED,0704,colecoes/programacao-design/prompts/BPD-034.md
+BPD,BPD-035,Auditoria de banco,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Banco de dados,EDITORIAL_REVIEW_REQUIRED,2506;0708,colecoes/programacao-design/prompts/BPD-035.md
+BPD,BPD-036,Projetar API,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,APIs,EDITORIAL_REVIEW_REQUIRED,0601,colecoes/programacao-design/prompts/BPD-036.md
+BPD,BPD-037,REST,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,APIs,EDITORIAL_REVIEW_REQUIRED,0601,colecoes/programacao-design/prompts/BPD-037.md
+BPD,BPD-038,OpenAPI,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,APIs,EDITORIAL_REVIEW_REQUIRED,0602,colecoes/programacao-design/prompts/BPD-038.md
+BPD,BPD-039,Versionamento,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,APIs,EDITORIAL_REVIEW_REQUIRED,0608,colecoes/programacao-design/prompts/BPD-039.md
+BPD,BPD-040,Auditar API,G03 — Desenvolvimento e integrações,Integração e APIs,APIs e Integrações,APIs,EDITORIAL_REVIEW_REQUIRED,0608;2505,colecoes/programacao-design/prompts/BPD-040.md
+BPD,BPD-041,Criar módulo,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Backend,EDITORIAL_REVIEW_REQUIRED,0301;0502,colecoes/programacao-design/prompts/BPD-041.md
+BPD,BPD-042,Service layer,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Backend,EDITORIAL_REVIEW_REQUIRED,0318;0203,colecoes/programacao-design/prompts/BPD-042.md
+BPD,BPD-043,Validação,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Backend,EDITORIAL_REVIEW_REQUIRED,0311,colecoes/programacao-design/prompts/BPD-043.md
+BPD,BPD-044,Erros,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Backend,EDITORIAL_REVIEW_REQUIRED,0114,colecoes/programacao-design/prompts/BPD-044.md
+BPD,BPD-045,Refatorar backend,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Backend,EDITORIAL_REVIEW_REQUIRED,0005;2505,colecoes/programacao-design/prompts/BPD-045.md
+BPD,BPD-046,Criar aplicação,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Frontend,EDITORIAL_REVIEW_REQUIRED,0401;0402,colecoes/programacao-design/prompts/BPD-046.md
+BPD,BPD-047,Criar página,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Frontend,EDITORIAL_REVIEW_REQUIRED,0404;0502,colecoes/programacao-design/prompts/BPD-047.md
+BPD,BPD-048,Criar componente,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Frontend,EDITORIAL_REVIEW_REQUIRED,0404,colecoes/programacao-design/prompts/BPD-048.md
+BPD,BPD-049,Gerenciamento de estado,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Frontend,EDITORIAL_REVIEW_REQUIRED,0408;0420,colecoes/programacao-design/prompts/BPD-049.md
+BPD,BPD-050,Frontend conectado,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Frontend,EDITORIAL_REVIEW_REQUIRED,0420;0502,colecoes/programacao-design/prompts/BPD-050.md
+BPD,BPD-051,UX completo,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),UX/UI Design,EDITORIAL_REVIEW_REQUIRED,0404;0409,colecoes/programacao-design/prompts/BPD-051.md
+BPD,BPD-052,Wireframe,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),UX/UI Design,EDITORIAL_REVIEW_REQUIRED,0404;2409,colecoes/programacao-design/prompts/BPD-052.md
+BPD,BPD-053,Layout profissional,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),UX/UI Design,EDITORIAL_REVIEW_REQUIRED,0404,colecoes/programacao-design/prompts/BPD-053.md
+BPD,BPD-054,Redesign,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),UX/UI Design,EDITORIAL_REVIEW_REQUIRED,0404;2504,colecoes/programacao-design/prompts/BPD-054.md
+BPD,BPD-055,Hierarquia visual,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),UX/UI Design,EDITORIAL_REVIEW_REQUIRED,0404;0422,colecoes/programacao-design/prompts/BPD-055.md
+BPD,BPD-056,Criar design system,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Design System,EDITORIAL_REVIEW_REQUIRED,0404;0422,colecoes/programacao-design/prompts/BPD-056.md
+BPD,BPD-057,Biblioteca de componentes,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Design System,EDITORIAL_REVIEW_REQUIRED,0404,colecoes/programacao-design/prompts/BPD-057.md
+BPD,BPD-058,Tokens,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Design System,EDITORIAL_REVIEW_REQUIRED,0422,colecoes/programacao-design/prompts/BPD-058.md
+BPD,BPD-059,Estados dos componentes,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),Design System,EDITORIAL_REVIEW_REQUIRED,0404;0422,colecoes/programacao-design/prompts/BPD-059.md
+BPD,BPD-060,Consistência,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),Design System,EDITORIAL_REVIEW_REQUIRED,0404;2504,colecoes/programacao-design/prompts/BPD-060.md
+BPD,BPD-061,Responsividade completa,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),Responsividade,EDITORIAL_REVIEW_REQUIRED,0405;0406,colecoes/programacao-design/prompts/BPD-061.md
+BPD,BPD-062,Mobile-first,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),Responsividade,EDITORIAL_REVIEW_REQUIRED,0405;0505,colecoes/programacao-design/prompts/BPD-062.md
+BPD,BPD-063,Tabelas responsivas,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),Responsividade,EDITORIAL_REVIEW_REQUIRED,0409;0405,colecoes/programacao-design/prompts/BPD-063.md
+BPD,BPD-064,Menu responsivo,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Design de Produto e UX (candidata),Responsividade,EDITORIAL_REVIEW_REQUIRED,0404;0405,colecoes/programacao-design/prompts/BPD-064.md
+BPD,BPD-065,Auditoria de acessibilidade,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Acessibilidade,EDITORIAL_REVIEW_REQUIRED,0405;1620,colecoes/programacao-design/prompts/BPD-065.md
+BPD,BPD-066,Corrigir acessibilidade,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Acessibilidade,EDITORIAL_REVIEW_REQUIRED,0405;1620,colecoes/programacao-design/prompts/BPD-066.md
+BPD,BPD-067,Formulários acessíveis,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Acessibilidade,EDITORIAL_REVIEW_REQUIRED,0407;0405,colecoes/programacao-design/prompts/BPD-067.md
+BPD,BPD-068,Arquitetura de autenticação,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Autenticação e autorização,EDITORIAL_REVIEW_REQUIRED,0309;0503,colecoes/programacao-design/prompts/BPD-068.md
+BPD,BPD-069,RBAC,G06 — Segurança e identidade,Identidade e acesso,Identidade e Access Management,Autenticação e autorização,EDITORIAL_REVIEW_REQUIRED,3307;0309,colecoes/programacao-design/prompts/BPD-069.md
+BPD,BPD-070,Autorização,G03 — Desenvolvimento e integrações,Backend e serviços,Desenvolvimento Backend,Autenticação e autorização,EDITORIAL_REVIEW_REQUIRED,0309;1525,colecoes/programacao-design/prompts/BPD-070.md
+BPD,BPD-071,Auditoria de segurança,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Segurança,EDITORIAL_REVIEW_REQUIRED,1501;2509,colecoes/programacao-design/prompts/BPD-071.md
+BPD,BPD-072,Threat modeling,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Segurança,EDITORIAL_REVIEW_REQUIRED,1502;1520,colecoes/programacao-design/prompts/BPD-072.md
+BPD,BPD-073,Segredos,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Segurança,EDITORIAL_REVIEW_REQUIRED,1503,colecoes/programacao-design/prompts/BPD-073.md
+BPD,BPD-074,Segurança de API,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Segurança,EDITORIAL_REVIEW_REQUIRED,1505,colecoes/programacao-design/prompts/BPD-074.md
+BPD,BPD-075,Revisão completa,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Code Review,EDITORIAL_REVIEW_REQUIRED,0108;2502,colecoes/programacao-design/prompts/BPD-075.md
+BPD,BPD-076,Review sem modificar,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Code Review,EDITORIAL_REVIEW_REQUIRED,0108,colecoes/programacao-design/prompts/BPD-076.md
+BPD,BPD-077,Review de pull request,G05 — Plataforma e operações,Automação e entrega,Git e GitHub,Code Review,EDITORIAL_REVIEW_REQUIRED,2005;0120,colecoes/programacao-design/prompts/BPD-077.md
+BPD,BPD-078,Review arquitetural,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Code Review,EDITORIAL_REVIEW_REQUIRED,2503;0201,colecoes/programacao-design/prompts/BPD-078.md
+BPD,BPD-079,Diagnosticar erro,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Debug e correção,EDITORIAL_REVIEW_REQUIRED,0004;0109,colecoes/programacao-design/prompts/BPD-079.md
+BPD,BPD-080,Corrigir bug,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Debug e correção,EDITORIAL_REVIEW_REQUIRED,2601;0005,colecoes/programacao-design/prompts/BPD-080.md
+BPD,BPD-081,Página em branco,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Debug e correção,EDITORIAL_REVIEW_REQUIRED,2622,colecoes/programacao-design/prompts/BPD-081.md
+BPD,BPD-082,Erro de API,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Debug e correção,EDITORIAL_REVIEW_REQUIRED,2604,colecoes/programacao-design/prompts/BPD-082.md
+BPD,BPD-083,Causa raiz,"G07 — Qualidade, auditoria e suporte",Suporte e diagnóstico,Diagnóstico e Troubleshooting,Debug e correção,EDITORIAL_REVIEW_REQUIRED,2610,colecoes/programacao-design/prompts/BPD-083.md
+BPD,BPD-084,Refatorar código,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Refatoração,EDITORIAL_REVIEW_REQUIRED,0005,colecoes/programacao-design/prompts/BPD-084.md
+BPD,BPD-085,Eliminar duplicação,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Refatoração,EDITORIAL_REVIEW_REQUIRED,0110,colecoes/programacao-design/prompts/BPD-085.md
+BPD,BPD-086,Reduzir complexidade,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Engenharia de Software,Refatoração,EDITORIAL_REVIEW_REQUIRED,0113;0110,colecoes/programacao-design/prompts/BPD-086.md
+BPD,BPD-087,Código legado,G02 — Engenharia e arquitetura,Transformação e plataformas,Modernização e Migração,Refatoração,EDITORIAL_REVIEW_REQUIRED,2801;0008,colecoes/programacao-design/prompts/BPD-087.md
+BPD,BPD-088,Estratégia de testes,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Testes,EDITORIAL_REVIEW_REQUIRED,1601,colecoes/programacao-design/prompts/BPD-088.md
+BPD,BPD-089,Testes unitários,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Testes,EDITORIAL_REVIEW_REQUIRED,1602,colecoes/programacao-design/prompts/BPD-089.md
+BPD,BPD-090,Testes de integração,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Testes,EDITORIAL_REVIEW_REQUIRED,1603,colecoes/programacao-design/prompts/BPD-090.md
+BPD,BPD-091,E2E,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Testes,EDITORIAL_REVIEW_REQUIRED,1604,colecoes/programacao-design/prompts/BPD-091.md
+BPD,BPD-092,Regressão,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,QA e Testes,Testes,EDITORIAL_REVIEW_REQUIRED,1609;1610,colecoes/programacao-design/prompts/BPD-092.md
+BPD,BPD-093,Auditoria de desempenho,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Performance,EDITORIAL_REVIEW_REQUIRED,0016;2701,colecoes/programacao-design/prompts/BPD-093.md
+BPD,BPD-094,Performance frontend,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Performance,EDITORIAL_REVIEW_REQUIRED,0406;2710,colecoes/programacao-design/prompts/BPD-094.md
+BPD,BPD-095,Performance backend,G02 — Engenharia e arquitetura,Desempenho e resiliência,"Performance, Escalabilidade e Resiliência",Performance,EDITORIAL_REVIEW_REQUIRED,2709,colecoes/programacao-design/prompts/BPD-095.md
+BPD,BPD-096,Banco lento,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Performance,EDITORIAL_REVIEW_REQUIRED,0703;0716,colecoes/programacao-design/prompts/BPD-096.md
+BPD,BPD-097,Arquitetura de produção,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,DevOps e infraestrutura,EDITORIAL_REVIEW_REQUIRED,0028;0209,colecoes/programacao-design/prompts/BPD-097.md
+BPD,BPD-098,Docker,G05 — Plataforma e operações,Cloud e runtime,Containers e Kubernetes,DevOps e infraestrutura,EDITORIAL_REVIEW_REQUIRED,1201,colecoes/programacao-design/prompts/BPD-098.md
+BPD,BPD-099,CI/CD,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,DevOps e infraestrutura,EDITORIAL_REVIEW_REQUIRED,1101;1102,colecoes/programacao-design/prompts/BPD-099.md
+BPD,BPD-100,Deploy,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,DevOps e infraestrutura,EDITORIAL_REVIEW_REQUIRED,1105,colecoes/programacao-design/prompts/BPD-100.md
+BPD,BPD-101,Logs,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Observabilidade,EDITORIAL_REVIEW_REQUIRED,2103,colecoes/programacao-design/prompts/BPD-101.md
+BPD,BPD-102,Monitoramento,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Observabilidade,EDITORIAL_REVIEW_REQUIRED,2102;2105,colecoes/programacao-design/prompts/BPD-102.md
+BPD,BPD-103,Tracing,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Observabilidade,EDITORIAL_REVIEW_REQUIRED,2122;2111,colecoes/programacao-design/prompts/BPD-103.md
+BPD,BPD-104,Health checks,G05 — Plataforma e operações,Confiabilidade e observabilidade,SRE e Observabilidade,Observabilidade,EDITORIAL_REVIEW_REQUIRED,2102,colecoes/programacao-design/prompts/BPD-104.md
+BPD,BPD-105,README,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentação,EDITORIAL_REVIEW_REQUIRED,2401,colecoes/programacao-design/prompts/BPD-105.md
+BPD,BPD-106,Documentação técnica,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Documentação,EDITORIAL_REVIEW_REQUIRED,0013;2410,colecoes/programacao-design/prompts/BPD-106.md
+BPD,BPD-107,API,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentação,EDITORIAL_REVIEW_REQUIRED,2403,colecoes/programacao-design/prompts/BPD-107.md
+BPD,BPD-108,Onboarding,G08 — Documentação e coding agents,Conhecimento e documentação,Documentação Técnica,Documentação,EDITORIAL_REVIEW_REQUIRED,2411,colecoes/programacao-design/prompts/BPD-108.md
+BPD,BPD-109,Auditoria geral,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Auditoria completa de projeto,EDITORIAL_REVIEW_REQUIRED,0002;2501,colecoes/programacao-design/prompts/BPD-109.md
+BPD,BPD-110,Código versus documentação,"G07 — Qualidade, auditoria e suporte",Qualidade e auditoria,Auditoria Técnica,Auditoria completa de projeto,EDITORIAL_REVIEW_REQUIRED,2511,colecoes/programacao-design/prompts/BPD-110.md
+BPD,BPD-111,Detectar implementação fictícia,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Auditoria completa de projeto,EDITORIAL_REVIEW_REQUIRED,0002;2510,colecoes/programacao-design/prompts/BPD-111.md
+BPD,BPD-112,Mapa de pendências,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Auditoria completa de projeto,EDITORIAL_REVIEW_REQUIRED,0025;2303,colecoes/programacao-design/prompts/BPD-112.md
+BPD,BPD-113,Critério de conclusão,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Auditoria completa de projeto,EDITORIAL_REVIEW_REQUIRED,0010;0020,colecoes/programacao-design/prompts/BPD-113.md
+BPD,BPD-114,Planejar antes de alterar,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompts de execução autônoma,EDITORIAL_REVIEW_REQUIRED,0023;0022,colecoes/programacao-design/prompts/BPD-114.md
+BPD,BPD-115,Implementação incremental,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Prompts de execução autônoma,EDITORIAL_REVIEW_REQUIRED,0502;0021,colecoes/programacao-design/prompts/BPD-115.md
+BPD,BPD-116,Corrigir antes de desenvolver,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompts de execução autônoma,EDITORIAL_REVIEW_REQUIRED,0027;0003,colecoes/programacao-design/prompts/BPD-116.md
+BPD,BPD-117,Não recriar,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompts de execução autônoma,EDITORIAL_REVIEW_REQUIRED,0003;0112,colecoes/programacao-design/prompts/BPD-117.md
+BPD,BPD-118,Validação obrigatória,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompts de execução autônoma,EDITORIAL_REVIEW_REQUIRED,0010;0020,colecoes/programacao-design/prompts/BPD-118.md
+BPD,BPD-119,Arquiteto,G02 — Engenharia e arquitetura,Engenharia de software e arquitetura,Arquitetura de Sistemas,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,0201;0011,colecoes/programacao-design/prompts/BPD-119.md
+BPD,BPD-120,Tech Lead,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,0011;2301,colecoes/programacao-design/prompts/BPD-120.md
+BPD,BPD-121,Desenvolvedor Full Stack,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Full Stack e Mobile,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,0502,colecoes/programacao-design/prompts/BPD-121.md
+BPD,BPD-122,UX/UI Designer,G03 — Desenvolvimento e integrações,Desenvolvimento de aplicações,Desenvolvimento Frontend,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,0404;0405,colecoes/programacao-design/prompts/BPD-122.md
+BPD,BPD-123,DBA,"G04 — Dados, analytics e IA",Dados e pipelines,Banco de Dados,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,0702;2506,colecoes/programacao-design/prompts/BPD-123.md
+BPD,BPD-124,DevOps,G05 — Plataforma e operações,Automação e entrega,DevOps e CI/CD,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,1101;2508,colecoes/programacao-design/prompts/BPD-124.md
+BPD,BPD-125,Segurança,G06 — Segurança e identidade,Segurança e supply chain,Segurança da Informação,Prompts para IA agir como equipe técnica,EDITORIAL_REVIEW_REQUIRED,1501;2509,colecoes/programacao-design/prompts/BPD-125.md
+BPD,BPD-126,Prompt Mestre,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompt Mestre — Programação + Design,EDITORIAL_REVIEW_REQUIRED,0001;0502;0404,colecoes/programacao-design/prompts/BPD-126.md
+BPD,BPD-127,Desenvolvimento contínuo,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompt para continuar automaticamente um projeto,EDITORIAL_REVIEW_REQUIRED,0003;0021,colecoes/programacao-design/prompts/BPD-127.md
+BPD,BPD-128,Do conceito à produção,"G01 — Estratégia, gestão e governança",Governança e planejamento,Prompts Mestres e Universais,Prompt para transformar uma ideia em aplicação pronta,EDITORIAL_REVIEW_REQUIRED,0001;0020,colecoes/programacao-design/prompts/BPD-128.md

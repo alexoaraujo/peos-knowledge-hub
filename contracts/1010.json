@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "1010",
+  "title": "Modelo Estrela para BI",
+  "content_sha256": "be172739d9ae5f1ae3e240642634d1160ffcc4f0b22467abe4c9fe4181d1f13d",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "planejar, analisar, implementar ou auditar **Modelo Estrela para BI** com evidências, critérios de sucesso e validação reproduzível.",
+  "when_to_use": "quando [PROJETO], [SISTEMA], [REPOSITÓRIO], [AMBIENTE] ou [PROBLEMA] exigir trabalho específico de Modelo Estrela para BI.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [ARQUITETURA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], [RESTRIÇÕES], métricas, logs e evidências disponíveis.",
+  "output_contract": "baseline, evidências, análise especializada, decisão, plano priorizado, implementação/procedimento, testes, riscos, rollback e próxima ação.",
+  "acceptance_criteria": "nenhuma afirmação crítica sem evidência; critérios de sucesso explícitos; P0 tratados; mudanças críticas reversíveis; validação comportamental; itens não verificados identificados; resultado reproduzível.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3602",
+  "title": "Arquitetura da Informação e Fluxos de Usuário",
+  "content_sha256": "172887a94bd4cfc1f607efd68c6265c82e18b09270d47acc5017d36c80946ef7",
+  "status": "CURATED",
+  "goal": "Projetar navegação, estrutura de informação, jornadas e fluxos de tarefa a partir de objetivos reais.",
+  "when_to_use": "Redesenho de fluxo, mapa de navegação, jornadas e organização de conteúdo.",
+  "inputs": "perfis e tarefas; inventário de conteúdo; permissões; dispositivos; jornadas atuais",
+  "output_contract": "mapa de informação; fluxogramas com entradas e saídas; caminhos alternativos; jornadas e critérios de descoberta",
+  "acceptance_criteria": "Cada tarefa prioritária tem caminho completo; retornos, estados vazios e acesso negado são modelados e testáveis.",
+  "guardrails": "Identifique tarefas críticas, caminhos de erro e restrições de autorização. Não altere regras de negócio sem aprovação.",
+  "related_ids": [
+    "0202",
+    "0404",
+    "0409"
+  ],
+  "source_links": [
+    "BPD-051"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

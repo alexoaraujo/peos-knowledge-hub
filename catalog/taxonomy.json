@@ -1,0 +1,823 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomic_policy": "editorial-mapping-does-not-change-permanent-ID",
+  "groups": [
+    "G01 — Estratégia, gestão e governança",
+    "G02 — Engenharia e arquitetura",
+    "G03 — Desenvolvimento e integrações",
+    "G04 — Dados, analytics e IA",
+    "G05 — Plataforma e operações",
+    "G06 — Segurança e identidade",
+    "G07 — Qualidade, auditoria e suporte",
+    "G08 — Documentação e coding agents",
+    "G09 — Design de produto e experiência"
+  ],
+  "technical_sectors": [
+    "Agentes de desenvolvimento",
+    "Analytics e ML",
+    "Automação e entrega",
+    "Backend e serviços",
+    "Cloud e runtime",
+    "Confiabilidade e observabilidade",
+    "Conhecimento e documentação",
+    "Dados e pipelines",
+    "Desempenho e resiliência",
+    "Desenvolvimento de aplicações",
+    "Economia e FinOps",
+    "Engenharia de software e arquitetura",
+    "Governança e planejamento",
+    "IA e sistemas cognitivos",
+    "Identidade e acesso",
+    "Infraestrutura e redes",
+    "Integração e APIs",
+    "Mensageria e sistemas distribuídos",
+    "Qualidade e auditoria",
+    "Segurança e supply chain",
+    "Suporte e diagnóstico",
+    "Transformação e plataformas",
+    "Design de produto e experiência do usuário"
+  ],
+  "categories": [
+    {
+      "code": "0000",
+      "name": "Prompts Mestres e Universais",
+      "group": "G01 — Estratégia, gestão e governança",
+      "technical_sector": "Governança e planejamento",
+      "subcategories": [
+        {
+          "name": "Criação, diagnóstico e evolução",
+          "from": 1,
+          "to": 10
+        },
+        {
+          "name": "Decisão, auditoria e release",
+          "from": 11,
+          "to": 20
+        },
+        {
+          "name": "Execução, evidências e gates",
+          "from": 21,
+          "to": 28
+        }
+      ]
+    },
+    {
+      "code": "0100",
+      "name": "Engenharia de Software",
+      "group": "G02 — Engenharia e arquitetura",
+      "technical_sector": "Engenharia de software e arquitetura",
+      "subcategories": [
+        {
+          "name": "Requisitos e análise",
+          "from": 101,
+          "to": 105
+        },
+        {
+          "name": "Qualidade e manutenção",
+          "from": 106,
+          "to": 110
+        },
+        {
+          "name": "Engenharia de código e práticas avançadas",
+          "from": 111,
+          "to": 120
+        }
+      ]
+    },
+    {
+      "code": "0200",
+      "name": "Arquitetura de Sistemas",
+      "group": "G02 — Engenharia e arquitetura",
+      "technical_sector": "Engenharia de software e arquitetura",
+      "subcategories": [
+        {
+          "name": "Estilos, domínio e modularização",
+          "from": 201,
+          "to": 205
+        },
+        {
+          "name": "Distribuição e decisões arquiteturais",
+          "from": 206,
+          "to": 210
+        },
+        {
+          "name": "Modelagem e padrões arquiteturais",
+          "from": 211,
+          "to": 215
+        },
+        {
+          "name": "Arquiteturas especializadas",
+          "from": 216,
+          "to": 220
+        }
+      ]
+    },
+    {
+      "code": "0300",
+      "name": "Desenvolvimento Backend",
+      "group": "G03 — Desenvolvimento e integrações",
+      "technical_sector": "Backend e serviços",
+      "subcategories": [
+        {
+          "name": "Frameworks e runtimes",
+          "from": 301,
+          "to": 308
+        },
+        {
+          "name": "Serviços seguros e padrões backend",
+          "from": 309,
+          "to": 316
+        },
+        {
+          "name": "Operação e engenharia de serviços",
+          "from": 317,
+          "to": 322
+        }
+      ]
+    },
+    {
+      "code": "0400",
+      "name": "Desenvolvimento Frontend",
+      "group": "G03 — Desenvolvimento e integrações",
+      "technical_sector": "Desenvolvimento de aplicações",
+      "subcategories": [
+        {
+          "name": "Interfaces, UX e qualidade",
+          "from": 401,
+          "to": 410
+        },
+        {
+          "name": "Renderização e experiência web",
+          "from": 411,
+          "to": 418
+        },
+        {
+          "name": "Resiliência e design de interface",
+          "from": 419,
+          "to": 422
+        }
+      ]
+    },
+    {
+      "code": "0500",
+      "name": "Full Stack e Mobile",
+      "group": "G03 — Desenvolvimento e integrações",
+      "technical_sector": "Desenvolvimento de aplicações",
+      "subcategories": [
+        {
+          "name": "Full Stack e entrega",
+          "from": 501,
+          "to": 506
+        },
+        {
+          "name": "Aplicações mobile",
+          "from": 507,
+          "to": 512
+        },
+        {
+          "name": "Monorepos e integração de aplicações",
+          "from": 513,
+          "to": 516
+        }
+      ]
+    },
+    {
+      "code": "0600",
+      "name": "APIs e Integrações",
+      "group": "G03 — Desenvolvimento e integrações",
+      "technical_sector": "Integração e APIs",
+      "subcategories": [
+        {
+          "name": "Design e contratos de APIs",
+          "from": 601,
+          "to": 608
+        },
+        {
+          "name": "Protocolos e APIs avançadas",
+          "from": 609,
+          "to": 614
+        },
+        {
+          "name": "Resiliência e governança de APIs",
+          "from": 615,
+          "to": 620
+        }
+      ]
+    },
+    {
+      "code": "0700",
+      "name": "Banco de Dados",
+      "group": "G04 — Dados, analytics e IA",
+      "technical_sector": "Dados e pipelines",
+      "subcategories": [
+        {
+          "name": "Modelagem e administração de dados",
+          "from": 701,
+          "to": 710
+        },
+        {
+          "name": "PostgreSQL e operações avançadas",
+          "from": 711,
+          "to": 718
+        },
+        {
+          "name": "Bancos especializados",
+          "from": 719,
+          "to": 722
+        }
+      ]
+    },
+    {
+      "code": "0800",
+      "name": "Data Engineering",
+      "group": "G04 — Dados, analytics e IA",
+      "technical_sector": "Dados e pipelines",
+      "subcategories": [
+        {
+          "name": "Pipelines e governança de dados",
+          "from": 801,
+          "to": 806
+        },
+        {
+          "name": "Streaming e plataformas de processamento",
+          "from": 807,
+          "to": 812
+        },
+        {
+          "name": "Contratos e modelagem analítica",
+          "from": 813,
+          "to": 816
+        }
+      ]
+    },
+    {
+      "code": "0900",
+      "name": "Data Science e Machine Learning",
+      "group": "G04 — Dados, analytics e IA",
+      "technical_sector": "Analytics e ML",
+      "subcategories": [
+        {
+          "name": "Ciclo de vida de ML",
+          "from": 901,
+          "to": 908
+        },
+        {
+          "name": "Modelagem avançada e MLOps",
+          "from": 909,
+          "to": 916
+        }
+      ]
+    },
+    {
+      "code": "1000",
+      "name": "Business Intelligence",
+      "group": "G04 — Dados, analytics e IA",
+      "technical_sector": "Analytics e ML",
+      "subcategories": [
+        {
+          "name": "BI, SQL e painéis",
+          "from": 1001,
+          "to": 1005
+        },
+        {
+          "name": "Analytics e governança avançados",
+          "from": 1006,
+          "to": 1013
+        }
+      ]
+    },
+    {
+      "code": "1100",
+      "name": "DevOps e CI/CD",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Automação e entrega",
+      "subcategories": [
+        {
+          "name": "Pipelines e releases",
+          "from": 1101,
+          "to": 1108
+        },
+        {
+          "name": "Entrega contínua e GitOps",
+          "from": 1109,
+          "to": 1114
+        },
+        {
+          "name": "Governança e promoção de ambientes",
+          "from": 1115,
+          "to": 1118
+        }
+      ]
+    },
+    {
+      "code": "1200",
+      "name": "Containers e Kubernetes",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Cloud e runtime",
+      "subcategories": [
+        {
+          "name": "Containerização e fundamentos Kubernetes",
+          "from": 1201,
+          "to": 1208
+        },
+        {
+          "name": "Kubernetes avançado",
+          "from": 1209,
+          "to": 1218
+        }
+      ]
+    },
+    {
+      "code": "1300",
+      "name": "IaC e Automação",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Automação e entrega",
+      "subcategories": [
+        {
+          "name": "IaC e automação operacional",
+          "from": 1301,
+          "to": 1308
+        },
+        {
+          "name": "Infraestrutura e testes avançados",
+          "from": 1309,
+          "to": 1318
+        }
+      ]
+    },
+    {
+      "code": "1400",
+      "name": "Cloud Computing",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Cloud e runtime",
+      "subcategories": [
+        {
+          "name": "Plataformas cloud e provedores",
+          "from": 1401,
+          "to": 1408
+        },
+        {
+          "name": "Operação e segurança de cloud",
+          "from": 1409,
+          "to": 1417
+        },
+        {
+          "name": "Ambientes, previews e cloud avançada",
+          "from": 1418,
+          "to": 1426
+        }
+      ]
+    },
+    {
+      "code": "1500",
+      "name": "Segurança da Informação",
+      "group": "G06 — Segurança e identidade",
+      "technical_sector": "Segurança e supply chain",
+      "subcategories": [
+        {
+          "name": "Fundamentos e auditoria AppSec",
+          "from": 1501,
+          "to": 1510
+        },
+        {
+          "name": "Avaliações, frameworks e supply chain",
+          "from": 1511,
+          "to": 1518
+        },
+        {
+          "name": "Ameaças e controles avançados",
+          "from": 1519,
+          "to": 1526
+        }
+      ]
+    },
+    {
+      "code": "1600",
+      "name": "QA e Testes",
+      "group": "G07 — Qualidade, auditoria e suporte",
+      "technical_sector": "Qualidade e auditoria",
+      "subcategories": [
+        {
+          "name": "Fundamentos e testes automatizados",
+          "from": 1601,
+          "to": 1610
+        },
+        {
+          "name": "Ferramentas e testes avançados",
+          "from": 1611,
+          "to": 1616
+        },
+        {
+          "name": "Qualidade, dados e gates",
+          "from": 1617,
+          "to": 1622
+        }
+      ]
+    },
+    {
+      "code": "1700",
+      "name": "Inteligência Artificial e LLM",
+      "group": "G04 — Dados, analytics e IA",
+      "technical_sector": "IA e sistemas cognitivos",
+      "subcategories": [
+        {
+          "name": "Prompts, agentes e RAG",
+          "from": 1701,
+          "to": 1710
+        },
+        {
+          "name": "Contexto, estruturação e coordenação",
+          "from": 1711,
+          "to": 1718
+        },
+        {
+          "name": "Busca, observabilidade e governança",
+          "from": 1719,
+          "to": 1726
+        }
+      ]
+    },
+    {
+      "code": "1800",
+      "name": "Redes",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Infraestrutura e redes",
+      "subcategories": [
+        {
+          "name": "Redes e conectividade",
+          "from": 1801,
+          "to": 1808
+        },
+        {
+          "name": "Redes modernas e diagnóstico",
+          "from": 1809,
+          "to": 1818
+        }
+      ]
+    },
+    {
+      "code": "1900",
+      "name": "Administração de Sistemas",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Infraestrutura e redes",
+      "subcategories": [
+        {
+          "name": "Administração de sistemas",
+          "from": 1901,
+          "to": 1908
+        },
+        {
+          "name": "Serviços, segurança e confiabilidade",
+          "from": 1909,
+          "to": 1918
+        }
+      ]
+    },
+    {
+      "code": "2000",
+      "name": "Git e GitHub",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Automação e entrega",
+      "subcategories": [
+        {
+          "name": "Git, PRs e governança",
+          "from": 2001,
+          "to": 2010
+        },
+        {
+          "name": "Proteção de repositórios e Actions",
+          "from": 2011,
+          "to": 2018
+        },
+        {
+          "name": "Artefatos, templates e repositórios",
+          "from": 2019,
+          "to": 2022
+        }
+      ]
+    },
+    {
+      "code": "2100",
+      "name": "SRE e Observabilidade",
+      "group": "G05 — Plataforma e operações",
+      "technical_sector": "Confiabilidade e observabilidade",
+      "subcategories": [
+        {
+          "name": "Práticas SRE e incidentes",
+          "from": 2101,
+          "to": 2110
+        },
+        {
+          "name": "Instrumentação, métricas e alerta",
+          "from": 2111,
+          "to": 2118
+        },
+        {
+          "name": "Monitoramento e rastreamento",
+          "from": 2119,
+          "to": 2122
+        }
+      ]
+    },
+    {
+      "code": "2200",
+      "name": "Suporte Técnico e Help Desk",
+      "group": "G07 — Qualidade, auditoria e suporte",
+      "technical_sector": "Suporte e diagnóstico",
+      "subcategories": [
+        {
+          "name": "Suporte e resolução",
+          "from": 2201,
+          "to": 2206
+        },
+        {
+          "name": "Suporte avançado e canais",
+          "from": 2207,
+          "to": 2212
+        }
+      ]
+    },
+    {
+      "code": "2300",
+      "name": "Gestão de Projetos de TI",
+      "group": "G01 — Estratégia, gestão e governança",
+      "technical_sector": "Governança e planejamento",
+      "subcategories": [
+        {
+          "name": "Gestão e planejamento",
+          "from": 2301,
+          "to": 2310
+        },
+        {
+          "name": "Gestão ágil e coordenação",
+          "from": 2311,
+          "to": 2318
+        }
+      ]
+    },
+    {
+      "code": "2400",
+      "name": "Documentação Técnica",
+      "group": "G08 — Documentação e coding agents",
+      "technical_sector": "Conhecimento e documentação",
+      "subcategories": [
+        {
+          "name": "Documentos e artefatos técnicos",
+          "from": 2401,
+          "to": 2410
+        },
+        {
+          "name": "Conteúdos especializados e docs as code",
+          "from": 2411,
+          "to": 2418
+        }
+      ]
+    },
+    {
+      "code": "2500",
+      "name": "Auditoria Técnica",
+      "group": "G07 — Qualidade, auditoria e suporte",
+      "technical_sector": "Qualidade e auditoria",
+      "subcategories": [
+        {
+          "name": "Auditorias técnicas e operacionais",
+          "from": 2501,
+          "to": 2512
+        },
+        {
+          "name": "Auditorias especializadas",
+          "from": 2513,
+          "to": 2522
+        }
+      ]
+    },
+    {
+      "code": "2600",
+      "name": "Diagnóstico e Troubleshooting",
+      "group": "G07 — Qualidade, auditoria e suporte",
+      "technical_sector": "Suporte e diagnóstico",
+      "subcategories": [
+        {
+          "name": "Diagnóstico geral e RCA",
+          "from": 2601,
+          "to": 2610
+        },
+        {
+          "name": "Falhas e diagnósticos especializados",
+          "from": 2611,
+          "to": 2622
+        }
+      ]
+    },
+    {
+      "code": "2700",
+      "name": "Performance, Escalabilidade e Resiliência",
+      "group": "G02 — Engenharia e arquitetura",
+      "technical_sector": "Desempenho e resiliência",
+      "subcategories": [
+        {
+          "name": "Performance e arquitetura de escala",
+          "from": 2701,
+          "to": 2706
+        },
+        {
+          "name": "Performance especializada",
+          "from": 2707,
+          "to": 2714
+        }
+      ]
+    },
+    {
+      "code": "2800",
+      "name": "Modernização e Migração",
+      "group": "G02 — Engenharia e arquitetura",
+      "technical_sector": "Transformação e plataformas",
+      "subcategories": [
+        {
+          "name": "Estratégias de modernização",
+          "from": 2801,
+          "to": 2806
+        },
+        {
+          "name": "Migrações especializadas e compatibilidade",
+          "from": 2807,
+          "to": 2814
+        }
+      ]
+    },
+    {
+      "code": "2900",
+      "name": "Platform Engineering e Developer Experience",
+      "group": "G02 — Engenharia e arquitetura",
+      "technical_sector": "Transformação e plataformas",
+      "subcategories": [
+        {
+          "name": "Fundamentos de Developer Experience",
+          "from": 2901,
+          "to": 2904
+        },
+        {
+          "name": "Plataformas internas e autosserviço",
+          "from": 2905,
+          "to": 2912
+        }
+      ]
+    },
+    {
+      "code": "3000",
+      "name": "FinOps e Custos",
+      "group": "G01 — Estratégia, gestão e governança",
+      "technical_sector": "Economia e FinOps",
+      "subcategories": [
+        {
+          "name": "Gestão e governança de custos",
+          "from": 3001,
+          "to": 3004
+        },
+        {
+          "name": "Custos técnicos especializados",
+          "from": 3005,
+          "to": 3010
+        }
+      ]
+    },
+    {
+      "code": "3100",
+      "name": "Governança, Risco e Privacidade",
+      "group": "G01 — Estratégia, gestão e governança",
+      "technical_sector": "Governança e planejamento",
+      "subcategories": [
+        {
+          "name": "Governança técnica e privacidade",
+          "from": 3101,
+          "to": 3104
+        },
+        {
+          "name": "Compliance, risco e evidências",
+          "from": 3105,
+          "to": 3112
+        }
+      ]
+    },
+    {
+      "code": "3200",
+      "name": "Mensageria, Streaming e Sistemas Distribuídos",
+      "group": "G04 — Dados, analytics e IA",
+      "technical_sector": "Mensageria e sistemas distribuídos",
+      "subcategories": [
+        {
+          "name": "Kafka e entrega de eventos",
+          "from": 3201,
+          "to": 3204
+        },
+        {
+          "name": "RabbitMQ e mensageria confiável",
+          "from": 3205,
+          "to": 3208
+        },
+        {
+          "name": "Consistência e padrões distribuídos",
+          "from": 3209,
+          "to": 3212
+        }
+      ]
+    },
+    {
+      "code": "3300",
+      "name": "Identidade e Access Management",
+      "group": "G06 — Segurança e identidade",
+      "technical_sector": "Identidade e acesso",
+      "subcategories": [
+        {
+          "name": "Identidades e federação",
+          "from": 3301,
+          "to": 3305
+        },
+        {
+          "name": "Autorização e identidades privilegiadas",
+          "from": 3306,
+          "to": 3310
+        }
+      ]
+    },
+    {
+      "code": "3400",
+      "name": "Software Supply Chain",
+      "group": "G06 — Segurança e identidade",
+      "technical_sector": "Segurança e supply chain",
+      "subcategories": [
+        {
+          "name": "Proveniência e dependências",
+          "from": 3401,
+          "to": 3405
+        },
+        {
+          "name": "Integridade e builds",
+          "from": 3406,
+          "to": 3410
+        }
+      ]
+    },
+    {
+      "code": "3500",
+      "name": "Coding Agents e Engenharia Assistida por IA",
+      "group": "G08 — Documentação e coding agents",
+      "technical_sector": "Agentes de desenvolvimento",
+      "subcategories": [
+        {
+          "name": "Instruções e especificação para agentes",
+          "from": 3501,
+          "to": 3505
+        },
+        {
+          "name": "Execução e validação por agentes",
+          "from": 3506,
+          "to": 3512
+        }
+      ]
+    },
+    {
+      "code": "3600",
+      "name": "Design de Produto e UX/UI",
+      "group": "G09 — Design de produto e experiência",
+      "technical_sector": "Design de produto e experiência do usuário",
+      "subcategories": [
+        {
+          "name": "Pesquisa e arquitetura da experiência",
+          "from": 3601,
+          "to": 3602
+        },
+        {
+          "name": "Wireframes, visual e redesign",
+          "from": 3603,
+          "to": 3605
+        },
+        {
+          "name": "Prototipação e interação",
+          "from": 3606,
+          "to": 3606
+        },
+        {
+          "name": "Experiências adaptativas e responsivas",
+          "from": 3607,
+          "to": 3609
+        },
+        {
+          "name": "Pesquisa de usabilidade, handoff e inclusão",
+          "from": 3610,
+          "to": 3612
+        }
+      ]
+    }
+  ],
+  "orthogonal_facets": [
+    "professional_role",
+    "project_phase",
+    "technology_tag",
+    "business_vertical",
+    "workflow",
+    "risk",
+    "deliverable"
+  ],
+  "business_vertical_policy": "Somente atribuir com evidência; novos setores de negócio não são presumidos na migração legado."
+}

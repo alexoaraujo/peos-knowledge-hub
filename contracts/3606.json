@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3606",
+  "title": "Prototipação Interativa e Contratos de Interação",
+  "content_sha256": "f172dd9179cf6d0dcdc040f522e988323c7d36a3a1ed223b44fde07abf02679e",
+  "status": "CURATED",
+  "goal": "Criar especificações de protótipos navegáveis para validar interações, transições e microinterações antes de codificar.",
+  "when_to_use": "Testar fluxos entre telas e comportamentos complexos com protótipos.",
+  "inputs": "wireframes; mapa de fluxos; eventos; estados; tarefas e dispositivos",
+  "output_contract": "roteiro de protótipo; mapa de estados; transições; gatilhos; critérios de interação; roteiro de teste",
+  "acceptance_criteria": "O protótipo cobre os caminhos principais e exceções; ações apresentam feedback previsto; testes podem ser reproduzidos.",
+  "guardrails": "Diferencie comportamento simulado de API real; registre explicitamente lacunas de backend e persistência.",
+  "related_ids": [
+    "0404",
+    "0502"
+  ],
+  "source_links": [
+    "BPD-052",
+    "BPD-051"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

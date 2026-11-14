@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3601",
+  "title": "Pesquisa UX e Descoberta de Necessidades",
+  "content_sha256": "e94900c3c9a9f7c591bf5c38950f21cb294759cc88fbbc8529c274154c627607",
+  "status": "CURATED",
+  "goal": "Transformar problema e hipóteses em plano de pesquisa UX e evidências sobre necessidades dos usuários, sem presumir resultados.",
+  "when_to_use": "Pesquisa exploratória, entrevistas e análise contextual anteriores ao design de telas.",
+  "inputs": "problema; perfis recrutáveis; hipóteses; restrições; pesquisa existente; critérios éticos",
+  "output_contract": "plano de pesquisa; roteiro de entrevistas; amostra e critérios de seleção; matriz hipótese-evidência; registro de limitações",
+  "acceptance_criteria": "Os métodos respondem às hipóteses; os critérios de seleção são explícitos; evidências e inferências aparecem separadas.",
+  "guardrails": "Não invente usuários, entrevistas ou dados observados. Marque hipóteses e achados não verificados; minimize PII; obtenha consentimento quando aplicável.",
+  "related_ids": [
+    "0404",
+    "0101"
+  ],
+  "source_links": [
+    "BPD-051"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:biblioteca-mestre:contract:2.0.0",
+  "title": "Contrato de prompt v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "title",
+    "content_sha256",
+    "status",
+    "goal",
+    "when_to_use",
+    "inputs",
+    "output_contract",
+    "acceptance_criteria",
+    "guardrails",
+    "related_ids",
+    "source_links",
+    "source_type",
+    "reviewer",
+    "reviewed_at",
+    "human_approval"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2
+    },
+    "content_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "status": {
+      "enum": [
+        "SOURCE_EXTRACTED",
+        "CURATED"
+      ]
+    },
+    "goal": {
+      "type": "string"
+    },
+    "when_to_use": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "string"
+    },
+    "output_contract": {
+      "type": "string"
+    },
+    "acceptance_criteria": {
+      "type": "string"
+    },
+    "guardrails": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "related_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "source_links": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "human_approval": {
+      "enum": [
+        "NOT_RECORDED",
+        "APPROVED"
+      ]
+    }
+  }
+}

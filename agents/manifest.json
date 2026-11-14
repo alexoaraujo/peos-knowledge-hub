@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "policy": "no execution credentials; design profiles only",
+  "agents": [
+    {
+      "id": "AGENT-001",
+      "name": "Prompt Universal PEOS",
+      "pmu_id": "PMU-001",
+      "workflow_id": "WF-001",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-002",
+      "name": "Criação de Projeto 360°",
+      "pmu_id": "PMU-002",
+      "workflow_id": "WF-002",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-003",
+      "name": "Auditoria Integral 360°",
+      "pmu_id": "PMU-003",
+      "workflow_id": "WF-003",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-004",
+      "name": "Continuidade Autônoma Controlada",
+      "pmu_id": "PMU-004",
+      "workflow_id": "WF-004",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-005",
+      "name": "Engenharia Full Stack",
+      "pmu_id": "PMU-005",
+      "workflow_id": "WF-005",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-006",
+      "name": "UX/UI e Design System",
+      "pmu_id": "PMU-006",
+      "workflow_id": "WF-006",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-007",
+      "name": "Segurança e Compliance",
+      "pmu_id": "PMU-007",
+      "workflow_id": "WF-007",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-008",
+      "name": "Dados e Inteligência Artificial",
+      "pmu_id": "PMU-008",
+      "workflow_id": "WF-008",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-009",
+      "name": "DevOps, SRE e Release",
+      "pmu_id": "PMU-009",
+      "workflow_id": "WF-009",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    },
+    {
+      "id": "AGENT-010",
+      "name": "Modernização e Migração",
+      "pmu_id": "PMU-010",
+      "workflow_id": "WF-010",
+      "status": "DESIGN_ONLY",
+      "permissions": [],
+      "execution_mode": "PLAN_ONLY",
+      "requires_human_review": true
+    }
+  ]
+}

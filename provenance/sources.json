@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "project": "peos-knowledge-hub",
+  "baseline": "v2.1.0",
+  "policy": "Source files in baseline v2.1 are retained verbatim; upstream prompt IDs and content hashes are immutable; historic archives are not redistributed within repository.",
+  "sources": [
+    {
+      "version": "legacy",
+      "archive_filename": "Biblioteca_Mestre_TI_Automatizada_Programacao_Design.zip",
+      "archive_sha256": "d2bf53683f1b4b91a7990cbe2a53b25daea92c3bd6f81646f85f0840545ef324",
+      "entries": 1053,
+      "baseline_role": "historical-provenance"
+    },
+    {
+      "version": "v2.0",
+      "archive_filename": "Biblioteca_Mestre_TI_v2.0_Completa_Automatizada.zip",
+      "archive_sha256": "f12eb7114d76aa9a1c01e0705b11a48ad6f94e80c174f487ada278ab204b138b",
+      "entries": 1750,
+      "baseline_role": "historical-provenance"
+    },
+    {
+      "version": "v2.1",
+      "archive_filename": "Biblioteca_Mestre_TI_v2.1_Completa_Automatizada(1).zip",
+      "archive_sha256": "39b1e8dbb1318057ba2ca31f79713f85bc1745d4de618d6deed794600f1556dd",
+      "entries": 1782,
+      "baseline_role": "canonical"
+    }
+  ]
+}

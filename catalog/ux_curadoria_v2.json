@@ -1,0 +1,236 @@
+{
+  "version": "2.0.0",
+  "policy": "curated-specialized-new-goals; no alteration to 647 inherited IDs",
+  "new_prompts": [
+    {
+      "id": "3601",
+      "title": "Pesquisa UX e Descoberta de Necessidades",
+      "goal": "Transformar problema e hipóteses em plano de pesquisa UX e evidências sobre necessidades dos usuários, sem presumir resultados.",
+      "when": "Pesquisa exploratória, entrevistas e análise contextual anteriores ao design de telas.",
+      "inputs": "problema; perfis recrutáveis; hipóteses; restrições; pesquisa existente; critérios éticos",
+      "outputs": "plano de pesquisa; roteiro de entrevistas; amostra e critérios de seleção; matriz hipótese-evidência; registro de limitações",
+      "guard": "Não invente usuários, entrevistas ou dados observados. Marque hipóteses e achados não verificados; minimize PII; obtenha consentimento quando aplicável.",
+      "acceptance": "Os métodos respondem às hipóteses; os critérios de seleção são explícitos; evidências e inferências aparecem separadas.",
+      "related": [
+        "0404",
+        "0101"
+      ],
+      "bpd": [
+        "BPD-051"
+      ]
+    },
+    {
+      "id": "3602",
+      "title": "Arquitetura da Informação e Fluxos de Usuário",
+      "goal": "Projetar navegação, estrutura de informação, jornadas e fluxos de tarefa a partir de objetivos reais.",
+      "when": "Redesenho de fluxo, mapa de navegação, jornadas e organização de conteúdo.",
+      "inputs": "perfis e tarefas; inventário de conteúdo; permissões; dispositivos; jornadas atuais",
+      "outputs": "mapa de informação; fluxogramas com entradas e saídas; caminhos alternativos; jornadas e critérios de descoberta",
+      "guard": "Identifique tarefas críticas, caminhos de erro e restrições de autorização. Não altere regras de negócio sem aprovação.",
+      "acceptance": "Cada tarefa prioritária tem caminho completo; retornos, estados vazios e acesso negado são modelados e testáveis.",
+      "related": [
+        "0202",
+        "0404",
+        "0409"
+      ],
+      "bpd": [
+        "BPD-051"
+      ]
+    },
+    {
+      "id": "3603",
+      "title": "Wireframes Funcionais e Especificação de Telas",
+      "goal": "Especificar wireframes de baixa fidelidade, comportamentos de tela e requisitos de interação antes da implementação.",
+      "when": "Prototipação inicial de telas, avaliação da disposição de informações e descoberta de requisitos de interface.",
+      "inputs": "fluxo; funcionalidades; conteúdo; estados; dimensões; requisitos de acessibilidade",
+      "outputs": "wireframes por viewport; regiões; ações; componentes; estados; anotação de comportamento e critérios de aceite",
+      "guard": "Separe rascunho visual de interface implementada; não trate o wireframe como prova de funcionalidade.",
+      "acceptance": "Cada ação possui comportamento e feedback; os estados loading/vazio/erro têm local e regra definidos.",
+      "related": [
+        "0404",
+        "2409"
+      ],
+      "bpd": [
+        "BPD-052"
+      ]
+    },
+    {
+      "id": "3604",
+      "title": "Composição Visual, Layout e Hierarquia UX",
+      "goal": "Definir hierarquia visual e layout de telas orientados a tarefas sem confundir a entrega com implementação de design system.",
+      "when": "Design visual de telas e diagnóstico de clareza, legibilidade e prioridade de ações.",
+      "inputs": "wireframes; conteúdo; identidade visual; hierarquia de tarefas; tokens existentes",
+      "outputs": "layout anotado; prioridades visuais; escala tipográfica; contraste; espaçamento; justificativas de trade-offs",
+      "guard": "Reutilize tokens e componentes aprovados. Não prometa acessibilidade sem evidência de contraste e navegação.",
+      "acceptance": "A ação principal está identificável; leitura e navegação são coerentes; tokens são respeitados e conflitos explicitados.",
+      "related": [
+        "0404",
+        "0422"
+      ],
+      "bpd": [
+        "BPD-053",
+        "BPD-055"
+      ]
+    },
+    {
+      "id": "3605",
+      "title": "Redesign de Produto com Preservação Funcional",
+      "goal": "Conduzir redesign de interface a partir de inventário funcional, dados de uso e critérios comparativos de experiência.",
+      "when": "Renovação visual e estrutural de produto existente preservando contratos e funcionalidades comprovadas.",
+      "inputs": "telas existentes; inventário de funções; problemas reportados; métricas; restrições técnicas",
+      "outputs": "baseline antes/depois; matriz de impactos; propostas de redesign; migração incremental; plano de validação",
+      "guard": "Não remover recursos nem alterar fluxos críticos sem registro de decisão; acessibilidade e regressões são gates.",
+      "acceptance": "100% das funções críticas da baseline têm destino validado; comparação antes/depois e critérios mensuráveis documentados.",
+      "related": [
+        "0005",
+        "2504"
+      ],
+      "bpd": [
+        "BPD-054"
+      ]
+    },
+    {
+      "id": "3606",
+      "title": "Prototipação Interativa e Contratos de Interação",
+      "goal": "Criar especificações de protótipos navegáveis para validar interações, transições e microinterações antes de codificar.",
+      "when": "Testar fluxos entre telas e comportamentos complexos com protótipos.",
+      "inputs": "wireframes; mapa de fluxos; eventos; estados; tarefas e dispositivos",
+      "outputs": "roteiro de protótipo; mapa de estados; transições; gatilhos; critérios de interação; roteiro de teste",
+      "guard": "Diferencie comportamento simulado de API real; registre explicitamente lacunas de backend e persistência.",
+      "acceptance": "O protótipo cobre os caminhos principais e exceções; ações apresentam feedback previsto; testes podem ser reproduzidos.",
+      "related": [
+        "0404",
+        "0502"
+      ],
+      "bpd": [
+        "BPD-052",
+        "BPD-051"
+      ]
+    },
+    {
+      "id": "3607",
+      "title": "Design Responsivo Mobile-First por Tarefa",
+      "goal": "Projetar adaptação progressiva de jornadas e interfaces de mobile para desktop preservando prioridade funcional.",
+      "when": "Interfaces que devem preservar produtividade e acessibilidade em telas de diferentes tamanhos.",
+      "inputs": "jornadas; prioridades de conteúdo; viewports; componentes; restrições de acesso",
+      "outputs": "matriz de comportamento por breakpoint; adaptação de densidade; regras de navegação; testes multiviewport",
+      "guard": "Não remova ações ou informação crítica em telas pequenas; evite breakpoints sem relação com conteúdo.",
+      "acceptance": "Todas as tarefas críticas permanecem acessíveis; sem perda de dados; foco e navegação por teclado verificáveis.",
+      "related": [
+        "0405",
+        "0406",
+        "0422"
+      ],
+      "bpd": [
+        "BPD-061",
+        "BPD-062"
+      ]
+    },
+    {
+      "id": "3608",
+      "title": "Design de Tabelas e Dados Densos Responsivos",
+      "goal": "Projetar apresentação responsiva de tabelas com retenção de dados, filtros, ordenação e ações.",
+      "when": "Tabelas administrativas e dashboards com muitas colunas e ações em telas pequenas.",
+      "inputs": "colunas e prioridades; operação por linha; volume; filtros; permissões; tamanho de tela",
+      "outputs": "estratégia tabela/cartões/scroll controlado; visibilidade por viewport; navegação; acessibilidade; testes de dados densos",
+      "guard": "Não oculte dados obrigatórios ou ações destrutivas de forma ambígua; mantenha cabeçalhos associados aos valores.",
+      "acceptance": "Todas as colunas têm forma acessível de consulta; operações preservadas; foco, overflow e ordenação testados.",
+      "related": [
+        "0409",
+        "0405"
+      ],
+      "bpd": [
+        "BPD-063"
+      ]
+    },
+    {
+      "id": "3609",
+      "title": "Padrões de Navegação Responsiva e Menus",
+      "goal": "Definir arquitetura e comportamento de navegação adaptativa para diferentes dispositivos e contextos.",
+      "when": "Sidebars, menus, breadcrumbs, buscas e ações contextuais para produtos complexos.",
+      "inputs": "sitemap; níveis de navegação; jornadas; permissões; dispositivos; padrões visuais",
+      "outputs": "matriz de navegação por viewport; abertura/fechamento; foco; rotas; atalhos; recuperação de contexto",
+      "guard": "Não exponha ações sem permissão; diferencie esconder item de negar autorização em backend.",
+      "acceptance": "Itens essenciais alcançáveis por mouse, teclado e touch; estado e foco do menu são previsíveis.",
+      "related": [
+        "0404",
+        "0405",
+        "0309"
+      ],
+      "bpd": [
+        "BPD-064"
+      ]
+    },
+    {
+      "id": "3610",
+      "title": "Pesquisa de Usabilidade e Avaliação de Fluxos",
+      "goal": "Planejar e avaliar testes de usabilidade com tarefas observáveis e análises de evidência, sem inventar participantes.",
+      "when": "Validar protótipos ou interfaces antes de decisões de UX e de lançamento.",
+      "inputs": "hipóteses; protótipo/ambiente; amostra; tarefas; métricas; critérios de sucesso",
+      "outputs": "plano de sessão; tarefas; observações; taxa de conclusão; barreiras; recomendações por gravidade",
+      "guard": "Não fabrique resultados ou taxas de sucesso; proteja participantes e dados pessoais.",
+      "acceptance": "Sessões e métricas estão rastreadas; evidências e recomendações separadas; decisões com critérios verificáveis.",
+      "related": [
+        "1601",
+        "1620",
+        "2504"
+      ],
+      "bpd": [
+        "BPD-051",
+        "BPD-054"
+      ]
+    },
+    {
+      "id": "3611",
+      "title": "Handoff UX/UI para Engenharia e Critérios de Aceite",
+      "goal": "Converter artefatos de design aprovados em contratos implementáveis, testáveis e com estados completos.",
+      "when": "Passagem entre UX, design system, frontend, QA e produto.",
+      "inputs": "telas e protótipos; tokens; fluxos; regras de negócio; requisitos acessíveis",
+      "outputs": "especificação por componente; estados; tokens; payloads esperados; comportamento; checklist de QA; aceite",
+      "guard": "Não confunda desenho com implementação; valide dependências de API, permissão e persistência com engenharia.",
+      "acceptance": "Cada elemento relevante tem fonte, estados e teste; comportamento responsivo e acessibilidade ficam explicitados.",
+      "related": [
+        "0404",
+        "0104",
+        "0502"
+      ],
+      "bpd": [
+        "BPD-056",
+        "BPD-059"
+      ]
+    },
+    {
+      "id": "3612",
+      "title": "UX Inclusiva e Acessibilidade de Jornadas",
+      "goal": "Projetar jornadas inclusivas por tarefa e tecnologia assistiva antes de testes automatizados de código.",
+      "when": "Revisão de barreiras de navegação, leitura, cognição e dispositivos na concepção de um produto.",
+      "inputs": "jornadas; perfis de uso; conteúdo; dispositivos; restrições; padrões existentes",
+      "outputs": "inventário de barreiras; jornada alternativa; plano de foco; conteúdo acessível; critérios de validação humana",
+      "guard": "Não apresente auditoria automática como garantia de acessibilidade; documente testes manuais e limites.",
+      "acceptance": "As tarefas críticas podem ser percorridas sem gesto exclusivo; barreiras possuem mitigação e testes definidos.",
+      "related": [
+        "0405",
+        "1620",
+        "0407"
+      ],
+      "bpd": [
+        "BPD-065",
+        "BPD-066",
+        "BPD-067"
+      ]
+    }
+  ],
+  "candidate_resolution": {
+    "BPD-051": "3602",
+    "BPD-052": "3603",
+    "BPD-053": "3604",
+    "BPD-054": "3605",
+    "BPD-055": "3604",
+    "BPD-059": "0404 + 3611 (existing component states, new handoff contract)",
+    "BPD-060": "0404 + 2504 (already covered; no new ID)",
+    "BPD-061": "3607",
+    "BPD-062": "3607",
+    "BPD-063": "3608",
+    "BPD-064": "3609"
+  }
+}

@@ -1,3 +1,3 @@
-# Política de segurança
+# Segurança
 
-Não inclua tokens, senhas, credenciais, dados pessoais privados ou URLs com segredos nos prompts, fixtures, issues e logs. Use dados sintéticos. Reporte vulnerabilidades por canais privados do GitHub, quando disponíveis. A execução dos agentes é **PLAN_ONLY** até que gates de autorização, revisão e auditoria sejam implementados e validados.
+Não publique credenciais nem dados pessoais em prompts. Relate vulnerabilidades pelo canal de segurança do repositório, evitando issues públicos com segredos. A composição do projeto é um **plano** e nunca executa comandos arbitrários. Alterações sensíveis devem passar por revisão, ambiente isolado e evidência antes de produção.

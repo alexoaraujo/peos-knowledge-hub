@@ -1,0 +1,26 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3610",
+  "title": "Pesquisa de Usabilidade e Avaliação de Fluxos",
+  "content_sha256": "0ec7ae53f869aaaea4ecf8a76eb4fea65296a2aa9a3ed43b82ecd28a1fe4cb1d",
+  "status": "CURATED",
+  "goal": "Planejar e avaliar testes de usabilidade com tarefas observáveis e análises de evidência, sem inventar participantes.",
+  "when_to_use": "Validar protótipos ou interfaces antes de decisões de UX e de lançamento.",
+  "inputs": "hipóteses; protótipo/ambiente; amostra; tarefas; métricas; critérios de sucesso",
+  "output_contract": "plano de sessão; tarefas; observações; taxa de conclusão; barreiras; recomendações por gravidade",
+  "acceptance_criteria": "Sessões e métricas estão rastreadas; evidências e recomendações separadas; decisões com critérios verificáveis.",
+  "guardrails": "Não fabrique resultados ou taxas de sucesso; proteja participantes e dados pessoais.",
+  "related_ids": [
+    "1601",
+    "1620",
+    "2504"
+  ],
+  "source_links": [
+    "BPD-051",
+    "BPD-054"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}
