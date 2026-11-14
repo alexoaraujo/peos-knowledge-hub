@@ -1,0 +1,33 @@
+name: Programacao e Design - collection gate
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'colecoes/programacao-design/**'
+      - 'tools/validate_bpd_collection.py'
+      - 'tests/test_bpd_collection.py'
+      - '.github/workflows/bpd-collection-gate.yml'
+  pull_request:
+    paths:
+      - 'colecoes/programacao-design/**'
+      - 'tools/validate_bpd_collection.py'
+      - 'tests/test_bpd_collection.py'
+      - '.github/workflows/bpd-collection-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bpd-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout pinned
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Check collection index and links
+        run: python3 tools/validate_bpd_collection.py
+      - name: Test duplicate and missing ID rejection
+        run: python3 -m unittest discover -s tests -p 'test_bpd_collection.py' -v
+      - name: Check baseline unchanged
+        run: python3 tools/library.py validate
