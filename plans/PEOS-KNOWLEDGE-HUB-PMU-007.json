@@ -1,0 +1,96 @@
+{
+  "library_version": "2.1.0",
+  "request": "Validar segurança, proveniência, direitos de redistribuição, controle de execução e gates do PEOS Knowledge Hub",
+  "pmu_id": "PMU-007",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "f1800bd5603285ba75896324d471a27904a90e3527ba1c44569845b9898b4dc0",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-006",
+      "PMU-007"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "1501",
+      "content_version": "1.0.0",
+      "sha256": "60b582444b55baaf1c2b7623ae84cbdd4663f4e798d5cc4d9daeb2669388a4e9"
+    },
+    {
+      "id": "1504",
+      "content_version": "1.0.0",
+      "sha256": "9f7c062d6387e428952eda72b7ed45df04f5e8e11fcc80949e2f145df361f8da"
+    },
+    {
+      "id": "0309",
+      "content_version": "1.0.0",
+      "sha256": "40c5afcaf1fdb5acf572a8bd1ba5b3bb326b6c27bf5d7185772e87b176cd5ae3"
+    },
+    {
+      "id": "1608",
+      "content_version": "1.0.0",
+      "sha256": "134fbb65f61450d27e108dcd1999db23b1263195bf05a7c93a74f552ddd4bf46"
+    },
+    {
+      "id": "2509",
+      "content_version": "1.0.0",
+      "sha256": "6fb4f0e70496ddb9255a88e1ce2e8602076ade09a14ff907bfb8c5689259a4a5"
+    }
+  ],
+  "workflow_id": "WF-007",
+  "steps": [
+    {
+      "name": "Escopo, ativos e ameaças",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Identidade e privilégios",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Segredos e dependências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Testes negativos e isolamento",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Riscos residuais e evidências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Gate de segurança",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

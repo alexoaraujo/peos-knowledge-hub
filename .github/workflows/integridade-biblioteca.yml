@@ -1,0 +1,36 @@
+name: Biblioteca Mestre - integridade e releases
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: biblioteca-integridade-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  integridade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout com SHA fixo
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Python disponível no runner
+        run: python3 --version
+      - name: Testes comportamentais e de regressão
+        run: python3 -m unittest discover -s tests -v
+      - name: Auditoria histórica 1.0 → 1.1
+        run: python3 tools/library.py audit
+      - name: Índices sem divergência
+        run: python3 tools/library.py index --check
+      - name: Compilação reproduzível
+        run: python3 tools/library.py compile --check
+      - name: Conferência da coleção Programação e Design
+        run: python3 tools/collections_integration.py check
+      - name: Validação dos contratos estruturados v2
+        run: python3 tools/v2_contracts.py
+      - name: Gate de integridade completo
+        run: python3 tools/library.py validate
+      - name: Validar motor de composição PEOS v2.1
+        run: python3 tools/peos_engine.py validate

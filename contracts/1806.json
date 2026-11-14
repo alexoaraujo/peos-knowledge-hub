@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "1806",
+  "title": "Routing e Switching",
+  "content_sha256": "37e1b305a15f8f6fcfc190892bce703a3e08f0c62f8033f29c394484f2c6dc1f",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Routing e Switching com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver routing e switching em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

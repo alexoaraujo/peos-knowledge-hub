@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3609",
+  "title": "Padrões de Navegação Responsiva e Menus",
+  "content_sha256": "31ab9bfcf956c9f89ee35053c2522e5bad5ec7a99349235b6a3a17761a94cd84",
+  "status": "CURATED",
+  "goal": "Definir arquitetura e comportamento de navegação adaptativa para diferentes dispositivos e contextos.",
+  "when_to_use": "Sidebars, menus, breadcrumbs, buscas e ações contextuais para produtos complexos.",
+  "inputs": "sitemap; níveis de navegação; jornadas; permissões; dispositivos; padrões visuais",
+  "output_contract": "matriz de navegação por viewport; abertura/fechamento; foco; rotas; atalhos; recuperação de contexto",
+  "acceptance_criteria": "Itens essenciais alcançáveis por mouse, teclado e touch; estado e foco do menu são previsíveis.",
+  "guardrails": "Não exponha ações sem permissão; diferencie esconder item de negar autorização em backend.",
+  "related_ids": [
+    "0404",
+    "0405",
+    "0309"
+  ],
+  "source_links": [
+    "BPD-064"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

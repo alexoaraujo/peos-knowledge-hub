@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3608",
+  "title": "Design de Tabelas e Dados Densos Responsivos",
+  "content_sha256": "a4411fd5e820563764babbe404373e912d6c5402d766a1b4d32afb0d9fe40150",
+  "status": "CURATED",
+  "goal": "Projetar apresentação responsiva de tabelas com retenção de dados, filtros, ordenação e ações.",
+  "when_to_use": "Tabelas administrativas e dashboards com muitas colunas e ações em telas pequenas.",
+  "inputs": "colunas e prioridades; operação por linha; volume; filtros; permissões; tamanho de tela",
+  "output_contract": "estratégia tabela/cartões/scroll controlado; visibilidade por viewport; navegação; acessibilidade; testes de dados densos",
+  "acceptance_criteria": "Todas as colunas têm forma acessível de consulta; operações preservadas; foco, overflow e ordenação testados.",
+  "guardrails": "Não oculte dados obrigatórios ou ações destrutivas de forma ambígua; mantenha cabeçalhos associados aos valores.",
+  "related_ids": [
+    "0409",
+    "0405"
+  ],
+  "source_links": [
+    "BPD-063"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

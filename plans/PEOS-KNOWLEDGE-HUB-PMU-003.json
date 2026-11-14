@@ -1,0 +1,100 @@
+{
+  "library_version": "2.1.0",
+  "request": "Auditar integralmente os ZIPs, manifestos, hashes, IDs e regressão da Biblioteca Mestre TI v2.1",
+  "pmu_id": "PMU-003",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "8610a6b6b2206c171116eebbd521830e62c74c3e3114530edc708640bafa646f",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-003"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "0002",
+      "content_version": "1.0.0",
+      "sha256": "8fc28afc10de6c1101bd27d2cccb4417b7cc3f8853a97a043cd585ddd3cb73c9"
+    },
+    {
+      "id": "2501",
+      "content_version": "1.0.0",
+      "sha256": "8d82a4708c175513e2781a872a8f4b859827dc3da111b71ee125c7126ed5c2f5"
+    },
+    {
+      "id": "2502",
+      "content_version": "1.0.0",
+      "sha256": "a97ceba18a9096f9819cbb040cab8d3af1e2f1e84f72902b51ee740bb8e3593b"
+    },
+    {
+      "id": "2503",
+      "content_version": "1.0.0",
+      "sha256": "259cae58d0cd6909918667da62ed3a7965d5d0c8dd042bb777ea70ffebccfc88"
+    },
+    {
+      "id": "2509",
+      "content_version": "1.0.0",
+      "sha256": "6fb4f0e70496ddb9255a88e1ce2e8602076ade09a14ff907bfb8c5689259a4a5"
+    },
+    {
+      "id": "2510",
+      "content_version": "1.0.0",
+      "sha256": "df73e01ee8df2c48b29e0b9a4c3e71aeffc0e284f23b40ce80bcca38b463a033"
+    }
+  ],
+  "workflow_id": "WF-003",
+  "steps": [
+    {
+      "name": "Inventário e baseline",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Verificação de código e dependências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Arquitetura e dados",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Segurança e IAM",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Testes e infraestrutura",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Achados com severidade e evidências",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

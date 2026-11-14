@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "2901",
+  "title": "Developer Experience Audit",
+  "content_sha256": "516972a01ba3f56cd414c3338bbe942f6719b9ba40cc682f534b51b78517ba6d",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Developer Experience Audit com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver developer experience audit em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "1402",
+  "title": "Arquitetura AWS",
+  "content_sha256": "f90ea3e33c32df129fd03b861206e66e2e66589fb16ae4925227108a9429f4d8",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Arquitetura AWS com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver arquitetura aws em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,100 @@
+{
+  "library_version": "2.1.0",
+  "request": "Criar Projeto PEOS Knowledge Hub open-source com biblioteca versionada, taxonomia, governança, validação, workflows, agentes especializados, CI GitHub e portal de busca",
+  "pmu_id": "PMU-002",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "1b992cc733667f44a34ae82104ff861ddf185013c6807b4fafea12a82ee6d1d7",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-002"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "0001",
+      "content_version": "1.0.0",
+      "sha256": "387ddff3f576349ae74aa01bb032e67998c2d86cd1189a50ca7524bf62228eca"
+    },
+    {
+      "id": "0101",
+      "content_version": "1.0.0",
+      "sha256": "82db9754bb8277d4c4a0c5f571a6fddcac7ac319f9195fb069d53fa9cef33e8a"
+    },
+    {
+      "id": "0201",
+      "content_version": "1.0.0",
+      "sha256": "565e1d16ae1261a7eab74a33da309bca149df1d0ddf3f007a86b9cf96adad5c9"
+    },
+    {
+      "id": "0502",
+      "content_version": "1.0.0",
+      "sha256": "d0449401c61b8912866dba9b183293cbe6f2e6d9acd47209846b03b08f914203"
+    },
+    {
+      "id": "1601",
+      "content_version": "1.0.0",
+      "sha256": "771e56905546250f47cb6afe24a6a5ed52cd0a7a276fddac6b3e0977dddf9d0f"
+    },
+    {
+      "id": "0020",
+      "content_version": "1.0.0",
+      "sha256": "a09703a2584bc882e58eaef91c7ba6f0f9947a36258406543868a7e2e77b2bbe"
+    }
+  ],
+  "workflow_id": "WF-002",
+  "steps": [
+    {
+      "name": "Descoberta e visão",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Requisitos e critérios de aceite",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Arquitetura e ADRs",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Backlog e vertical slices",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Implementação e integração",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "QA, segurança e release",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

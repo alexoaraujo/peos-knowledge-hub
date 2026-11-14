@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "2109",
+  "title": "Reliability Review",
+  "content_sha256": "6732bb31338cedc92fa7a68ebce2a1121dca8b8856e6b8f6f0d9246cf129c4c0",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Reliability Review com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver reliability review em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

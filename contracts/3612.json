@@ -1,0 +1,27 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3612",
+  "title": "UX Inclusiva e Acessibilidade de Jornadas",
+  "content_sha256": "142a74e39b6f41ad8b08b96ae885657d25416f15afa78781bf1b712bbaec793f",
+  "status": "CURATED",
+  "goal": "Projetar jornadas inclusivas por tarefa e tecnologia assistiva antes de testes automatizados de código.",
+  "when_to_use": "Revisão de barreiras de navegação, leitura, cognição e dispositivos na concepção de um produto.",
+  "inputs": "jornadas; perfis de uso; conteúdo; dispositivos; restrições; padrões existentes",
+  "output_contract": "inventário de barreiras; jornada alternativa; plano de foco; conteúdo acessível; critérios de validação humana",
+  "acceptance_criteria": "As tarefas críticas podem ser percorridas sem gesto exclusivo; barreiras possuem mitigação e testes definidos.",
+  "guardrails": "Não apresente auditoria automática como garantia de acessibilidade; documente testes manuais e limites.",
+  "related_ids": [
+    "0405",
+    "1620",
+    "0407"
+  ],
+  "source_links": [
+    "BPD-065",
+    "BPD-066",
+    "BPD-067"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

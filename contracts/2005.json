@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "2005",
+  "title": "Code Review de PR",
+  "content_sha256": "3fc17d35011651b0a892fb4fbe470f00e1fc1d003576716b97048f8ae564e0f2",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Code Review de PR com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver code review de pr em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3607",
+  "title": "Design Responsivo Mobile-First por Tarefa",
+  "content_sha256": "e193f7e1339f4da1544abd8543ad11163eea2f29e4ae27078f27d8e4e46daca3",
+  "status": "CURATED",
+  "goal": "Projetar adaptação progressiva de jornadas e interfaces de mobile para desktop preservando prioridade funcional.",
+  "when_to_use": "Interfaces que devem preservar produtividade e acessibilidade em telas de diferentes tamanhos.",
+  "inputs": "jornadas; prioridades de conteúdo; viewports; componentes; restrições de acesso",
+  "output_contract": "matriz de comportamento por breakpoint; adaptação de densidade; regras de navegação; testes multiviewport",
+  "acceptance_criteria": "Todas as tarefas críticas permanecem acessíveis; sem perda de dados; foco e navegação por teclado verificáveis.",
+  "guardrails": "Não remova ações ou informação crítica em telas pequenas; evite breakpoints sem relação com conteúdo.",
+  "related_ids": [
+    "0405",
+    "0406",
+    "0422"
+  ],
+  "source_links": [
+    "BPD-061",
+    "BPD-062"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

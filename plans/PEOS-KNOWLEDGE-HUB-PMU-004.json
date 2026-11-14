@@ -1,0 +1,90 @@
+{
+  "library_version": "2.1.0",
+  "request": "Continuar PEOS Knowledge Hub sem ultrapassar gate de licença, revisão ou publicação",
+  "pmu_id": "PMU-004",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "1158de5b09af8ed63fa625d3a8768c92cad0ea6ebcc7f67077eacf8fd9fb6373",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-004"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "0003",
+      "content_version": "1.0.0",
+      "sha256": "e605f733b402cda9806bf17887bc80f4245c706c3002695a9de137daa13b32d5"
+    },
+    {
+      "id": "0004",
+      "content_version": "1.0.0",
+      "sha256": "768c930e86f17cf70956e42fe068946190bfbb7756bee369c84edaf83004828d"
+    },
+    {
+      "id": "2303",
+      "content_version": "1.0.0",
+      "sha256": "a3e3dbaa244e17e8ed3468c6566c0add9e07d064dbda529e09c18458bb404db3"
+    },
+    {
+      "id": "0010",
+      "content_version": "1.0.0",
+      "sha256": "1be85c95f215542e13bb938b33b86a138bdb59288b5907a3c61129fbb7a77c13"
+    }
+  ],
+  "workflow_id": "WF-004",
+  "steps": [
+    {
+      "name": "Ler estado e histórico",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Detectar bloqueios e riscos",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Escolher menor avanço seguro",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Executar mudanças incrementais",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Rodar testes e regressões",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Atualizar backlog e gates",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

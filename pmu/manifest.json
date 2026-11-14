@@ -1,0 +1,443 @@
+{
+  "schema_version": "1.0.0",
+  "library_version": "2.1.0",
+  "namespace": "PMU",
+  "total": 10,
+  "prompts": [
+    {
+      "id": "PMU-001",
+      "name": "Prompt Universal PEOS",
+      "version": "1.0.0",
+      "goal": "Classificar e orquestrar qualquer solicitação de TI",
+      "kind": "universal",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-001.md",
+      "sha256": "485d4ed3da6483c972db657b01100c554f6a3d1d2f27c427381a944c398666d6",
+      "refs": [
+        "0001",
+        "0002",
+        "0003",
+        "0004",
+        "0010",
+        "0020"
+      ],
+      "stages": [
+        "Interpretar intenção e riscos",
+        "Recuperar estado e evidências",
+        "Selecionar módulos especializados",
+        "Construir plano com dependências",
+        "Executar apenas ações autorizadas",
+        "Aplicar gates e reportar"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-002",
+      "name": "Criação de Projeto 360°",
+      "version": "1.0.0",
+      "goal": "Transformar uma ideia em produto validado",
+      "kind": "project",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-002.md",
+      "sha256": "1b992cc733667f44a34ae82104ff861ddf185013c6807b4fafea12a82ee6d1d7",
+      "refs": [
+        "0001",
+        "0101",
+        "0201",
+        "0502",
+        "1601",
+        "0020"
+      ],
+      "stages": [
+        "Descoberta e visão",
+        "Requisitos e critérios de aceite",
+        "Arquitetura e ADRs",
+        "Backlog e vertical slices",
+        "Implementação e integração",
+        "QA, segurança e release"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-003",
+      "name": "Auditoria Integral 360°",
+      "version": "1.0.0",
+      "goal": "Auditar código, arquitetura, segurança e operação",
+      "kind": "audit",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-003.md",
+      "sha256": "8610a6b6b2206c171116eebbd521830e62c74c3e3114530edc708640bafa646f",
+      "refs": [
+        "0002",
+        "2501",
+        "2502",
+        "2503",
+        "2509",
+        "2510"
+      ],
+      "stages": [
+        "Inventário e baseline",
+        "Verificação de código e dependências",
+        "Arquitetura e dados",
+        "Segurança e IAM",
+        "Testes e infraestrutura",
+        "Achados com severidade e evidências"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-004",
+      "name": "Continuidade Autônoma Controlada",
+      "version": "1.0.0",
+      "goal": "Retomar e evoluir projetos sem ultrapassar gates",
+      "kind": "continuity",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-004.md",
+      "sha256": "1158de5b09af8ed63fa625d3a8768c92cad0ea6ebcc7f67077eacf8fd9fb6373",
+      "refs": [
+        "0003",
+        "0004",
+        "2303",
+        "0010"
+      ],
+      "stages": [
+        "Ler estado e histórico",
+        "Detectar bloqueios e riscos",
+        "Escolher menor avanço seguro",
+        "Executar mudanças incrementais",
+        "Rodar testes e regressões",
+        "Atualizar backlog e gates"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-005",
+      "name": "Engenharia Full Stack",
+      "version": "1.0.0",
+      "goal": "Integrar interface, APIs, domínio, dados e testes",
+      "kind": "fullstack",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-005.md",
+      "sha256": "8a72dd3b3b9c689b16c67dc00987c6745dbf6b7c5d7a2a942f9bc62e22fffffb",
+      "refs": [
+        "0502",
+        "0301",
+        "0402",
+        "0601",
+        "0701",
+        "1601"
+      ],
+      "stages": [
+        "Contrato de domínio",
+        "Banco e migrações",
+        "APIs e autenticação",
+        "Interface e UX",
+        "Integração e tratamento de erros",
+        "Testes e observabilidade"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-006",
+      "name": "UX/UI e Design System",
+      "version": "1.0.0",
+      "goal": "Conduzir descoberta, protótipos e acessibilidade",
+      "kind": "design",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-006.md",
+      "sha256": "5049327147ddb5852b87841f3dcb32d2545d2bc1faba3632946a3a9958a3d28a",
+      "refs": [
+        "3601",
+        "3602",
+        "3603",
+        "3604",
+        "3607",
+        "3610",
+        "3611"
+      ],
+      "stages": [
+        "Pesquisa e personas sem inventar dados",
+        "Jornadas e arquitetura da informação",
+        "Wireframes e protótipos",
+        "Design tokens e componentes",
+        "Responsividade e acessibilidade",
+        "Teste de usabilidade e handoff"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-007",
+      "name": "Segurança e Compliance",
+      "version": "1.0.0",
+      "goal": "Analisar riscos, IAM e conformidade",
+      "kind": "security",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-007.md",
+      "sha256": "f1800bd5603285ba75896324d471a27904a90e3527ba1c44569845b9898b4dc0",
+      "refs": [
+        "1501",
+        "1504",
+        "0309",
+        "1608",
+        "2509"
+      ],
+      "stages": [
+        "Escopo, ativos e ameaças",
+        "Identidade e privilégios",
+        "Segredos e dependências",
+        "Testes negativos e isolamento",
+        "Riscos residuais e evidências",
+        "Gate de segurança"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-008",
+      "name": "Dados e Inteligência Artificial",
+      "version": "1.0.0",
+      "goal": "Planejar e validar pipelines, dados e IA",
+      "kind": "data",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-008.md",
+      "sha256": "0b2e0f39d93d72f23b8cf9aab8100eab60cc03c85523a1a7c3e5a47520e03144",
+      "refs": [
+        "0701",
+        "0705",
+        "3001",
+        "3101",
+        "3501"
+      ],
+      "stages": [
+        "Objetivos e contratos de dados",
+        "Governança, privacidade e linhagem",
+        "Modelagem e pipelines",
+        "Treino/inferência quando aplicável",
+        "Avaliações, vieses e observabilidade",
+        "Rollback e custo"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-009",
+      "name": "DevOps, SRE e Release",
+      "version": "1.0.0",
+      "goal": "Construir gates de entrega, observabilidade e recuperação",
+      "kind": "release",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-009.md",
+      "sha256": "ea208e9a3711483d941156d901752bf45368558f96bcaf2ce5dec62b94d4e5ac",
+      "refs": [
+        "0010",
+        "0020",
+        "1105",
+        "1603",
+        "2102"
+      ],
+      "stages": [
+        "Ambientes e configurações",
+        "Pipeline e supply chain",
+        "Migrações e testes",
+        "Métricas, alertas e SLO",
+        "Backup/restore e rollback",
+        "Go/No-Go com evidências"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    },
+    {
+      "id": "PMU-010",
+      "name": "Modernização e Migração",
+      "version": "1.0.0",
+      "goal": "Modernizar com compatibilidade e rollback",
+      "kind": "modernization",
+      "status": "PROPOSED",
+      "prompt_path": "pmu/prompts/PMU-010.md",
+      "sha256": "33a6e30173a51eeea8c13c9095d4d53723b1f7a7160b4d68628618e5d7e36be3",
+      "refs": [
+        "0005",
+        "0106",
+        "2801",
+        "1603",
+        "0020"
+      ],
+      "stages": [
+        "Baseline e comportamento existente",
+        "Mapa de dependências",
+        "Compatibilidade e plano incremental",
+        "Migração e execução paralela",
+        "Testes de regressão e dados",
+        "Rollback e desativação controlada"
+      ],
+      "gate_policy": {
+        "fail_closed": true,
+        "require_evidence": true,
+        "allow_na_with_reason": true
+      },
+      "required_inputs": [
+        "OBJETIVO",
+        "PROJETO"
+      ],
+      "outputs": [
+        "resumo",
+        "estado",
+        "plano",
+        "evidencias",
+        "gates",
+        "riscos",
+        "proximo_passo"
+      ]
+    }
+  ]
+}

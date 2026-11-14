@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biblioteca Mestre de TI v2.0 — Catálogo</title>
+<style>
+:root {color-scheme:light;--ink:#152238;--muted:#58677b;--border:#d7e0e9;--bg:#f6f8fb;--blue:#145a8c}
+*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);margin:0;line-height:1.52}
+header{background:#102b45;color:white;padding:2.8rem max(1.5rem,calc((100% - 1180px)/2))}header h1{font-size:clamp(1.5rem,3.6vw,2.6rem);margin:0}header p{color:#c9d9e8;max-width:780px}
+main{max-width:1180px;margin:0 auto;padding:1.5rem}.stats{display:flex;gap:.7rem;flex-wrap:wrap;margin:1rem 0}.stat{background:#fff;border:1px solid var(--border);padding:.65rem 1rem;border-radius:9px}
+.controls{display:grid;grid-template-columns:2fr repeat(3,minmax(125px,1fr));gap:.6rem;margin:1.2rem 0}input,select{width:100%;border:1px solid #a8bacb;border-radius:7px;padding:.8rem;background:white;color:#142a40;font:inherit}
+input:focus,select:focus,a:focus{outline:3px solid #aacbe7;outline-offset:2px}
+.list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem}.item{background:white;border:1px solid var(--border);border-radius:10px;padding:1rem;display:flex;flex-direction:column;gap:.45rem}
+.item h2{font-size:1.04rem;line-height:1.3;margin:0}.item .category{color:var(--muted);font-size:.85rem}.item p{color:#40576b;font-size:.88rem;margin:0;flex:1}.item a{color:var(--blue);font-weight:600;text-decoration:underline}.chip{display:inline-block;background:#eaf2f9;color:#1c506e;border-radius:6px;padding:.16rem .5rem;font-size:.75rem}
+#resultsStatus{margin:.4rem 0 1rem;color:var(--muted)}footer{padding:2rem 1.5rem;color:var(--muted);text-align:center}
+@media(max-width:820px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}}@media(max-width:500px){.controls{grid-template-columns:1fr}.controls input{grid-column:auto}}
+</style></head><body>
+<header><h1>Biblioteca Mestre de TI <span style="font-weight:400">v2.0</span></h1><p>Busca por ID, título, objetivo, grupo, setor, categoria e coleção. Conteúdos versionados; sem duplicação ou alteração das fontes originais.</p></header>
+<main><div class="stats"><div class="stat"><b>659</b> prompts canônicos</div><div class="stat"><b>128</b> complementares BPD</div><div class="stat"><b>12</b> novos UX/UI</div></div>
+<div class="controls"><input id="search" type="search" aria-label="Pesquisar prompts" placeholder="Pesquisar nome, ID, objetivo ou tecnologia...">
+<select id="scope" aria-label="Tipo de entrada"><option value="">Todas as coleções</option><option value="MASTER">Prompts mestres</option><option value="BPD">Programação e Design</option></select>
+<select id="group" aria-label="Grupo"><option value="">Todos os grupos</option></select><select id="category" aria-label="Categoria"><option value="">Todas as categorias</option></select></div>
+<p id="resultsStatus" role="status" aria-live="polite">Carregando...</p><div id="results" class="list"></div>
+</main><footer><small>v2.0 · Fonte de verdade: manifesto e arquivos versionados · Publicação estática sem backend ou dependência paga</small></footer>
+<script>
+const nodes={search:document.getElementById('search'),scope:document.getElementById('scope'),group:document.getElementById('group'),category:document.getElementById('category'),results:document.getElementById('results'),status:document.getElementById('resultsStatus')};
+const node=(tag,cls,text)=>{const e=document.createElement(tag); if(cls)e.className=cls; if(text!==undefined)e.textContent=text; return e;};
+function addOptions(el,values){[...new Set(values.filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR')).forEach(v=>{let o=document.createElement('option');o.value=v;o.textContent=v;el.append(o)});}
+fetch('catalog.json').then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(data=>{
+const entries=data.entries;addOptions(nodes.group,entries.map(x=>x.group));addOptions(nodes.category,entries.map(x=>x.category));
+const render=()=>{let q=nodes.search.value.toLocaleLowerCase('pt-BR').trim();let selected=entries.filter(x=>(!q||[x.id,x.title,x.goal,x.category,x.subcategory,x.group,x.sector,...x.tags].join(' ').toLocaleLowerCase('pt-BR').includes(q))&&(!nodes.scope.value||x.namespace===nodes.scope.value)&&(!nodes.group.value||x.group===nodes.group.value)&&(!nodes.category.value||x.category===nodes.category.value));nodes.status.textContent=`${selected.length} entradas encontradas de ${entries.length}`;nodes.results.replaceChildren();const frag=document.createDocumentFragment();for(const x of selected.slice(0,250)){const card=node('article','item');const header=node('div');header.append(node('span','chip',x.namespace+' · '+x.id));card.append(header,node('h2','',x.title),node('div','category',x.category+' / '+x.subcategory),node('p','',x.goal));const link=node('a','', 'Abrir prompt completo');link.href=x.content_path;card.append(link);frag.append(card)}nodes.results.append(frag);if(selected.length>250){nodes.status.textContent+= ' (mostrando os primeiros 250; refine os filtros)'}};
+for(const el of [nodes.search,nodes.scope,nodes.group,nodes.category])el.addEventListener(el===nodes.search?'input':'change',render);render();
+}).catch(err=>{nodes.status.textContent='Não foi possível carregar o catálogo. Execute python3 -m http.server 8000 a partir da raiz do projeto e abra /portal/.';});
+</script></body></html>

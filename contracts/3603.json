@@ -1,0 +1,24 @@
+{
+  "schema_version": "2.0.0",
+  "id": "3603",
+  "title": "Wireframes Funcionais e Especificação de Telas",
+  "content_sha256": "c02b22a776d075f6e9d0bfe70ad4366248e97043b568fe8fa27c3ebd67e67830",
+  "status": "CURATED",
+  "goal": "Especificar wireframes de baixa fidelidade, comportamentos de tela e requisitos de interação antes da implementação.",
+  "when_to_use": "Prototipação inicial de telas, avaliação da disposição de informações e descoberta de requisitos de interface.",
+  "inputs": "fluxo; funcionalidades; conteúdo; estados; dimensões; requisitos de acessibilidade",
+  "output_contract": "wireframes por viewport; regiões; ações; componentes; estados; anotação de comportamento e critérios de aceite",
+  "acceptance_criteria": "Cada ação possui comportamento e feedback; os estados loading/vazio/erro têm local e regra definidos.",
+  "guardrails": "Separe rascunho visual de interface implementada; não trate o wireframe como prova de funcionalidade.",
+  "related_ids": [
+    "0404",
+    "2409"
+  ],
+  "source_links": [
+    "BPD-052"
+  ],
+  "source_type": "editorial-specialization",
+  "reviewer": "editorial-assistant",
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

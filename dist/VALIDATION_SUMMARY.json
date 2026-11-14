@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "canonical_count": 659,
+  "additional_bpd_count": 128,
+  "searchable_entries": 787,
+  "original_ids_preserved": 647,
+  "new_ids": [
+    "3601",
+    "3602",
+    "3603",
+    "3604",
+    "3605",
+    "3606",
+    "3607",
+    "3608",
+    "3609",
+    "3610",
+    "3611",
+    "3612"
+  ],
+  "changed_historical_content": 0,
+  "category_count": 37,
+  "group_count": 9,
+  "technical_sector_count": 23,
+  "subcategory_count": 95,
+  "contract_states": {
+    "SOURCE_EXTRACTED": 647,
+    "CURATED": 12
+  },
+  "external_approval_recorded": false,
+  "remote_ci_executed": false,
+  "source_changelog_raw_embedded": false,
+  "original_changelog_reconstructed": false,
+  "notes": "Changelog v1.1 original não pôde ser materializado; histórico independente v1.0→1.1 em catalog/history.json e docs/AUDITORIA_HISTORICA.md."
+}

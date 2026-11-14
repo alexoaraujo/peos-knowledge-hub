@@ -1,0 +1,30 @@
+name: PEOS Knowledge Hub - validation
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: peos-knowledge-hub-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout (pinned)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Python
+        run: python3 --version
+      - name: Unit and regression tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Canonical library validation
+        run: python3 tools/library.py validate
+      - name: PEOS composition validation
+        run: python3 tools/peos_engine.py validate
+      - name: Deterministic portal index
+        run: python3 tools/build_hub_index.py --check
+      - name: Safe composition smoke test
+        run: python3 -m hub.cli compose --goal 'criar projeto de software do zero com testes' > /tmp/peos-plan.json

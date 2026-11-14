@@ -1,0 +1,105 @@
+{
+  "library_version": "2.1.0",
+  "request": "Projetar UX de catálogo, navegação e busca acessível da biblioteca PEOS Knowledge Hub",
+  "pmu_id": "PMU-006",
+  "pmu_version": "1.0.0",
+  "pmu_sha256": "5049327147ddb5852b87841f3dcb32d2545d2bc1faba3632946a3a9958a3d28a",
+  "routing": {
+    "method": "deterministic-keyword",
+    "candidates": [
+      "PMU-006"
+    ],
+    "confidence": "heuristic-not-semantic-validation"
+  },
+  "canonical_dependencies": [
+    {
+      "id": "3601",
+      "content_version": "2.0.0",
+      "sha256": "e94900c3c9a9f7c591bf5c38950f21cb294759cc88fbbc8529c274154c627607"
+    },
+    {
+      "id": "3602",
+      "content_version": "2.0.0",
+      "sha256": "172887a94bd4cfc1f607efd68c6265c82e18b09270d47acc5017d36c80946ef7"
+    },
+    {
+      "id": "3603",
+      "content_version": "2.0.0",
+      "sha256": "c02b22a776d075f6e9d0bfe70ad4366248e97043b568fe8fa27c3ebd67e67830"
+    },
+    {
+      "id": "3604",
+      "content_version": "2.0.0",
+      "sha256": "c277c9853a21da2c75dd817e6aedfb0136d699630a8ade29649056bf0fb777f8"
+    },
+    {
+      "id": "3607",
+      "content_version": "2.0.0",
+      "sha256": "e193f7e1339f4da1544abd8543ad11163eea2f29e4ae27078f27d8e4e46daca3"
+    },
+    {
+      "id": "3610",
+      "content_version": "2.0.0",
+      "sha256": "0ec7ae53f869aaaea4ecf8a76eb4fea65296a2aa9a3ed43b82ecd28a1fe4cb1d"
+    },
+    {
+      "id": "3611",
+      "content_version": "2.0.0",
+      "sha256": "c12b0902bfab73a48ffa0184b85335bce9790d5c1c17ce9a2211c193d53571ad"
+    }
+  ],
+  "workflow_id": "WF-006",
+  "steps": [
+    {
+      "name": "Pesquisa e personas sem inventar dados",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Jornadas e arquitetura da informação",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Wireframes e protótipos",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Design tokens e componentes",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Responsividade e acessibilidade",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    },
+    {
+      "name": "Teste de usabilidade e handoff",
+      "status": "NOT_STARTED",
+      "evidence": null,
+      "gate": "BLOCKED_UNTIL_VERIFIED"
+    }
+  ],
+  "execution_status": "PLAN_ONLY",
+  "permissions": "NO_EXTERNAL_MUTATIONS",
+  "gates": {
+    "G0": "NOT_EVALUATED",
+    "G1": "NOT_EVALUATED",
+    "G2": "NOT_EVALUATED",
+    "G3": "NOT_EVALUATED",
+    "G4": "NOT_EVALUATED",
+    "G5": "NOT_EVALUATED",
+    "G6": "NOT_EVALUATED"
+  },
+  "notes": [
+    "Plano gerado sem execução de ferramentas externas.",
+    "Requer avaliação de contexto, autorização e evidências reais."
+  ]
+}

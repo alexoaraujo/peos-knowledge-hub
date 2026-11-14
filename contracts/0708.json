@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "id": "0708",
+  "title": "Segurança de Banco de Dados",
+  "content_sha256": "fb78146bfb1f5c943eb1e4fb4ab9179290a1a04e872dd4c0e9b01bf4d55e9f28",
+  "status": "SOURCE_EXTRACTED",
+  "goal": "executar Segurança de Banco de Dados com método profissional, evidências e critérios verificáveis.",
+  "when_to_use": "quando o trabalho envolver segurança de banco de dados em projeto, sistema, repositório, ambiente ou incidente real.",
+  "inputs": "[PROJETO], [OBJETIVO] e, conforme aplicável, [TECNOLOGIA], [AMBIENTE], [ARQUIVO], [ERRO], [REPOSITÓRIO], [URL], [BANCO_DE_DADOS], [VERSÃO], restrições e evidências disponíveis.",
+  "output_contract": "análise/proposta executável, decisões e trade-offs, ações priorizadas, evidências, testes/validação, riscos e próxima ação.",
+  "acceptance_criteria": "escopo atendido; fatos não inventados; riscos relevantes tratados; critérios de sucesso demonstrados; mudanças críticas com rollback; resultado reproduzível ou auditável.",
+  "guardrails": "Regras gerais da v1.1; restrições especializadas exigem revisão editorial",
+  "related_ids": [],
+  "source_links": [],
+  "source_type": "legacy-v1.1",
+  "reviewer": null,
+  "reviewed_at": null,
+  "human_approval": "NOT_RECORDED"
+}

@@ -1,0 +1,192 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/biblioteca-mestre-ti/manifest.schema.json",
+  "title": "Biblioteca Mestre TI — manifesto versionado 1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "library_version",
+    "library_name",
+    "id_policy",
+    "total_prompts",
+    "active_prompts",
+    "sources",
+    "prompts"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "library_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "library_name": {
+      "type": "string"
+    },
+    "id_policy": {
+      "const": "permanent-non-recyclable"
+    },
+    "total_prompts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "active_prompts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      }
+    },
+    "prompts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/prompt"
+      }
+    }
+  },
+  "$defs": {
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "group",
+        "technical_sector",
+        "category",
+        "category_code",
+        "subcategory",
+        "source_subcategory",
+        "level",
+        "source_status",
+        "status",
+        "tags",
+        "verticals",
+        "first_seen",
+        "content_version",
+        "revision",
+        "content_path",
+        "content_sha256",
+        "replaces",
+        "replaced_by"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "group": {
+          "type": "string",
+          "minLength": 1
+        },
+        "technical_sector": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category_code": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        },
+        "subcategory": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_subcategory": {
+          "type": "string"
+        },
+        "level": {
+          "type": "string"
+        },
+        "source_status": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "ACTIVE",
+            "DEPRECATED",
+            "SUPERSEDED"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "verticals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "first_seen": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "content_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "content_path": {
+          "type": "string",
+          "pattern": "^prompts/[0-9]{4}-[0-9]{4}/[0-9]{4}\\.md$"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "replaces": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9]{4}$"
+          }
+        },
+        "replaced_by": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "string",
+              "pattern": "^[0-9]{4}$"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

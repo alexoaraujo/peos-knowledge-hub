@@ -1,0 +1,602 @@
+Biblioteca de Prompts para Programação e Design
+
+Use os campos entre `[COLCHETES]` para personalizar cada comando.
+
+## 1. Ideação do projeto
+
+1. **Transformar ideia em projeto**
+   > Atue como arquiteto de software e transforme a seguinte ideia em um projeto de software profissional: `[IDEIA]`. Identifique objetivo, usuários, problemas resolvidos, funcionalidades, requisitos técnicos, riscos e arquitetura inicial.
+
+2. **Analisar viabilidade**
+   > Analise a viabilidade técnica, operacional e financeira de desenvolver `[PROJETO]`. Identifique dificuldades, dependências, riscos, custos tecnológicos e alternativas.
+
+3. **Definir escopo**
+   > Defina o escopo completo do projeto `[PROJETO]`, separando claramente o que pertence ao MVP, versões posteriores e funcionalidades opcionais.
+
+4. **Descobrir funcionalidades**
+   > Analise o objetivo `[OBJETIVO]` e proponha uma lista completa de funcionalidades necessárias para construir uma aplicação profissional.
+
+5. **Criar visão do produto**
+   > Crie a visão de produto para `[PROJETO]`, incluindo problema, público-alvo, proposta de valor, diferenciais e resultados esperados.
+
+---
+
+# 2. Levantamento de requisitos
+
+6. **Requisitos funcionais**
+   > Atue como analista de sistemas e produza os requisitos funcionais completos para `[SISTEMA]`. Numere cada requisito e inclua descrição, prioridade e critérios de aceite.
+
+7. **Requisitos não funcionais**
+   > Identifique requisitos não funcionais de desempenho, segurança, disponibilidade, acessibilidade, escalabilidade, manutenção, observabilidade e compatibilidade para `[SISTEMA]`.
+
+8. **Regras de negócio**
+   > Analise `[DESCRIÇÃO DO NEGÓCIO]` e transforme o conteúdo em regras de negócio formais, eliminando ambiguidades e inconsistências.
+
+9. **Casos de uso**
+   > Crie todos os principais casos de uso de `[SISTEMA]`, indicando ator, pré-condições, fluxo principal, exceções e resultado esperado.
+
+10. **Critérios de aceite**
+    > Para a funcionalidade `[FUNCIONALIDADE]`, escreva critérios de aceite objetivos e testáveis, incluindo cenários positivos, negativos e casos extremos.
+
+---
+
+# 3. Planejamento técnico
+
+11. **Planejamento completo**
+    > Atue como tech lead. Crie um plano técnico completo para desenvolver `[PROJETO]`, da configuração inicial até produção.
+
+12. **Dividir em fases**
+    > Divida `[PROJETO]` em fases de desenvolvimento progressivas e independentes. Para cada fase, informe objetivo, funcionalidades, dependências, entregáveis e critérios de conclusão.
+
+13. **Criar backlog**
+    > Transforme os requisitos de `[PROJETO]` em épicos, funcionalidades, histórias de usuário e tarefas técnicas priorizadas.
+
+14. **Roadmap**
+    > Crie um roadmap técnico e funcional para `[PROJETO]`, priorizando primeiro fundações arquiteturais e funcionalidades críticas.
+
+15. **Dependências**
+    > Analise as funcionalidades de `[PROJETO]` e gere um mapa de dependências indicando quais componentes precisam existir antes dos demais.
+
+---
+
+# 4. Arquitetura de software
+
+16. **Arquitetura completa**
+    > Atue como arquiteto de software sênior e proponha a arquitetura ideal para `[PROJETO]`. Avalie frontend, backend, banco, APIs, autenticação, armazenamento, filas, cache, observabilidade, infraestrutura e segurança.
+
+17. **Comparar arquiteturas**
+    > Compare arquitetura monolítica, modular, microsserviços e serverless para `[PROJETO]`. Recomende a opção mais adequada justificando tecnicamente.
+
+18. **Arquitetura modular**
+    > Projete uma arquitetura modular para `[SISTEMA]`, identificando domínios, módulos, submódulos, serviços e fronteiras de responsabilidade.
+
+19. **Clean Architecture**
+    > Proponha uma implementação baseada em Clean Architecture para `[PROJETO]`, explicando camadas, responsabilidades, dependências e estrutura de diretórios.
+
+20. **Domain-Driven Design**
+    > Analise `[DOMÍNIO]` utilizando princípios de DDD e identifique bounded contexts, entidades, agregados, value objects, serviços de domínio e eventos.
+
+---
+
+# 5. Escolha de tecnologias
+
+21. **Escolher stack**
+    > Analise os requisitos de `[PROJETO]` e recomende a melhor stack tecnológica atual. Compare pelo menos três alternativas antes de decidir.
+
+22. **Frontend**
+    > Compare tecnologias modernas de frontend adequadas para `[PROJETO]` considerando produtividade, desempenho, ecossistema, SEO, manutenção e escalabilidade.
+
+23. **Backend**
+    > Compare tecnologias e frameworks de backend para `[PROJETO]` considerando segurança, produtividade, desempenho, suporte a APIs e manutenção.
+
+24. **Banco de dados**
+    > Analise os dados e operações de `[SISTEMA]` e recomende SQL, NoSQL ou arquitetura híbrida, justificando a escolha.
+
+25. **Tecnologias alternativas**
+    > Para cada tecnologia proposta em `[ARQUITETURA]`, apresente pelo menos duas alternativas, vantagens, desvantagens e situações nas quais deveriam ser escolhidas.
+
+---
+
+# 6. Estrutura de projeto
+
+26. **Estrutura de pastas**
+    > Crie uma estrutura profissional de diretórios para `[STACK]`, preparada para crescimento, testes, documentação e produção.
+
+27. **Monorepo**
+    > Projete um monorepo para `[PROJETO]` contendo aplicações, pacotes compartilhados, configurações, documentação e infraestrutura.
+
+28. **Convenções**
+    > Defina padrões de nomenclatura, organização de código, imports, commits, branches, APIs e banco de dados para `[PROJETO]`.
+
+29. **Configurações**
+    > Liste todas as configurações necessárias para iniciar `[PROJETO]`, separando desenvolvimento, teste, homologação e produção.
+
+30. **Variáveis de ambiente**
+    > Gere uma especificação das variáveis de ambiente necessárias para `[SISTEMA]`, indicando finalidade e ambiente, sem criar ou expor credenciais reais.
+
+---
+
+# 7. Banco de dados
+
+31. **Modelagem**
+    > Atue como arquiteto de banco de dados e crie a modelagem completa de `[SISTEMA]`, incluindo entidades, relacionamentos, cardinalidade e restrições.
+
+32. **Schema**
+    > Transforme os requisitos de `[SISTEMA]` em um schema de banco de dados profissional e normalizado.
+
+33. **ERD**
+    > Descreva um diagrama entidade-relacionamento completo para `[SISTEMA]`, explicando cada entidade e relacionamento.
+
+34. **Índices**
+    > Analise este schema `[SCHEMA]` e recomende índices necessários para consultas, filtros, ordenações e relacionamentos.
+
+35. **Auditoria de banco**
+    > Audite o banco `[SCHEMA/CÓDIGO]` procurando redundância, relações incorretas, ausência de constraints, problemas de integridade e riscos de performance.
+
+---
+
+# 8. APIs
+
+36. **Projetar API**
+    > Projete uma API profissional para `[SISTEMA]`, definindo endpoints, métodos HTTP, parâmetros, autenticação, respostas e erros.
+
+37. **REST**
+    > Crie uma especificação REST completa para o módulo `[MÓDULO]`, seguindo convenções consistentes de recursos e status HTTP.
+
+38. **OpenAPI**
+    > Transforme estes requisitos `[REQUISITOS]` em uma especificação OpenAPI organizada e pronta para documentação.
+
+39. **Versionamento**
+    > Proponha uma estratégia de versionamento e compatibilidade de API para `[SISTEMA]`.
+
+40. **Auditar API**
+    > Revise `[API/CÓDIGO]` procurando problemas de segurança, consistência, validação, autorização, performance, idempotência e tratamento de erros.
+
+---
+
+# 9. Backend
+
+41. **Criar módulo**
+    > Implemente o módulo backend `[MÓDULO]` usando `[TECNOLOGIA]`, incluindo entidades, serviços, controladores, validação, persistência e testes.
+
+42. **Service layer**
+    > Crie a camada de serviços para `[FUNCIONALIDADE]`, mantendo regras de negócio separadas de transporte HTTP e persistência.
+
+43. **Validação**
+    > Adicione validações completas para `[ENTIDADE/DTO]`, incluindo obrigatoriedade, formatos, limites e regras condicionais.
+
+44. **Erros**
+    > Implemente uma estratégia padronizada de tratamento de erros para `[BACKEND]`, distinguindo erros de domínio, validação, autenticação e infraestrutura.
+
+45. **Refatorar backend**
+    > Analise este backend `[CÓDIGO]` e refatore para melhorar separação de responsabilidades, testabilidade, manutenção e segurança sem alterar o comportamento esperado.
+
+---
+
+# 10. Frontend
+
+46. **Criar aplicação**
+    > Crie a arquitetura frontend para `[SISTEMA]` utilizando `[FRAMEWORK]`, com páginas, componentes, layouts, serviços, hooks, estado e rotas.
+
+47. **Criar página**
+    > Desenvolva a página `[PÁGINA]` com interface profissional, responsiva e acessível, seguindo o design system existente.
+
+48. **Criar componente**
+    > Desenvolva um componente reutilizável para `[FINALIDADE]`, incluindo estados normal, carregando, vazio, sucesso, erro e desabilitado.
+
+49. **Gerenciamento de estado**
+    > Analise `[APLICAÇÃO]` e recomende a estratégia de estado local, global, servidor e cache mais adequada.
+
+50. **Frontend conectado**
+    > Conecte a interface `[TELA]` à API `[API]`, implementando carregamento, envio, tratamento de erros, feedback visual e atualização dos dados.
+
+---
+
+# 11. UX/UI Design
+
+51. **UX completo**
+    > Atue como UX Designer sênior e analise `[SISTEMA]`. Proponha arquitetura da informação, jornadas, fluxos, navegação e hierarquia das páginas.
+
+52. **Wireframe**
+    > Crie a especificação de wireframe para `[TELA]`, descrevendo cada área, componente, ação e comportamento.
+
+53. **Layout profissional**
+    > Proponha um layout moderno e profissional para `[SISTEMA]`, priorizando clareza, produtividade, acessibilidade e consistência visual.
+
+54. **Redesign**
+    > Analise esta interface `[DESCRIÇÃO/IMAGEM]` e proponha um redesign completo sem remover funcionalidades existentes.
+
+55. **Hierarquia visual**
+    > Avalie a hierarquia visual de `[TELA]` e indique melhorias em espaçamento, tipografia, agrupamento, contraste, navegação e ações principais.
+
+---
+
+# 12. Design System
+
+56. **Criar design system**
+    > Crie um design system completo para `[PRODUTO]`, incluindo princípios, tipografia, espaçamento, grid, ícones, componentes e estados.
+
+57. **Biblioteca de componentes**
+    > Defina a biblioteca de componentes necessária para `[SISTEMA]`, agrupando componentes básicos, formulários, navegação, dados, feedback e overlays.
+
+58. **Tokens**
+    > Defina design tokens semânticos para `[PROJETO]`, cobrindo cores, espaçamento, tipografia, bordas, sombras e responsividade.
+
+59. **Estados dos componentes**
+    > Para `[COMPONENTE]`, documente todos os estados possíveis: padrão, hover, focus, ativo, selecionado, loading, vazio, erro e desabilitado.
+
+60. **Consistência**
+    > Audite as telas de `[SISTEMA]` procurando inconsistências de componentes, espaçamento, tipografia, botões, formulários e comportamento.
+
+---
+
+# 13. Responsividade
+
+61. **Responsividade completa**
+    > Adapte `[TELA]` para desktop, notebook, tablet e smartphone sem remover funcionalidades essenciais.
+
+62. **Mobile-first**
+    > Redesenhe `[INTERFACE]` utilizando abordagem mobile-first e explique como os elementos evoluem em resoluções maiores.
+
+63. **Tabelas responsivas**
+    > Proponha uma solução responsiva para esta tabela `[COLUNAS]`, mantendo acesso a todos os dados e ações em dispositivos móveis.
+
+64. **Menu responsivo**
+    > Crie uma estratégia de navegação responsiva para `[SISTEMA]`, considerando sidebar, menus secundários e ações contextuais.
+
+---
+
+# 14. Acessibilidade
+
+65. **Auditoria de acessibilidade**
+    > Audite `[PÁGINA/CÓDIGO]` procurando problemas de acessibilidade relacionados a teclado, foco, contraste, semântica, formulários e leitores de tela.
+
+66. **Corrigir acessibilidade**
+    > Corrija os problemas de acessibilidade encontrados em `[CÓDIGO]` preservando aparência e funcionalidades.
+
+67. **Formulários acessíveis**
+    > Desenvolva o formulário `[FORMULÁRIO]` seguindo boas práticas de acessibilidade e mensagens de erro compreensíveis.
+
+---
+
+# 15. Autenticação e autorização
+
+68. **Arquitetura de autenticação**
+    > Projete uma arquitetura segura de autenticação para `[SISTEMA]`, incluindo login, logout, recuperação de senha, sessões e renovação de credenciais.
+
+69. **RBAC**
+    > Crie um modelo RBAC para `[SISTEMA]`, definindo usuários, perfis, permissões, recursos e ações.
+
+70. **Autorização**
+    > Revise `[CÓDIGO]` para garantir que permissões sejam verificadas no servidor e não apenas na interface.
+
+---
+
+# 16. Segurança
+
+71. **Auditoria de segurança**
+    > Atue como engenheiro de segurança e audite `[PROJETO]` em busca de vulnerabilidades de autenticação, autorização, validação, exposição de dados, injeção e configuração.
+
+72. **Threat modeling**
+    > Crie um modelo de ameaças para `[SISTEMA]`, identificando ativos, atores, superfícies de ataque, ameaças e mitigações.
+
+73. **Segredos**
+    > Analise `[PROJETO]` procurando credenciais, tokens ou segredos que não deveriam estar no código e proponha uma gestão segura.
+
+74. **Segurança de API**
+    > Faça uma revisão de segurança da API `[API]`, verificando autenticação, autorização, rate limiting, validação, CORS e exposição de informações.
+
+---
+
+# 17. Code Review
+
+75. **Revisão completa**
+    > Faça uma revisão técnica completa deste código `[CÓDIGO]`. Identifique bugs, vulnerabilidades, problemas arquiteturais, duplicações, complexidade e oportunidades de melhoria.
+
+76. **Review sem modificar**
+    > Analise `[CÓDIGO]` sem alterá-lo. Primeiro apresente problemas classificados por criticidade e somente depois sugira correções.
+
+77. **Review de pull request**
+    > Atue como revisor sênior e avalie este diff `[DIFF]`. Procure regressões, erros lógicos, problemas de segurança, testes ausentes e alterações incompatíveis.
+
+78. **Review arquitetural**
+    > Analise `[CÓDIGO/ESTRUTURA]` considerando exclusivamente qualidade arquitetural, responsabilidades, acoplamento, coesão e dependências.
+
+---
+
+# 18. Debug e correção
+
+79. **Diagnosticar erro**
+    > Analise o erro `[ERRO]` e o código `[CÓDIGO]`. Identifique a causa raiz antes de sugerir alterações.
+
+80. **Corrigir bug**
+    > Corrija `[BUG]` com a menor alteração segura possível e explique quais casos devem ser testados para evitar regressão.
+
+81. **Página em branco**
+    > Investigue sistematicamente por que `[PÁGINA]` apresenta tela em branco. Verifique runtime, console, imports, rotas, chamadas assíncronas, estado e renderização.
+
+82. **Erro de API**
+    > Analise `[ERRO DE API]`, rastreando a requisição desde o frontend até banco de dados para identificar o ponto exato da falha.
+
+83. **Causa raiz**
+    > Não aplique workaround inicialmente. Faça uma análise de causa raiz de `[PROBLEMA]`, apresente evidências e só então proponha a correção definitiva.
+
+---
+
+# 19. Refatoração
+
+84. **Refatorar código**
+    > Refatore `[CÓDIGO]` mantendo comportamento externo idêntico e melhorando legibilidade, coesão, testabilidade e manutenção.
+
+85. **Eliminar duplicação**
+    > Identifique duplicações em `[CÓDIGO]` e proponha abstrações somente quando realmente reduzirem complexidade.
+
+86. **Reduzir complexidade**
+    > Analise `[FUNÇÃO/CLASSE]` e reduza sua complexidade sem alterar regras de negócio.
+
+87. **Código legado**
+    > Crie um plano seguro para modernizar `[SISTEMA LEGADO]` progressivamente sem uma reescrita de alto risco.
+
+---
+
+# 20. Testes
+
+88. **Estratégia de testes**
+    > Crie uma estratégia completa de testes para `[PROJETO]`, cobrindo unitários, integração, API, componentes, E2E, segurança e desempenho.
+
+89. **Testes unitários**
+    > Crie testes unitários para `[FUNÇÃO/MÓDULO]`, incluindo caminhos principais, erros e casos extremos.
+
+90. **Testes de integração**
+    > Desenvolva testes de integração para `[FUNCIONALIDADE]`, verificando comunicação entre serviço, banco e dependências externas.
+
+91. **E2E**
+    > Crie cenários E2E para o fluxo `[FLUXO]`, começando na interação do usuário e validando o resultado persistido.
+
+92. **Regressão**
+    > Com base nesta alteração `[ALTERAÇÃO]`, identifique quais funcionalidades podem sofrer regressão e quais testes devem ser executados.
+
+---
+
+# 21. Performance
+
+93. **Auditoria de desempenho**
+    > Analise `[SISTEMA/CÓDIGO]` procurando gargalos de CPU, memória, rede, renderização, queries e operações desnecessárias.
+
+94. **Performance frontend**
+    > Analise `[FRONTEND]` procurando bundles excessivos, renders desnecessários, carregamento lento, assets pesados e oportunidades de lazy loading.
+
+95. **Performance backend**
+    > Avalie `[BACKEND]` procurando queries N+1, chamadas redundantes, processamento bloqueante e oportunidades de cache.
+
+96. **Banco lento**
+    > Analise esta consulta `[QUERY]`, explique por que pode estar lenta e proponha otimizações de query, schema e índices.
+
+---
+
+# 22. DevOps e infraestrutura
+
+97. **Arquitetura de produção**
+    > Projete a infraestrutura de produção para `[SISTEMA]`, incluindo aplicações, banco, armazenamento, CDN, DNS, cache, observabilidade e backups.
+
+98. **Docker**
+    > Crie uma estratégia Docker profissional para `[PROJETO]`, separando desenvolvimento e produção e evitando imagens desnecessariamente grandes.
+
+99. **CI/CD**
+    > Crie um pipeline CI/CD para `[PROJETO]`, incluindo lint, testes, build, análise de segurança, migrações e deploy.
+
+100. **Deploy**
+     > Crie um checklist completo de deploy para `[SISTEMA]`, desde validações prévias até smoke tests e rollback.
+
+---
+
+# 23. Observabilidade
+
+101. **Logs**
+     > Defina uma estratégia de logs estruturados para `[SISTEMA]`, incluindo níveis, correlação, contexto e proteção de dados sensíveis.
+
+102. **Monitoramento**
+     > Proponha métricas e alertas para monitorar disponibilidade, erros, latência, filas, banco e recursos de `[SISTEMA]`.
+
+103. **Tracing**
+     > Projete rastreamento distribuído para `[ARQUITETURA]`, permitindo seguir uma requisição entre serviços.
+
+104. **Health checks**
+     > Defina health checks de liveness, readiness e dependências externas para `[SISTEMA]`.
+
+---
+
+# 24. Documentação
+
+105. **README**
+     > Crie um README profissional para `[PROJETO]`, incluindo objetivo, arquitetura, requisitos, instalação, configuração, execução, testes e deploy.
+
+106. **Documentação técnica**
+     > Documente `[MÓDULO]` para que outro desenvolvedor consiga entender arquitetura, dependências, fluxo e pontos de extensão.
+
+107. **API**
+     > Gere documentação completa para `[API]`, incluindo autenticação, endpoints, parâmetros, exemplos e erros.
+
+108. **Onboarding**
+     > Crie um guia de onboarding técnico para novos desenvolvedores de `[PROJETO]`.
+
+---
+
+# 25. Auditoria completa de projeto
+
+109. **Auditoria geral**
+     > Atue simultaneamente como arquiteto de software, desenvolvedor sênior, DBA, especialista em segurança, DevOps e UX/UI. Audite completamente `[PROJETO]` e identifique estado atual, problemas, riscos e melhorias.
+
+110. **Código versus documentação**
+     > Compare a documentação de `[PROJETO]` com o código realmente implementado. Classifique cada funcionalidade como comprovadamente existente, parcial, simulada, ausente ou não verificável.
+
+111. **Detectar implementação fictícia**
+     > Verifique `[PROJETO]` procurando páginas que aparentam estar completas mas utilizam mocks, arrays locais, funções vazias, dados fixos ou integrações simuladas.
+
+112. **Mapa de pendências**
+     > Analise `[PROJETO]` e produza um mapa completo de pendências técnicas e funcionais ordenado por criticidade e dependência.
+
+113. **Critério de conclusão**
+     > Para cada módulo de `[PROJETO]`, determine o que precisa existir para que ele possa ser considerado realmente concluído e pronto para produção.
+
+---
+
+# 26. Prompts de execução autônoma
+
+114. **Planejar antes de alterar**
+     > Antes de modificar `[PROJETO]`, analise o estado atual, identifique dependências e apresente internamente um plano. Preserve tudo que já estiver correto e altere somente o necessário.
+
+115. **Implementação incremental**
+     > Implemente `[FUNCIONALIDADE]` em pequenas etapas verificáveis. Após cada etapa, valide compilação, tipos, testes e integração antes de avançar.
+
+116. **Corrigir antes de desenvolver**
+     > Antes de adicionar novas funcionalidades, revise `[PROJETO]`, corrija erros existentes que possam comprometer a evolução e somente então continue o desenvolvimento.
+
+117. **Não recriar**
+     > Analise primeiro o código existente. Não recrie componentes, módulos, schemas ou serviços que já estejam implementados corretamente; reutilize e evolua o que existe.
+
+118. **Validação obrigatória**
+     > Não considere `[FUNCIONALIDADE]` concluída somente porque o código foi escrito. Valide integração, persistência, permissões, tratamento de erros e testes.
+
+---
+
+# 27. Prompts para IA agir como equipe técnica
+
+119. **Arquiteto**
+     > Atue como arquiteto de software sênior responsável por decisões estruturais de `[PROJETO]`. Avalie impacto de longo prazo antes de recomendar mudanças.
+
+120. **Tech Lead**
+     > Atue como Tech Lead de `[PROJETO]`, coordenando arquitetura, qualidade de código, prioridades técnicas, riscos e sequência de implementação.
+
+121. **Desenvolvedor Full Stack**
+     > Atue como desenvolvedor Full Stack sênior e implemente `[FUNCIONALIDADE]` considerando frontend, backend, API, banco, segurança e testes como uma única entrega integrada.
+
+122. **UX/UI Designer**
+     > Atue como Product Designer e UX/UI Designer sênior. Projete `[FUNCIONALIDADE]` considerando jornada, clareza, consistência, acessibilidade e produtividade.
+
+123. **DBA**
+     > Atue como DBA e engenheiro de dados. Analise `[BANCO]` considerando integridade, performance, segurança, backup, crescimento e manutenção.
+
+124. **DevOps**
+     > Atue como engenheiro DevOps responsável por `[PROJETO]`. Avalie build, containers, CI/CD, ambientes, secrets, observabilidade, backup e recuperação.
+
+125. **Segurança**
+     > Atue como engenheiro de segurança de aplicações e faça uma revisão de `[PROJETO]` desde arquitetura até código e infraestrutura.
+
+---
+
+# 28. Prompt Mestre — Programação + Design
+
+126. **Prompt Mestre**
+
+> Atue como uma equipe técnica sênior formada por:
+>
+> - arquiteto de software;
+> - engenheiro de software;
+> - desenvolvedor frontend;
+> - desenvolvedor backend;
+> - especialista em banco de dados;
+> - UX/UI Designer;
+> - especialista em segurança;
+> - engenheiro DevOps;
+> - QA Engineer;
+> - especialista em performance.
+>
+> Sua tarefa é analisar e desenvolver `[PROJETO]`.
+>
+> Antes de implementar:
+>
+> 1. compreenda o problema e os objetivos;
+> 2. identifique requisitos funcionais e não funcionais;
+> 3. analise a arquitetura necessária;
+> 4. identifique módulos e dependências;
+> 5. determine a melhor stack;
+> 6. defina arquitetura de frontend, backend e banco;
+> 7. planeje UX, UI e design system;
+> 8. avalie segurança;
+> 9. defina estratégia de testes;
+> 10. determine infraestrutura e deploy.
+>
+> Durante a implementação:
+>
+> - preserve funcionalidades corretas existentes;
+> - não recrie código desnecessariamente;
+> - não utilize dados simulados como implementação definitiva;
+> - mantenha regras de negócio separadas da interface;
+> - implemente validações;
+> - implemente autenticação e autorização quando necessárias;
+> - trate erros;
+> - mantenha tipagem consistente;
+> - crie testes;
+> - documente decisões relevantes;
+> - valide integração entre frontend, backend e banco;
+> - verifique responsividade e acessibilidade;
+> - revise segurança;
+> - valide build e execução.
+>
+> Antes de considerar qualquer módulo concluído, confirme:
+>
+> - interface implementada;
+> - backend implementado;
+> - persistência real;
+> - validações;
+> - regras de negócio;
+> - permissões;
+> - tratamento de erros;
+> - integrações;
+> - testes;
+> - documentação;
+> - funcionamento em ambiente de produção.
+>
+> Ao encontrar problemas, identifique primeiro a causa raiz. Não aplique soluções temporárias quando uma correção estrutural for possível.
+>
+> Trabalhe de forma incremental, verificável e orientada à produção.
+
+---
+
+# 29. Prompt para continuar automaticamente um projeto
+
+127. **Desenvolvimento contínuo**
+
+> Analise o estado atual de `[PROJETO]` e determine automaticamente a próxima etapa tecnicamente correta.
+>
+> Antes de avançar:
+>
+> - identifique erros;
+> - identifique funcionalidades incompletas;
+> - identifique dependências pendentes;
+> - verifique build;
+> - verifique banco;
+> - verifique APIs;
+> - verifique frontend;
+> - verifique testes.
+>
+> Corrija primeiro problemas que possam comprometer etapas posteriores.
+>
+> Depois continue a implementação seguindo a ordem de dependências até concluir a etapa atual.
+>
+> Não reinicie o projeto do zero.
+> Não substitua implementações corretas sem necessidade.
+> Não marque tarefas como concluídas sem validação técnica.
+
+---
+
+# 30. Prompt para transformar uma ideia em aplicação pronta
+
+128. **Do conceito à produção**
+
+> Transforme `[IDEIA]` em uma aplicação profissional pronta para produção.
+>
+> Execute sequencialmente:
+>
+> descoberta → requisitos → arquitetura → UX → UI → design system → banco de dados → backend → APIs → frontend → autenticação → autorização → segurança → testes → performance → infraestrutura → CI/CD → observabilidade → documentação → auditoria final → deploy.
+>
+> Em cada etapa:
+>
+> - preserve decisões válidas anteriores;
+> - registre dependências;
+> - identifique riscos;
+> - valide o resultado;
+> - somente avance quando a fundação necessária estiver consistente.
+>
+> O resultado final deve ser uma aplicação funcional, integrada, segura, testada, documentada, responsiva, acessível e preparada para produção.
