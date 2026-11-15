@@ -36,13 +36,14 @@ jobs:
           npm --version
           python3 --version
       - name: Install pinned Playwright test runner
-        run: npm install --no-save --package-lock=false --ignore-scripts @playwright/test@1.56.1
+        run: npm install --no-save --package-lock=false --ignore-scripts @playwright/test@1.56.1 @axe-core/playwright@4.14.0
       - name: Install Chromium and Linux system dependencies
         run: npx playwright install --with-deps chromium
       - name: Check browser test code syntax
         run: |
           node --check playwright.config.cjs
           node --check tests/e2e/portal.spec.cjs
+          node --check tests/e2e/portal-accessibility.spec.cjs
           node --check tests/portal_search_benchmark.test.cjs
       - name: Run real Chromium E2E scenarios
         run: npx playwright test --config=playwright.config.cjs
