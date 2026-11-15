@@ -1,9 +1,9 @@
 'use strict';
 /* Accessible read-only catalog viewer. No HTML injection, no external mutations. */
 const byId = id => document.getElementById(id);
-const ui = {q:byId('q'),ns:byId('ns'),sort:byId('sort'),results:byId('results'),count:byId('result-count'),stats:byId('stats'),more:byId('more'),clear:byId('clear'),error:byId('load-error')};
-const norm = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-let list = [], filtered = [], visible = 0;
+const ui = {q:byId('q'),ns:byId('ns'),category:byId('category'),group:byId('group'),tag:byId('tag'),sort:byId('sort'),results:byId('results'),count:byId('result-count'),stats:byId('stats'),more:byId('more'),clear:byId('clear'),error:byId('load-error')};
+const search = window.PEOSSearch;
+let list = [], indexed = [], filtered = [], visible = 0;
 const PAGE_SIZE = 40;
 
 function safePromptPath(value) {
@@ -44,14 +44,29 @@ function showMore() {
   }
 }
 function render() {
-  const words = norm(ui.q.value).trim().split(/\s+/).filter(Boolean);
-  const namespace = ui.ns.value;
-  filtered = list.filter(p => (!namespace || p.namespace === namespace) &&
-    words.every(w => norm([p.id,p.title,p.category,p.group,...(Array.isArray(p.tags)?p.tags:[])].join(' ')).includes(w)));
-  if (ui.sort.value === 'title') filtered.sort((a,b)=>String(a.title).localeCompare(String(b.title),'pt-BR'));
-  if (ui.sort.value === 'id') filtered.sort((a,b)=>String(a.id).localeCompare(String(b.id),'pt-BR'));
+  filtered = search.query(indexed, {
+    query:ui.q.value,
+    namespace:ui.ns.value,
+    category:ui.category.value,
+    group:ui.group.value,
+    tag:ui.tag.value,
+    sort:ui.sort.value
+  });
   ui.results.replaceChildren(); visible = 0; showMore();
-  ui.clear.disabled = !ui.q.value && !ui.ns.value && ui.sort.value === 'default';
+  ui.clear.disabled = !ui.q.value && !ui.ns.value && !ui.category.value && !ui.group.value &&
+    !ui.tag.value && ui.sort.value === 'default';
+}
+function facetOptions(select, key, title) {
+  const values = search.options(list, key);
+  select.replaceChildren();
+  const first = document.createElement('option');
+  first.value = ''; first.textContent = title;
+  select.append(first);
+  for (const value of values) {
+    const option = document.createElement('option');
+    option.value = value; option.textContent = value;
+    select.append(option);
+  }
 }
 function addStat(label, count) {
   const box = document.createElement('div'); box.className = 'stat';
@@ -68,6 +83,10 @@ function load() {
   }).then(data => {
     if (!Array.isArray(data.entries) || !data.summary || !data.summary.by_namespace) throw Error('Formato de índice inválido');
     list = data.entries;
+    indexed = search.indexEntries(list);
+    facetOptions(ui.category, 'category', 'Todas as categorias');
+    facetOptions(ui.group, 'group', 'Todos os grupos');
+    facetOptions(ui.tag, 'tag', 'Todas as tags');
     ui.stats.replaceChildren();
     addStat('Entradas',data.summary.total_prompts);
     addStat('Canônicos',data.summary.by_namespace.canonical);
@@ -83,10 +102,13 @@ function load() {
 }
 ui.q.addEventListener('input', render);
 ui.ns.addEventListener('change', render);
+ui.category.addEventListener('change', render);
+ui.group.addEventListener('change', render);
+ui.tag.addEventListener('change', render);
 ui.sort.addEventListener('change', render);
 ui.more.addEventListener('click', showMore);
 ui.clear.addEventListener('click', () => {
-  ui.q.value = ''; ui.ns.value = ''; ui.sort.value = 'default';
+  ui.q.value = ''; ui.ns.value = ''; ui.category.value = ''; ui.group.value = ''; ui.tag.value = ''; ui.sort.value = 'default';
   render(); ui.q.focus();
 });
 byId('retry').addEventListener('click', load);
