@@ -23,7 +23,7 @@ A cadeia `#7 → #9 → #10 → #11` permanece independente do gate documental. 
 - Para a #5, executar **auditoria retrospectiva independente** e registrar parecer na issue #13, sem apresentar aprovação posterior como aprovação pré-merge.
 - Tratar #6 em avaliação independente, sem misturar mudanças não relacionadas; atualizar a base somente com inspeção do diff e checks no novo SHA.
 
-## Regraset de proteção obrigatório para satisfazer G4 (configuração ainda não verificada)
+## Proteção da main: diagnóstico confirmado e configuração necessária
 
 - Exigir Pull Request para alterar `main` e impedir push direto ou bypass não autorizado quando o plano e visibilidade permitirem.
 - Exigir no mínimo **uma aprovação formal de colaborador elegível diferente do autor**, descartar aprovações obsoletas após push quando disponível e resolver conversas antes do merge.
@@ -31,7 +31,7 @@ A cadeia `#7 → #9 → #10 → #11` permanece independente do gate documental. 
 - Configurar especificamente a aplicabilidade a administradores e possíveis bypasses; somente autorizar exceções sob procedimento de emergência auditável.
 - Preferir permissões mínimas no CI; evitar `pull_request_target` para código não confiável.
 - Executar ensaio negativo em PR descartável (sem review: **bloqueia**) e positivo (review por revisor elegível + checks: **permite**), registrando evidências e link do ruleset na issue #13.
-- **Não declarar o ruleset aplicado** sem consultar as configurações reais e testes. O conector disponível nesta execução não expõe a leitura/alteração da proteção da branch.
+- **Leitura confirmada via GitHub API em 15/11/2026:** `GET /repos/alexoaraujo/peos-knowledge-hub/rulesets` retornou `[]`; `GET /repos/alexoaraujo/peos-knowledge-hub/branches/main` retornou `protected: false` e `protection.enabled: false`. O endpoint de branch protection detalhada retornou `403 Resource not accessible by integration`. Portanto, a `main` está sem proteção ativa, mas não há autorização de escrita administrativa disponível nesta conexão. **Não declarar regras aplicadas.**
 
 ## Incidente de governança G4 — evidências e restrições
 
@@ -44,7 +44,7 @@ A cadeia `#7 → #9 → #10 → #11` permanece independente do gate documental. 
 | Review formal GitHub | Nenhuma revisão retornada pela API no momento da auditoria |
 | Exceção PEOS G4 | [Issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13), aberta |
 | Histórico `main` | Merge da #5 confirmado como HEAD durante a auditoria |
-| Ruleset/branch protection | **NÃO VERIFICADO**; não inferir a configuração a partir de um merge isolado |
+| Ruleset/branch protection | **CONFIRMADO SEM PROTEÇÃO:** `rulesets=[]`, `main.protected=false`; consulta detalhada retorna HTTP 403 para a integração |
 
 A ausência de revisão formal registrada **não** permite afirmar qual configuração ou bypass possibilitou o merge. Verificar ruleset, direitos de bypass e mecanismo de aprovação. Uma revisão feita posteriormente é *retrospectiva*, não apaga a ocorrência.
 
@@ -53,3 +53,22 @@ A ausência de revisão formal registrada **não** permite afirmar qual configur
 `PASS`: somente após evidências autenticadas no SHA e revisão pertinente. `BLOCKED`: ausência de permissão, prova, licença ou revisão. `NOT_EVALUATED`: teste ou auditoria não executado. `FAIL`: verificação executada com desvio comprovado.
 
 **Os testes automatizados de axe-core e Playwright não constituem auditoria humana WCAG nem autorização jurídica.**
+
+## Verificador automatizado de revisão independente (PR #12)
+
+O workflow `.github/workflows/peos-independent-review.yml` executa `tests/test_independent_review_gate.py` e consulta o endpoint de reviews da PR para exigir:
+- aprovação `APPROVED` atribuída a outro usuário, ligada exatamente ao `head.sha` atual;
+- nenhuma solicitação de alterações `CHANGES_REQUESTED` pendente de outro revisor;
+- rejeição de autoaprovação, review obsoleto, review `DISMISSED` e ausência de metadados.
+
+O verificador usa apenas `contents:read` e `pull-requests:read`, não contém secrets adicionais e **não altera PRs**. Seu status será negativo até surgir aprovação elegível, o que é o comportamento esperado (fail-closed). A execução isolada não protege a `main`.
+
+### Etapas administrativas para ativação obrigatória
+
+1. Abrir [GitHub Settings → Rules → Rulesets](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules).
+2. Criar ruleset ativo destinado à branch `main`; exigir Pull Request antes do merge.
+3. Solicitar ao menos **uma aprovação independente**, considerar `Dismiss stale approvals` e bloquear conversas não resolvidas; impedir bypass administrativo não autorizado.
+4. Adicionar como required checks, após publicação do workflow na branch padrão e disponibilidade dos contextos: `Independent review on current SHA`, `Canonical integrity (windows-latest)`, `Canonical integrity (ubuntu-latest)`, `validate` e `integridade` **somente após conferir os nomes exatos no GitHub**.
+5. Testar uma PR descartável sem aprovação (merge bloqueado) e outra com aprovação elegível + checks verdes (merge permitido); registrar evidências na [issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13).
+
+**Importante:** os nomes `validate` e `integridade` podem não ser globalmente exclusivos, e required checks devem referenciar o app e contexto concretos. A escolha final exige inspeção dos checks no GitHub. Não inserir um check novo como obrigatório antes que o workflow esteja publicado na branch padrão e funcionando, para não provocar deadlock operacional.
