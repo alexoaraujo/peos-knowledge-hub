@@ -1,0 +1,62 @@
+name: PEOS cross-platform integrity gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: peos-cross-platform-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integrity:
+    name: Canonical integrity (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      PYTHONIOENCODING: utf-8
+      PYTHONUTF8: '1'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout pinned commit
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Python version and checkout diagnostics
+        run: |
+          python --version
+          git rev-parse HEAD
+          git config --get core.autocrlf || true
+          git ls-files --eol catalog/manifest.json prompts/0700-0799/0711.md tools/library.py
+
+      - name: Baseline and behavioral integrity tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate canonical library and snapshots
+        run: python tools/library.py validate
+
+      - name: Verify deterministic indexes
+        run: python tools/library.py index --check
+
+      - name: Verify deterministic compilation
+        run: python tools/library.py compile --check
+
+      - name: Validate PMUs and workflows
+        run: python tools/peos_engine.py validate
+
+      - name: Validate Knowledge Hub search index
+        run: python tools/build_hub_index.py --check
+
+      - name: Check generated files are unchanged
+        run: git diff --exit-code
