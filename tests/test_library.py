@@ -1,5 +1,5 @@
 """Testes comportamentais: baseline, adulterações, IDs e release."""
-import json, shutil, subprocess, sys, tempfile, unittest
+import json, os, shutil, subprocess, sys, tempfile, unittest
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -9,7 +9,8 @@ import library
 class IntegrityTests(unittest.TestCase):
     def run_cli(self,base,*args):
         return subprocess.run([sys.executable,str(base/'tools'/'library.py'),*args],
-                              cwd=base,text=True,encoding='utf-8',errors='replace',capture_output=True,check=False)
+                              cwd=base,text=True,encoding='utf-8',capture_output=True,check=False,
+                              env={**os.environ, 'PYTHONIOENCODING':'utf-8'})
     def test_historical_baseline(self):
         data=library.historical_audit()
         self.assertEqual((data['v1_0_count'],data['v1_1_count'],data['preserved_ids']), (273,647,273))
