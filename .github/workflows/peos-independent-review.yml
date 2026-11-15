@@ -4,7 +4,6 @@ on:
     types: [opened, reopened, synchronize, ready_for_review, review_requested]
   pull_request_review:
     types: [submitted, dismissed]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,12 +22,6 @@ jobs:
       - name: Review gate behavioral tests
         run: python3 -m unittest discover -s tests -p 'test_independent_review_gate.py' -v
       - name: Check live approval and HEAD SHA
-        if: github.event_name != 'workflow_dispatch'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 .github/scripts/check_independent_review.py
-      - name: Manual runs cannot assert approval without a PR context
-        if: github.event_name == 'workflow_dispatch'
-        run: |
-          echo "BLOCKED: workflow_dispatch has no PR context"
-          exit 1
