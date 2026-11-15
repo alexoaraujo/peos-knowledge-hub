@@ -1,5 +1,15 @@
 # Runbook de revisão independente e integração de PRs PEOS
 
+## Atualização de configuração — 15/11/2026
+
+A auditoria de rulesets descrita abaixo como ausência de proteção é **histórica** e já não representa o estado atual. A leitura mais recente do GitHub retorna:
+- Único ruleset **`protect-main` ID 27310126**, ativo para `main`; `main.protected=true`.
+- Ruleset antigo ID 27310107: **404 Not Found**, não apenas desativado.
+- Required check ainda configurado incorretamente como `quality`; o check não figura entre os contextos da CI disponíveis.
+- CODEOWNERS review exigida embora não haja arquivo CODEOWNERS nos locais reconhecidos.
+- A [proposta atualizada](GITHUB-RULESETS-MAIN-CONSOLIDATION.md) define os quatro required checks reais e a sequência segura de remediação administrativa.
+- Não houve alteração administrativa por este documento. G4 permanece bloqueado pela ausência de aprovação formal independente e pela configuração efetiva de checks ainda pendente.
+
 ## Estado de referência
 A cadeia `#7 → #9 → #10 → #11` permanece independente do gate documental. A PR #5 (integridade Windows/Linux) **já foi mesclada na `main`**, em 2026-11-15T03:04:46Z (merge SHA `317e911c5c543e9aef526c4117b0f2793e91a02d`). A API de reviews da PR #5 retornou **zero revisões formais**, embora a CI Windows/Ubuntu tenha aprovado 41/41 testes; o desvio G4 foi registrado na issue #13. A PR #6 permanece aberta como Draft, e a PR #12 contém esta remediação documental.
 
