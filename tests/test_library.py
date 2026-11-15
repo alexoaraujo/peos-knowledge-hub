@@ -9,7 +9,7 @@ import library
 class IntegrityTests(unittest.TestCase):
     def run_cli(self,base,*args):
         return subprocess.run([sys.executable,str(base/'tools'/'library.py'),*args],
-                              cwd=base,text=True,capture_output=True,check=False)
+                              cwd=base,text=True,encoding='utf-8',errors='replace',capture_output=True,check=False)
     def test_historical_baseline(self):
         data=library.historical_audit()
         self.assertEqual((data['v1_0_count'],data['v1_1_count'],data['preserved_ids']), (273,647,273))
@@ -20,7 +20,7 @@ class IntegrityTests(unittest.TestCase):
         self.assertEqual(library.validate(),[])
     def test_index_determinism(self):
         self.assertEqual(library.write_indexes(library.load(library.MANIFEST),
-               (library.SOURCES/'Biblioteca_Mestre_Prompts_TI_v1.1.md').read_text(),check=True),[])
+               (library.SOURCES/'Biblioteca_Mestre_Prompts_TI_v1.1.md').read_text(encoding='utf-8'),check=True),[])
     def copy_repo(self):
         tmp=tempfile.TemporaryDirectory()
         base=Path(tmp.name)/'repository';shutil.copytree(ROOT,base)
