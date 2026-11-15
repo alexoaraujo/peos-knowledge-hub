@@ -1,5 +1,5 @@
 {
-  "name": "protect-main-hardened",
+  "name": "protect-main",
   "target": "branch",
   "enforcement": "active",
   "conditions": {
