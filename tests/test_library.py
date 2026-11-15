@@ -43,7 +43,7 @@ class IntegrityTests(unittest.TestCase):
     def test_duplicate_id_is_blocked(self):
         base=self.copy_repo()
         m=base/'catalog'/'manifest.json';doc=json.loads(m.read_text(encoding='utf-8'))
-        doc['prompts'].append(dict(doc['prompts'][0]));m.write_text(json.dumps(doc,ensure_ascii=False))
+        doc['prompts'].append(dict(doc['prompts'][0]));m.write_text(json.dumps(doc,ensure_ascii=False),encoding='utf-8')
         r=self.run_cli(base,'validate')
         self.assertNotEqual(r.returncode,0)
         self.assertIn('ID duplicado:',r.stdout)
