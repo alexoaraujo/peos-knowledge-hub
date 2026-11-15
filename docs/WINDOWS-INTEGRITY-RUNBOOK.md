@@ -2,7 +2,7 @@
 
 ## Diagnóstico PEOS PMU-003 + PMU-007 + PMU-009
 
-**Causa ainda não comprovada:** os erros `test_duplicate_id_is_blocked`, `test_manifest_integrity`, `test_index_determinism` e `test_stage_with_reason_creates_versioned_snapshot` foram observados em uma cópia Windows. A mesma baseline do ZIP completa passou nos 37 testes em Linux. Não altere hashes/snapshots para acomodar falhas sem explicação.
+**Causa-raiz verificada no GitHub Actions:** conversão CRLF durante checkout Windows, caminhos relativos formatados com `\\` em vez de `/`, codificação implícita de arquivo em teste e console/subprocessos sem UTF-8 explícito. Corrigidos com `.gitattributes`, `Path.as_posix()`, leitura/gravação UTF-8 e `PYTHONIOENCODING=utf-8`. Os testes passaram em Windows e Ubuntu no commit `6daeb46a0d05028b2f0d6b0d54bcbb51f0974f5c` ([execução](https://github.com/alexoaraujo/peos-knowledge-hub/actions/runs/43668730991)). Não alterar hashes/snapshots para acomodar falhas sem explicação.
 
 ## Pré-condições
 
@@ -22,7 +22,7 @@ python --version
 python tools/library.py validate
 python tools/library.py index --check
 python tools/library.py compile --check
-python -m unittest discover -s tests -p 'test_library.py' -v > peos-test-errors.log 2>&1
+python -m unittest discover -s tests -v > peos-test-errors.log 2>&1
 cat peos-test-errors.log
 ```
 
@@ -39,9 +39,18 @@ cat peos-test-errors.log
 
 ## Gates obrigatórios
 
-- **G1**: suíte completa `37/37` aprovada em Linux e Windows no mesmo SHA
+- **G1**: suíte completa de pelo menos `41/41` testes aprovada em Linux e Windows no mesmo SHA
 - **G2**: manifesto, releases, índices e contratos sem divergências
 - **G3**: revisão de licença e redistribuição das fontes (issue #2)
 - **G4**: aprovação independente do PR e rastreabilidade da evidência
 
 Nenhuma validação local substitui execução no runner GitHub. Os prompts permanecem `PLAN_ONLY` e não fornecem autorização para mudanças em Production.
+
+## Evidência final e controles de saída
+
+- [ ] Registrar novo SHA exato após qualquer alteração adicional e verificar Windows + Ubuntu nesse SHA
+- [ ] Confirmar que a saída de `git diff --exit-code` permanece limpa após os checks
+- [ ] Obter revisão formal de colaborador elegível diferente do autor antes de merge
+- [ ] Não declarar a issue #2 de licenciamento concluída por causa desta correção técnica
+
+A execução cruzada que comprovou a correção possui 41 testes PASS em cada sistema. O arquivo `peos-test-errors.log` é diagnóstico local e **não deve ser commitado**.
