@@ -1,39 +1,42 @@
-# Consolidação de rulesets da main — auditoria 2026-11-15
+# Auditoria e consolidação de ruleset para `main` — PEOS Knowledge Hub
 
-## Evidência consultada no GitHub
+## Situação efetiva verificada em 15/11/2026
 
-- `protect-main` — ID **27310107**, `active`, escopo exclusivo `refs/heads/main`.
-- `protect-main-hardened` — ID **27310126**, `active`, escopo exclusivo `refs/heads/main`.
-- Os dois exigem PR e uma revisão, sem bypass actors.
-- Ambos exigem o check `quality` (GitHub Actions, integration_id 15368), **não encontrado** na lista de check runs da `main` (`317e911c5c543e9aef526c4117b0f2793e91a02d`).
-- Os quatro contextos efetivamente observados em `main` são `Canonical integrity (windows-latest)`, `Canonical integrity (ubuntu-latest)`, `integridade`, `validate` (app `github-actions`).
-- `protect-main-hardened` exige CODEOWNERS review, mas `CODEOWNERS`, `.github/CODEOWNERS` e `docs/CODEOWNERS` não existem na `main`. A aprovação comum de um revisor diferente do autor deve continuar obrigatória.
-- `GET /branches/main` retornou `protected: true`. Não confundir `protection.enabled: false` (proteção clássica) com inexistência de **rulesets**, que agora existem.
+Fonte: GitHub REST `GET /repos/alexoaraujo/peos-knowledge-hub/rulesets`, `GET /rulesets/27310126` e `GET /branches/main`.
 
-## Configuração de destino (ainda NÃO aplicada)
+- **Único ruleset na listagem**: `protect-main`, ID **27310126**, `enforcement=active`, `refs/heads/main`.
+- Antigo ruleset ID **27310107**: consulta direta retornou **404 Not Found**. Não assumir que está apenas `disabled`: o objeto não é encontrado.
+- `main.protected=true` graças ao ruleset; a proteção clássica segue `protection.enabled=false`.
+- Requer PR, 1 aprovação, descarte de aprovações antigas, aprovação do último push, conversas resolvidas, sem bypass, bloqueio de exclusão/force push, histórico linear e squash/rebase.
+- **Pendência 1:** required check `quality` (GitHub Actions, integration ID **15368**) não existe nos check-runs observados no SHA `317e911c5c543e9aef526c4117b0f2793e91a02d` da `main`.
+- **Pendência 2:** `require_code_owner_review=true`, embora nenhuma das localizações padrão contenha `CODEOWNERS`. Não confundir isso com bloqueio comprovado: sua aplicabilidade depende dos arquivos afetados e de um CODEOWNERS válido.
+- **Pendência 3:** aprovação independente ainda não registrada na PR #12. Workflow `Independent review on current SHA` permanece somente na branch da PR #12.
 
-A versão proposta está em [`protect-main-hardened.proposed.json`](github-rulesets/protect-main-hardened.proposed.json) — **artefato de referência**, não arquivo de configuração automaticamente lido pelo GitHub.
+## Quatro checks reais identificados
 
-Preservar: PR obrigatório; 1 approval; stale approvals descartadas; aprovação do último push por pessoa diferente; conversas resolvidas; bloqueio de deleção e force push; histórico linear; squash/rebase; checks estritos; nenhum bypass.
+| Contexto GitHub Actions | App ID | Verificado |
+| --- | ---: | --- |
+| `Canonical integrity (windows-latest)` | 15368 | SIM |
+| `Canonical integrity (ubuntu-latest)` | 15368 | SIM |
+| `integridade` | 15368 | SIM |
+| `validate` | 15368 | SIM |
 
-Correções:
-1. Remover contexto obrigatório inexistente `quality`.
-2. Exigir exatamente os quatro contextos publicados por GitHub Actions no commit validado, vinculados ao app correto.
-3. Marcar `Require review from Code Owners` como **false** até cadastrar CODEOWNERS reais com colaboradores independentes elegíveis. O requisito de 1 aprovação permanece ativo.
-4. **Não exigir `Independent review on current SHA` nesta fase**: o workflow ainda está em PR #12, não na `main`. Quando integrado e testado, acrescentar esse check obrigatório em alteração separada, observando eventos de atualização de reviews e SHAs.
+**Configuração-alvo de referência:** [`protect-main-hardened.proposed.json`](github-rulesets/protect-main-hardened.proposed.json). O nome do arquivo é histórico; o conteúdo proposto deve manter o nome **`protect-main`** e o **ID existente 27310126** na edição pelo GitHub UI. Arquivos de configuração no repositório **não alteram automaticamente** rulesets.
 
-## Ordem operacional segura
+## Sequência de ajustes administrativos — sem excluir regras adicionais
 
-1. Abrir [ruleset hardened — ID 27310126](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules/27310126). Conferir o escopo `main`.
-2. Editar o hardened mantendo estado `active`; ajustar os quatro checks e o requisito de CODEOWNERS conforme acima, salvar.
-3. Reconsultar via `GET /rulesets/27310126` para confirmar persistência do estado, `required_status_checks` e parâmetros.
-4. **Somente então** acessar [ruleset legado — ID 27310107](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules/27310107), alterar `Enforcement` de `Active` para `Disabled` (não excluir a política).
-5. Reconsultar `GET /rulesets`: hardened deve estar `active`; legado deve estar `disabled`. Confirmar `main.protected=true`.
-6. Validar em PR sem approval, confirmando que o merge está bloqueado; validar com colaboração independente legítima, reviews e checks verdes. Não gerar merge de produção apenas para testar.
-7. Registrar screenshots/URLs e aprovação independente na [issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13).
+1. Abrir [ruleset ativo ID 27310126](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules/27310126). Confirmar `enforcement=active` e escopo apenas `main`.
+2. Remover o required status `quality` e incluir os quatro checks acima, selecionando o app GitHub Actions (ID 15368).
+3. Manter 1 aprovação independente, stale review dismissal, last-push approval, resolved threads, linear history, proteção contra exclusão e push forçado.
+4. Enquanto não existir CODEOWNERS com um **revisor elegível diferente do autor**, definir temporariamente `Require review from Code Owners=false`. Isso **não** reduz o requisito mínimo de aprovação geral.
+5. Salvar e fazer nova consulta do ruleset. Confirmar exatamente os quatro contextos, `CODEOWNERS=false`, nenhuma regra `quality`.
+6. Verificar [Settings → Rules](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules): somente ID **27310126** deve aparecer. O antigo **27310107** já retornou 404; não há outra regra ativa a desativar na última consulta.
+7. Testar que uma PR sem review não pode ser mesclada; uma PR com revisão legítima e checks completos deve cumprir os gates. Não mesclar mudanças irreversíveis apenas para ensaio.
+8. Registrar as provas e links na [issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13).
 
-**Observação importante:** este repositório está na conta pessoal `alexoaraujo`. Em alguns planos e modalidades de repos, restrições de ruleset e revisores podem ter nuances de aplicabilidade. Confirmar em **Rules → Rulesets** e no banner de merge de uma PR real. Não criar `CODEOWNERS` apontando exclusivamente para o próprio autor para contornar a aprovação independente.
+## Limitações e risco de deadlock
 
-## Verificação operacional
-
-Conector GitHub nesta conversa permite **ler** rulesets, mas não disponibiliza ferramenta para `PUT/PATCH` ou mudança de `enforcement`. Assim, este artefato **não efetua a configuração** e não pode ser contabilizado como gate G4=PASS até a reconsulta após edição administrativa.
+- O conector nesta conversa é de leitura para rulesets; **nenhuma atualização administrativa foi aplicada** por esta auditoria.
+- Não exigir o check `Independent review on current SHA` enquanto o workflow não estiver na `main`. A PR #12 deve ser revisada e aprovada independentemente antes da integração.
+- Os checks `integridade` e `validate` são nomes genéricos: confirmar a associação ao app GitHub Actions e evitar outros workflows com mesmo contexto.
+- O arquivo de referência documenta o estado desejado, **não** o estado real. O gate PEOS G4 somente passa após verificação da proteção efetiva e revisão independente.
