@@ -45,13 +45,13 @@ class PortalAccessibilityTests(unittest.TestCase):
     def test_accessible_inputs_and_unique_ids(self):
         p = self.parser
         self.assertFalse(p.duplicate_ids)
-        self.assertTrue({'q', 'ns', 'sort'}.issubset(p.labels))
+        self.assertTrue({'q', 'ns', 'sort', 'category', 'group', 'tag'}.issubset(p.labels))
         self.assertTrue({'results', 'result-count', 'clear', 'more', 'load-error', 'retry'}.issubset(p.ids))
         self.assertIn('#catalog-results', p.skip_links)
         self.assertIn('aria-live="polite"', self.html)
 
     def test_assets_are_local_and_present(self):
-        self.assertEqual(self.parser.scripts, ['app.js'])
+        self.assertEqual(self.parser.scripts, ['search.js', 'app.js'])
         self.assertIn('enhancements.css', self.parser.links)
         for asset in self.parser.scripts + self.parser.links:
             self.assertTrue((PORTAL / asset).is_file(), asset)
