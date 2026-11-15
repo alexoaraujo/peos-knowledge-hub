@@ -23,7 +23,7 @@ permissions:
 jobs:
   browser-e2e:
     name: Chromium E2E and benchmark
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
       - name: Checkout pinned
