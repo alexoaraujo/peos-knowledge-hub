@@ -1,0 +1,35 @@
+name: PEOS advanced search quality gate
+on:
+  pull_request:
+    paths:
+      - 'hub-portal/**'
+      - 'tests/portal_search.test.cjs'
+      - '.github/workflows/portal-search-gate.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'hub-portal/**'
+      - 'tests/portal_search.test.cjs'
+      - '.github/workflows/portal-search-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout pinned
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Verify JS syntax
+        run: |
+          node --check hub-portal/search.js
+          node --check hub-portal/app.js
+      - name: Test pure advanced search on real 797-entry index
+        run: node --test tests/portal_search.test.cjs
+      - name: Full Python regression
+        run: python3 -m unittest discover -s tests -v
+      - name: Verify deterministic catalog
+        run: python3 tools/build_hub_index.py --check
