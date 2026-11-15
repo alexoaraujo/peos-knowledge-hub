@@ -1,0 +1,34 @@
+name: PEOS independent review evidence
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review, review_requested]
+  pull_request_review:
+    types: [submitted, dismissed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  independent-review:
+    name: Independent review on current SHA
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout pinned
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Review gate behavioral tests
+        run: python3 -m unittest discover -s tests -p 'test_independent_review_gate.py' -v
+      - name: Check live approval and HEAD SHA
+        if: github.event_name != 'workflow_dispatch'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/check_independent_review.py
+      - name: Manual runs cannot assert approval without a PR context
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          echo "BLOCKED: workflow_dispatch has no PR context"
+          exit 1
