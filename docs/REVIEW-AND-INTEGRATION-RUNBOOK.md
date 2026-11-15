@@ -1,7 +1,7 @@
 # Runbook de revisão independente e integração de PRs PEOS
 
 ## Estado de referência
-A cadeia `#7 → #9 → #10 → #11` está aberta como Draft. Não foram encontradas aprovações formais nas quatro PRs na verificação desta etapa. `#5` (integridade Windows/Linux) e `#6` (coleção BPD) são frentes independentes em Draft.
+A cadeia `#7 → #9 → #10 → #11` permanece independente do gate documental. A PR #5 (integridade Windows/Linux) **já foi mesclada na `main`**, em 2026-11-15T03:04:46Z (merge SHA `317e911c5c543e9aef526c4117b0f2793e91a02d`). A API de reviews da PR #5 retornou **zero revisões formais**, embora a CI Windows/Ubuntu tenha aprovado 41/41 testes; o desvio G4 foi registrado na issue #13. A PR #6 permanece aberta como Draft, e a PR #12 contém esta remediação documental.
 
 ## Execução da revisão (BPD-075/076/077/109/110/111/113/118)
 
@@ -20,14 +20,33 @@ A cadeia `#7 → #9 → #10 → #11` está aberta como Draft. Não foram encontr
 - Integrar #9; atualizar a base da #10 para `main`; repetir conferência de diff/CI.
 - Integrar #10; atualizar a base da #11 para `main`; repetir conferência.
 - Não realizar `force push` nem ignorar required checks sem autorização. A atualização das bases pode disparar novos testes.
-- Tratar #5 e #6 em avaliações independentes, sem misturar mudanças não relacionadas.
+- Para a #5, executar **auditoria retrospectiva independente** e registrar parecer na issue #13, sem apresentar aprovação posterior como aprovação pré-merge.
+- Tratar #6 em avaliação independente, sem misturar mudanças não relacionadas; atualizar a base somente com inspeção do diff e checks no novo SHA.
 
-## Regraset de proteção recomendado (não aplicado automaticamente)
+## Regraset de proteção obrigatório para satisfazer G4 (configuração ainda não verificada)
 
-- Bloquear push direto para `main` quando o plano e visibilidade do repositório permitirem
-- Exigir PR, checks obrigatórios, conversas resolvidas e aprovação de colaborador elegível diferente do autor
-- Preferir permissões mínimas no CI; `pull_request_target` apenas em cenário estritamente controlado
-- Não declarar a regra aplicada sem checar settings do GitHub; esta documentação não muda o ruleset
+- Exigir Pull Request para alterar `main` e impedir push direto ou bypass não autorizado quando o plano e visibilidade permitirem.
+- Exigir no mínimo **uma aprovação formal de colaborador elegível diferente do autor**, descartar aprovações obsoletas após push quando disponível e resolver conversas antes do merge.
+- Exigir os checks obrigatórios estáveis (inclusive integridade Windows/Ubuntu) no SHA efetivamente mesclado, evitando depender de runs de commits anteriores.
+- Configurar especificamente a aplicabilidade a administradores e possíveis bypasses; somente autorizar exceções sob procedimento de emergência auditável.
+- Preferir permissões mínimas no CI; evitar `pull_request_target` para código não confiável.
+- Executar ensaio negativo em PR descartável (sem review: **bloqueia**) e positivo (review por revisor elegível + checks: **permite**), registrando evidências e link do ruleset na issue #13.
+- **Não declarar o ruleset aplicado** sem consultar as configurações reais e testes. O conector disponível nesta execução não expõe a leitura/alteração da proteção da branch.
+
+## Incidente de governança G4 — evidências e restrições
+
+| Campo | Evidência |
+| --- | --- |
+| PR | [#5](https://github.com/alexoaraujo/peos-knowledge-hub/pull/5) |
+| Merge | [`317e911c5c543e9aef526c4117b0f2793e91a02d`](https://github.com/alexoaraujo/peos-knowledge-hub/commit/317e911c5c543e9aef526c4117b0f2793e91a02d) |
+| Head validado | `4438a4a8e92a47aa28afc27d9b8eb3170120a15e` |
+| Testes | [Windows e Ubuntu PASS](https://github.com/alexoaraujo/peos-knowledge-hub/actions/runs/43669518684) |
+| Review formal GitHub | Nenhuma revisão retornada pela API no momento da auditoria |
+| Exceção PEOS G4 | [Issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13), aberta |
+| Histórico `main` | Merge da #5 confirmado como HEAD durante a auditoria |
+| Ruleset/branch protection | **NÃO VERIFICADO**; não inferir a configuração a partir de um merge isolado |
+
+A ausência de revisão formal registrada **não** permite afirmar qual configuração ou bypass possibilitou o merge. Verificar ruleset, direitos de bypass e mecanismo de aprovação. Uma revisão feita posteriormente é *retrospectiva*, não apaga a ocorrência.
 
 ## Estados PEOS
 
