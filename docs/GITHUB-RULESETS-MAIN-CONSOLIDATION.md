@@ -1,42 +1,37 @@
-# Auditoria e consolidação de ruleset para `main` — PEOS Knowledge Hub
+# Auditoria de proteção da branch main — PEOS Knowledge Hub
 
-## Situação efetiva verificada em 15/11/2026
+## Estado atual verificado pela API GitHub (15/11/2026)
 
-Fonte: GitHub REST `GET /repos/alexoaraujo/peos-knowledge-hub/rulesets`, `GET /rulesets/27310126` e `GET /branches/main`.
+- **Ruleset único:** `protect-main`, ID **27310471**, `target=branch`, `enforcement=active`, restrito a `refs/heads/main`.
+- Rulesets anteriores **27310107** e **27310126** não estão mais na lista; a consulta direta ao ID 27310126 retornou **404**.
+- `GET /branches/main`: `protected=true`. Proteção clássica `protection.enabled=false` não significa falta de proteção, porque o ruleset está ativo.
+- `bypass_actors=[]`: nenhum bypass declarado.
+- Aprovação de PR obrigatória, com **1 aprovação**, descarte de aprovações obsoletas após push, aprovação do último push, conversas resolvidas; `require_code_owner_review=false`.
+- Histórico linear obrigatório; bloqueio de exclusão e push não fast-forward; apenas squash e rebase.
+- `code_quality` restrito a erros; check-runs estritos obrigatórios.
 
-- **Único ruleset na listagem**: `protect-main`, ID **27310126**, `enforcement=active`, `refs/heads/main`.
-- Antigo ruleset ID **27310107**: consulta direta retornou **404 Not Found**. Não assumir que está apenas `disabled`: o objeto não é encontrado.
-- `main.protected=true` graças ao ruleset; a proteção clássica segue `protection.enabled=false`.
-- Requer PR, 1 aprovação, descarte de aprovações antigas, aprovação do último push, conversas resolvidas, sem bypass, bloqueio de exclusão/force push, histórico linear e squash/rebase.
-- **Pendência 1:** required check `quality` (GitHub Actions, integration ID **15368**) não existe nos check-runs observados no SHA `317e911c5c543e9aef526c4117b0f2793e91a02d` da `main`.
-- **Pendência 2:** `require_code_owner_review=true`, embora nenhuma das localizações padrão contenha `CODEOWNERS`. Não confundir isso com bloqueio comprovado: sua aplicabilidade depende dos arquivos afetados e de um CODEOWNERS válido.
-- **Pendência 3:** aprovação independente ainda não registrada na PR #12. Workflow `Independent review on current SHA` permanece somente na branch da PR #12.
+## Checks obrigatórios efetivamente configurados
 
-## Quatro checks reais identificados
-
-| Contexto GitHub Actions | App ID | Verificado |
+| Nome do contexto | Integration ID | Verificação |
 | --- | ---: | --- |
-| `Canonical integrity (windows-latest)` | 15368 | SIM |
-| `Canonical integrity (ubuntu-latest)` | 15368 | SIM |
-| `integridade` | 15368 | SIM |
-| `validate` | 15368 | SIM |
+| `Canonical integrity (windows-latest)` | 15368 | GitHub Actions: publicado e aprovado |
+| `Canonical integrity (ubuntu-latest)` | 15368 | GitHub Actions: publicado e aprovado |
+| `integridade` | 15368 | GitHub Actions: publicado e aprovado |
+| `validate` | 15368 | GitHub Actions: publicado e aprovado |
 
-**Configuração-alvo de referência:** [`protect-main-hardened.proposed.json`](github-rulesets/protect-main-hardened.proposed.json). O nome do arquivo é histórico; o conteúdo proposto deve manter o nome **`protect-main`** e o **ID existente 27310126** na edição pelo GitHub UI. Arquivos de configuração no repositório **não alteram automaticamente** rulesets.
+O status inválido `quality` **não está mais configurado**. Esses quatro contextos foram confrontados com a API `GET /commits/317e911c.../check-runs` na `main`.
 
-## Sequência de ajustes administrativos — sem excluir regras adicionais
+## Arquivo JSON
 
-1. Abrir [ruleset ativo ID 27310126](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules/27310126). Confirmar `enforcement=active` e escopo apenas `main`.
-2. Remover o required status `quality` e incluir os quatro checks acima, selecionando o app GitHub Actions (ID 15368).
-3. Manter 1 aprovação independente, stale review dismissal, last-push approval, resolved threads, linear history, proteção contra exclusão e push forçado.
-4. Enquanto não existir CODEOWNERS com um **revisor elegível diferente do autor**, definir temporariamente `Require review from Code Owners=false`. Isso **não** reduz o requisito mínimo de aprovação geral.
-5. Salvar e fazer nova consulta do ruleset. Confirmar exatamente os quatro contextos, `CODEOWNERS=false`, nenhuma regra `quality`.
-6. Verificar [Settings → Rules](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules): somente ID **27310126** deve aparecer. O antigo **27310107** já retornou 404; não há outra regra ativa a desativar na última consulta.
-7. Testar que uma PR sem review não pode ser mesclada; uma PR com revisão legítima e checks completos deve cumprir os gates. Não mesclar mudanças irreversíveis apenas para ensaio.
-8. Registrar as provas e links na [issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13).
+[`protect-main-hardened.proposed.json`](github-rulesets/protect-main-hardened.proposed.json) é uma cópia de referência do alvo configurado: **não deve ser importado novamente**. Importar pode criar regras duplicadas. A regra ativa é o **ID 27310471**; editar sempre esse ID se houver mudanças adicionais.
 
-## Limitações e risco de deadlock
+## Verificações ainda necessárias para G4=PASS
 
-- O conector nesta conversa é de leitura para rulesets; **nenhuma atualização administrativa foi aplicada** por esta auditoria.
-- Não exigir o check `Independent review on current SHA` enquanto o workflow não estiver na `main`. A PR #12 deve ser revisada e aprovada independentemente antes da integração.
-- Os checks `integridade` e `validate` são nomes genéricos: confirmar a associação ao app GitHub Actions e evitar outros workflows com mesmo contexto.
-- O arquivo de referência documenta o estado desejado, **não** o estado real. O gate PEOS G4 somente passa após verificação da proteção efetiva e revisão independente.
+1. Obter pelo menos uma revisão formal independente na [PR #12](https://github.com/alexoaraujo/peos-knowledge-hub/pull/12), vinculada ao HEAD final.
+2. Confirmar na UI do GitHub a impossibilidade de merge de uma PR sem aprovação. A ausência de review na #12 e o `Independent review on current SHA` em falha são evidências de review pendente, mas **não bastam isoladamente para comprovar enforcement do ruleset**.
+3. Não definir `Independent review on current SHA` como required check antes da integração do workflow na `main` e da verificação do contexto no GitHub Actions; a regra já exige uma aprovação na própria plataforma.
+4. Após aprovar e integrar a #12, revalidar os 4 checks no SHA final e, se necessário, atualizar o ruleset com evidência.
+5. Concluir a revisão retrospectiva da PR #5 na [issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13) sem reescrever a história nem alegar aprovação pré-merge.
+6. Manter release bloqueado por direitos/licenciamento [issue #2](https://github.com/alexoaraujo/peos-knowledge-hub/issues/2) e auditoria manual de acessibilidade [issue #8](https://github.com/alexoaraujo/peos-knowledge-hub/issues/8).
+
+**Status:** ruleset consolidado e configuração coerente com a política PEOS; revisão independente e ensaio de enforcement ainda pendentes. Sem novos merges autorizados por esta documentação.
