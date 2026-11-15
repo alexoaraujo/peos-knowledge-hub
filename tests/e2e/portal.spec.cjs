@@ -13,7 +13,7 @@ test('loads all catalog entries and progressively renders 40 at a time', async (
 });
 
 test('filters intersect category, group, tags, namespace and ID, then reset', async ({ page }) => {
-  const sample = catalog.entries.find(p => p.namespace === 'bpd' && p.tags.length && p.category && p.group);
+  const sample = catalog.entries.find(p => p.namespace === 'canonical' && p.tags.length && p.category && p.group);
   expect(sample).toBeTruthy();
   await page.goto(url);
   await page.locator('#ns').selectOption(sample.namespace);
