@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Fail-closed, read-only GitHub PR independent-review gate.
+"""Read-only PEOS PR review-policy check for solo and team workflows.
 
-This check is advisory unless GitHub branch protection/ruleset requires its status.
-No review submission, merge, or repository mutation is performed.
+Solo-maintainer mode does not require approval; CI and branch rules still apply.
+Independent mode remains available if a team adopts mandatory review later.
 """
 from __future__ import annotations
 
@@ -41,6 +41,15 @@ def evaluate(reviews, author, head_sha):
     return True, "Independent approval on current SHA: " + ", ".join(sorted(valid))
 
 
+def evaluate_policy(reviews, author, head_sha, mode):
+    """Mode-specific review decision. Never claim solo mode is an independent approval."""
+    if mode == "solo":
+        return True, "Solo-maintainer mode: independent approval not required (no review asserted)"
+    if mode == "independent":
+        return evaluate(reviews, author, head_sha)
+    return False, "Unrecognized review mode; expected solo or independent"
+
+
 def get_json(url, token):
     if not url.startswith("https://api.github.com/"):
         raise ValueError("Unexpected GitHub API URL")
@@ -57,6 +66,15 @@ def get_json(url, token):
 
 
 def main():
+    mode = os.environ.get("PEOS_REVIEW_MODE", "solo").strip().lower()
+    if mode == "solo":
+        _, reason = evaluate_policy([], "", "", mode)
+        print("PASS:", reason)
+        print("Review status is informational; required CI and branch rules remain enforced")
+        return 0
+    if mode != "independent":
+        print("BLOCKED: unsupported PEOS_REVIEW_MODE", file=sys.stderr)
+        return 1
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     token = os.environ.get("GITHUB_TOKEN", "")
     event_path = os.environ.get("GITHUB_EVENT_PATH", "")
@@ -84,7 +102,7 @@ def main():
                 break
         else:
             raise ValueError("More than 2,000 reviews: manual review required")
-        passed, reason = evaluate(reviews, author, head_sha)
+        passed, reason = evaluate_policy(reviews, author, head_sha, mode)
         print(("PASS: " if passed else "BLOCKED: ") + reason)
         print("PR:", number, "HEAD:", head_sha, "review records:", len(reviews))
         return 0 if passed else 1
