@@ -1,44 +1,37 @@
-## PEOS — Revisão técnica e gates
+## PEOS — Pull Request (mantenedor único)
 
-### Contexto
+### Contexto e escopo
 - Issue relacionada:
-- Escopo e motivo:
-- Prompt(s) PEOS/BPD utilizados:
-- Branch de origem e SHA de referência:
-- Dependências de PR:
-- Arquivos canônicos/manifests afetados? (sim/não; justificar):
+- Objetivo e alterações:
+- Prompt(s) PEOS/BPD:
+- Branch, base e SHA:
+- Impacto em conteúdo canônico/manifests: (sim/não)
 
-### Execução → Verificação → Correção → Testes
-- [ ] Diff revisado e alterações justificadas
-- [ ] Testes comportamentais reais, sem mocks apresentados como produção
-- [ ] CI passa no SHA final (links dos runs abaixo)
-- [ ] Nenhum hash, ID canônico ou snapshot histórico reescrito sem aprovação
-- [ ] Sem tokens, chaves, informações pessoais ou serviços pagos obrigatórios
-- [ ] Logs e links para as evidências incluídos, sem declarar PASS por suposição
+### Executar → Verificar → Corrigir → Testar → Validar
+- [ ] Diff revisado pelo mantenedor, sem mudanças fora do escopo
+- [ ] Testes e integridade no SHA final (com links de runs)
+- [ ] GitHub Actions: Windows, Ubuntu, `integridade` e `validate` PASS
+- [ ] Nenhum hash, ID, ledger ou snapshot histórico reescrito sem justificativa e autorização
+- [ ] Sem secrets, credenciais ou serviços pagos necessários ao pipeline
+- [ ] Riscos, rollback e documentação atualizados
+- [ ] Para UI: testes de teclado, UX, contraste e acessibilidade conforme issue #8
 
-### Segurança, UX e documentação
-- [ ] Documentação corresponde ao código efetivo (BPD-110/111)
-- [ ] Interações e estados de erro testados
-- [ ] Teclado, foco, contraste e leitor de tela revisados quando houver UI
-- [ ] Acessibilidade automatizada não foi confundida com certificação WCAG
-- [ ] Riscos e rollback documentados
+### Política de revisão
+**Modo solo:** aprovação por outra pessoa NÃO é exigida. Comentários e revisões voluntárias são bem-vindos, mas não condicionam o merge. Não declarar revisão independente quando ela não ocorreu.
 
-### Gates de publicação (não se aplicam automaticamente a toda PR)
-- [ ] Licença e autorização de redistribuição comprovadas para cada uma das 3 fontes (issue #2)
-- [ ] Revisão independente **formal** por pessoa diferente do autor
-- [ ] Revisão manual de acessibilidade e evidências completas (issue #8)
-- [ ] Branch protegida e checks obrigatórios no SHA exato
-- [ ] Aprovação explícita do release e plano de reversão, se necessário
+### Gates adicionais de publicação
+- [ ] Direitos/licenciamento das fontes comprovados (issue #2) **antes do release**
+- [ ] Acessibilidade e revisão manual comprovadas (issue #8) **antes de certificações/declarações**
+- [ ] Checks obrigatórios e ruleset `protect-main` aplicados ao SHA do merge
 
 ### Evidências
-| Gate | Estado (PASS/FAIL/BLOCKED/N/A) | Link/SHA | Revisor |
-| --- | --- | --- | --- |
-| Integridade | NOT_EVALUATED | | |
-| Regressão | NOT_EVALUATED | | |
-| Segurança | NOT_EVALUATED | | |
-| UX/acessibilidade | NOT_EVALUATED | | |
-| Licença/reutilização | BLOCKED | #2 | |
-| Revisão independente | BLOCKED | | |
-| Release | BLOCKED | | |
+| Controle | Estado | Link / SHA |
+| --- | --- | --- |
+| Integridade | NOT_EVALUATED | |
+| Regressão Windows/Linux | NOT_EVALUATED | |
+| Segurança | NOT_EVALUATED | |
+| Revisão humana externa (opcional) | N/A_SOLO | |
+| Direitos de conteúdo para release | BLOCKED | #2 |
+| Acessibilidade manual para release | NOT_EVALUATED | #8 |
 
-**Aprovação de CI isolada não autoriza merge nem release.** Não marque como pronto sem evidência e revisão humana.
+**Review independente não é exigida no modo solo.** Isso não libera merge com CI quebrada nem publicação de conteúdo sem licença adequada.
