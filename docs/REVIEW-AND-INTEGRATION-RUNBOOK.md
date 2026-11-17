@@ -10,8 +10,9 @@ O repositório `alexoaraujo/peos-knowledge-hub` é desenvolvido por um único ma
 
 A auditoria atual de [`protect-main` ID 27310471](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules/27310471) confirmou:
 - `required_approving_review_count=0`: configuração solo já efetiva.
-- `require_last_push_approval=true`: **precisa ficar false**; caso contrário, revisão do último push pode continuar sendo exigida.
+- `require_last_push_approval=false`: **já aplicado**, sem exigência de aprovação do último push.
 - `require_code_owner_review=false`: correto.
+O parâmetro `require_extra_approval_for_unattributed_changes=true` pode permanecer ativo: a documentação oficial do GitHub esclarece que ele **não tem efeito quando o mínimo de aprovações é zero**. Alterá-lo para `false` é uma escolha opcional de clareza, não um desbloqueio necessário.
 - Quatro checks obrigatórios: `Canonical integrity (windows-latest)`, `Canonical integrity (ubuntu-latest)`, `integridade`, `validate`.
 - `required_linear_history`, `deletion`, `non_fast_forward`, `bypass_actors=[]`: preservar.
 
