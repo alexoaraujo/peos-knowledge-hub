@@ -32,7 +32,7 @@ python3 tools/build_hub_index.py --check
 - [ ] E2E Chromium PASS no SHA do GitHub Actions
 - [ ] Benchmark com métricas registradas e resultados consistentes
 - [ ] Regressão Python e validação do catálogo PASS
-- [ ] Revisão independente, teste manual com leitor de tela/contraste (issue #8)
+- [ ] Revisão pelo mantenedor; teste manual com leitor de tela/contraste antes da homologação de acessibilidade (issue #8)
 - [ ] Direitos/licenciamento das fontes (issue #2) antes de release
 
 **Não modifique a biblioteca canônica, os manifests de versões ou os hashes para fazer testes passarem.** Testes negativos com falhas de rede são isolados no browser e não alteram dados de origem.
