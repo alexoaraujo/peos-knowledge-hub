@@ -15,6 +15,6 @@ A mesma CI da PR #10 instala `@playwright/test@1.56.1` e `@axe-core/playwright@4
 - [ ] Zero violações detectadas nas regras automatizadas selecionadas
 - [ ] Sem desabilitar regras ou colocar exceções sem justificativa e revisão
 - [ ] Teste manual por leitor de tela, contraste e navegação real — issue #8
-- [ ] Revisão independente e licença das fontes — issue #2
+- [ ] Revisão pelo mantenedor (review externo opcional) e licença das fontes antes de release — issue #2
 
 **A ausência de violações detectadas automaticamente não equivale à certificação ou conformidade integral WCAG.** Sem mutações externas, sem alteração do catálogo e sem licença atribuída às fontes.
