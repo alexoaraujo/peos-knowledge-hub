@@ -1,37 +1,44 @@
-# Auditoria de proteção da branch main — PEOS Knowledge Hub
+# PEOS — Ruleset da main para mantenedor único
 
-## Estado atual verificado pela API GitHub (15/11/2026)
+## Estado efetivo verificado em 17/11/2026
 
-- **Ruleset único:** `protect-main`, ID **27310471**, `target=branch`, `enforcement=active`, restrito a `refs/heads/main`.
-- Rulesets anteriores **27310107** e **27310126** não estão mais na lista; a consulta direta ao ID 27310126 retornou **404**.
-- `GET /branches/main`: `protected=true`. Proteção clássica `protection.enabled=false` não significa falta de proteção, porque o ruleset está ativo.
-- `bypass_actors=[]`: nenhum bypass declarado.
-- Aprovação de PR obrigatória, com **1 aprovação**, descarte de aprovações obsoletas após push, aprovação do último push, conversas resolvidas; `require_code_owner_review=false`.
-- Histórico linear obrigatório; bloqueio de exclusão e push não fast-forward; apenas squash e rebase.
-- `code_quality` restrito a erros; check-runs estritos obrigatórios.
+Ruleset ativo **`protect-main`** (ID **27310471**) em `refs/heads/main`, sem bypass, com histórico linear, restrições de exclusão/force push, PR obrigatório e checks estritos.
 
-## Checks obrigatórios efetivamente configurados
+A API confirmou:
+- `required_approving_review_count=0` — **já aplicado** no GitHub;
+- `require_code_owner_review=false` — já aplicado;
+- `require_last_push_approval=true` — **ainda precisa ser alterado para false** para não depender de revisor do último push;
+- `require_extra_approval_for_unattributed_changes=true` — configurado atualmente; o GitHub só exige aprovação extra de PRs sem atribuição quando já existe contagem de aprovações maior que zero; recomendamos `false` por coerência com o modo solo;
+- `dismiss_stale_reviews_on_push=true`, `required_review_thread_resolution=true` — podem permanecer habilitados sem exigir que haja uma aprovação;
+- `allowed_merge_methods=["squash","rebase"]`.
 
-| Nome do contexto | Integration ID | Verificação |
-| --- | ---: | --- |
-| `Canonical integrity (windows-latest)` | 15368 | GitHub Actions: publicado e aprovado |
-| `Canonical integrity (ubuntu-latest)` | 15368 | GitHub Actions: publicado e aprovado |
-| `integridade` | 15368 | GitHub Actions: publicado e aprovado |
-| `validate` | 15368 | GitHub Actions: publicado e aprovado |
+## Quatro checks obrigatórios preservados
 
-O status inválido `quality` **não está mais configurado**. Esses quatro contextos foram confrontados com a API `GET /commits/317e911c.../check-runs` na `main`.
+| Contexto exato | Aplicativo | Situação |
+| --- | --- | --- |
+| `Canonical integrity (windows-latest)` | GitHub Actions (15368) | Obrigatório |
+| `Canonical integrity (ubuntu-latest)` | GitHub Actions (15368) | Obrigatório |
+| `integridade` | GitHub Actions (15368) | Obrigatório |
+| `validate` | GitHub Actions (15368) | Obrigatório |
 
-## Arquivo JSON
+**Política final pretendida:** aprovação humana facultativa, nunca simulada; PR obrigatório, checks no SHA integrado e proteção efetiva da `main`. O workflow de revisão da PR #12 foi adaptado para modo `solo`: passa sem aprovação e mantém os testes de política independente para eventual adoção futura.
 
-[`protect-main-hardened.proposed.json`](github-rulesets/protect-main-hardened.proposed.json) é uma cópia de referência do alvo configurado: **não deve ser importado novamente**. Importar pode criar regras duplicadas. A regra ativa é o **ID 27310471**; editar sempre esse ID se houver mudanças adicionais.
+## Ajuste administrativo pendente
 
-## Verificações ainda necessárias para G4=PASS
+1. Abrir [`protect-main` — ID 27310471](https://github.com/alexoaraujo/peos-knowledge-hub/settings/rules/27310471), sem criar outro ruleset.
+2. Em **Require a pull request before merging**, manter a regra, com **Required approvals: 0**.
+3. Desmarcar **Require approval of the most recent reviewable push**.
+4. Desativar **Require an additional approval for unattributed Copilot pull requests**, se disponível.
+5. Manter **Require review from Code Owners** desativado; conservar **Require conversation resolution before merging**, checks obrigatórios, histórico linear, bloqueios de exclusão/force push e ausência de bypass.
+6. Salvar. Reconsultar `GET /repos/alexoaraujo/peos-knowledge-hub/rulesets/27310471`: exigir `required_approving_review_count=0`, `require_last_push_approval=false`, `require_code_owner_review=false`, e confirmar os quatro checks exatos.
+7. Fazer teste de uma PR pequena **sem revisão**: checks obrigatórios verdes devem ser suficientes para o merge, sem alterar a biblioteca histórica.
 
-1. Obter pelo menos uma revisão formal independente na [PR #12](https://github.com/alexoaraujo/peos-knowledge-hub/pull/12), vinculada ao HEAD final.
-2. Confirmar na UI do GitHub a impossibilidade de merge de uma PR sem aprovação. A ausência de review na #12 e o `Independent review on current SHA` em falha são evidências de review pendente, mas **não bastam isoladamente para comprovar enforcement do ruleset**.
-3. Não definir `Independent review on current SHA` como required check antes da integração do workflow na `main` e da verificação do contexto no GitHub Actions; a regra já exige uma aprovação na própria plataforma.
-4. Após aprovar e integrar a #12, revalidar os 4 checks no SHA final e, se necessário, atualizar o ruleset com evidência.
-5. Concluir a revisão retrospectiva da PR #5 na [issue #13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13) sem reescrever a história nem alegar aprovação pré-merge.
-6. Manter release bloqueado por direitos/licenciamento [issue #2](https://github.com/alexoaraujo/peos-knowledge-hub/issues/2) e auditoria manual de acessibilidade [issue #8](https://github.com/alexoaraujo/peos-knowledge-hub/issues/8).
+O arquivo [`protect-main-hardened.proposed.json`](github-rulesets/protect-main-hardened.proposed.json) registra os valores propostos. **Não importar como novo ruleset**, pois isso pode duplicar proteção; editar o ruleset atual.
 
-**Status:** ruleset consolidado e configuração coerente com a política PEOS; revisão independente e ensaio de enforcement ainda pendentes. Sem novos merges autorizados por esta documentação.
+## Limites
+
+O conector conectado disponibiliza leitura de rulesets, mas **não disponibiliza atualização administrativa**. A publicação desta documentação e do JSON não muda os parâmetros ativos automaticamente.
+
+A issue [#13](https://github.com/alexoaraujo/peos-knowledge-hub/issues/13) mantém a ocorrência histórica de merge sem revisão sob a política anterior. A política de mantenedor único passa a ser aplicada prospectivamente; não reescrever eventos antigos.
+
+Licenciamento dos conteúdos (issue #2) e auditoria manual de UX/acessibilidade (issue #8) são gates de release separados e permanecem pendentes.
