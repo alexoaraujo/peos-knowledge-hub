@@ -33,10 +33,10 @@ main
                  └─ PR #11 — axe-core WCAG automatizado
 ```
 
-Cada PR tem testes automatizados, mas nenhuma das quatro possuía review formal registrada na última checagem. A CI não é substituto de revisão independente, e `axe-core` não prova conformidade WCAG completa.
+As PRs possuem testes automatizados. Em modo de mantenedor único, a revisão de outro desenvolvedor é facultativa; não inventar aprovações. O `axe-core` não prova conformidade WCAG completa.
 
 ## Critérios de bloqueio de release
 
-**BLOCKED** se faltar qualquer uma destas evidências: autorização de redistribuição, revisão independente, suíte no SHA final, auditoria manual de acessibilidade quando relevante, escopo de licença e aprovação explícita. A publicação prévia do código em repositório público não é prova de autorização/licença sobre o conteúdo.
+**BLOCKED para release** se faltar autorização de redistribuição, suíte no SHA final, auditoria manual de acessibilidade quando relevante, escopo de licença e decisão explícita de publicação. Revisão independente é opcional no modo solo. A publicação prévia do código em repositório público não é prova de autorização/licença sobre o conteúdo.
 
 **Regra PEOS:** Executar → Verificar → Corrigir → Testar → Revisar → Validar → Avançar, sem ultrapassar os gates indisponíveis.
