@@ -1,0 +1,21 @@
+# Preserve canonical source bytes across Windows, macOS and Linux.
+# Historical source SHA-256 is computed from raw bytes: no CRLF conversion.
+* text=auto eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.pdf binary
