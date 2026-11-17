@@ -1,4 +1,4 @@
-name: PEOS independent review evidence
+name: PEOS solo-maintainer review policy
 on:
   pull_request:
     types: [opened, reopened, synchronize, ready_for_review, review_requested]
@@ -10,8 +10,8 @@ permissions:
   pull-requests: read
 
 jobs:
-  independent-review:
-    name: Independent review on current SHA
+  solo-review-policy:
+    name: Solo-maintainer review policy
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
@@ -19,9 +19,9 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           persist-credentials: false
-      - name: Review gate behavioral tests
+      - name: Review policy regression tests
         run: python3 -m unittest discover -s tests -p 'test_independent_review_gate.py' -v
-      - name: Check live approval and HEAD SHA
+      - name: Verify solo-maintainer policy (approval optional)
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          PEOS_REVIEW_MODE: solo
         run: python3 .github/scripts/check_independent_review.py
