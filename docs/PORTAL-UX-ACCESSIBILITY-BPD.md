@@ -30,8 +30,8 @@ Aplicado sobre o portal estático existente em `hub-portal/index.html` da `main`
 - [ ] Python: `python3 -m unittest discover -s tests -v`
 - [ ] JavaScript: `node --check hub-portal/app.js`
 - [ ] `python3 tools/build_hub_index.py --check`
-- [ ] GitHub Actions no SHA da PR e revisão independente
+- [ ] GitHub Actions no SHA da PR e revisão de código pelo mantenedor (revisão externa facultativa no modo solo)
 - [ ] Auditoria manual de uso por teclado, leitor de tela e contraste
 - [ ] Revisão de licença das fontes anterior a release público (issue #2)
 
-**Estado:** implementação candidata, não afirma conformidade WCAG nem prontidão para Production até auditoria humana e evidências.
+**Estado:** implementação candidata para integração técnica após CI no SHA atualizado; não afirma conformidade WCAG nem prontidão para Production até auditoria humana e evidências.
