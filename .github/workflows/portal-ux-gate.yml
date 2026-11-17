@@ -1,0 +1,33 @@
+name: PEOS Portal UX and accessibility contracts
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'hub-portal/**'
+      - 'tests/test_portal_accessibility.py'
+      - '.github/workflows/portal-ux-gate.yml'
+  pull_request:
+    paths:
+      - 'hub-portal/**'
+      - 'tests/test_portal_accessibility.py'
+      - '.github/workflows/portal-ux-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Python accessibility contracts
+        run: python3 -m unittest discover -s tests -p 'test_portal_accessibility.py' -v
+      - name: JavaScript syntax validation
+        run: node --check hub-portal/app.js
+      - name: Complete project regression
+        run: python3 -m unittest discover -s tests -v
+      - name: Reproducible catalog index
+        run: python3 tools/build_hub_index.py --check
