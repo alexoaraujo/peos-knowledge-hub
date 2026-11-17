@@ -29,7 +29,7 @@ Esta mudança parte da branch `feat/hub-portal-accessibility-ux` (PR #7) e não 
 - [ ] Testes Node e Python PASS no SHA da PR
 - [ ] Índice determinístico preservado
 - [ ] Verificação manual de filtros, resultados e navegação com teclado
-- [ ] Revisão independente do código e comportamento
+- [ ] Revisão do código e do comportamento pelo mantenedor (revisão externa opcional no modo solo)
 - [ ] Revisão de licenciamento antes de release (issue #2)
 
 **Status:** implementação de pesquisa avançada proposta, não homologada para produção.
