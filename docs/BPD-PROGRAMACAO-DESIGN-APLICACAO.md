@@ -35,9 +35,9 @@
 
 - [ ] Check BPD CI PASS no SHA de revisão
 - [ ] Testes completos do Hub PASS no SHA de revisão
-- [ ] Revisão independente do código e da matriz de riscos
+- [ ] Revisão do código e da matriz de riscos pelo mantenedor (revisão externa opcional no modo solo)
 - [ ] Nenhum conteúdo canônico ou manifesto alterado silenciosamente
 - [ ] UX/acessibilidade verificados antes de afirmar o portal pronto para produção
 - [ ] Revisão de licença anterior ao release
 
-**Não promova esta PR automaticamente.** A ausência da branch piloto solicitada não autoriza declarar os resultados experimentais dessa branch como revisados.
+**Integrar somente após checks obrigatórios PASS no SHA atualizado e validação de integridade.** A ausência da branch piloto solicitada não autoriza declarar os resultados experimentais dessa branch como revisados.
