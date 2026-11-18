@@ -6,3 +6,18 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Local Python environments and coverage (never commit environment secrets)
+.venv/
+venv/
+.coverage
+htmlcov/
+
+# Node/Playwright generated artifacts and local credentials
+node_modules/
+playwright-report/
+test-results/
+coverage/
+*.log
+.npmrc
+.pypirc
