@@ -30,6 +30,19 @@ A coluna técnica deve ser interpretada com o **resultado do workflow em SHA ver
 - Um agente por PMU com `status=DESIGN_ONLY`, `execution_mode=PLAN_ONLY`, `permissions=[]` e revisão humana prevista.
 - `status=PROPOSED` mantido e nenhuma aprovação editorial declarada por CI.
 
+## Cenários negativos de contexto e autorização
+
+O motor e a CLI foram fortalecidos para **rejeitar objetivos vazios** e declarar explicitamente quando a entrada obrigatória `PROJETO` está ausente. O campo `context.status=INCOMPLETE` não equivale a aprovação; mesmo com `--project` informado, o plano permanece `PLAN_ONLY`, com `NO_EXTERNAL_MUTATIONS`, etapas `NOT_STARTED`, evidências nulas e gates `NOT_EVALUATED`/`BLOCKED_UNTIL_VERIFIED`.
+
+Exemplo de verificação sem efeitos externos:
+
+```bash
+python3 -m hub.cli compose --goal "Auditar segurança" --project "PEOS Knowledge Hub"
+python3 -m unittest tests.test_pmu_negative_gates -v
+```
+
+A suíte de testes negativa abrange objetivo vazio, falta de contexto, valor inválido, limites de tamanho e instruções hostis na solicitação para ignorar gates e conceder privilégios. A aprovação editorial da issue #17 e os direitos da issue #2 **permanecem pendentes**: uma verificação técnica não constitui aceite humano.
+
 ## Limitações e próximo aceite
 
 O script não avalia se a redação é suficientemente original, completa ou adequada a um caso real; não detecta todo risco de instruções contraditórias e não prova direitos autorais. Não altera o estado editorial dos PMUs.

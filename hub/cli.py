@@ -16,6 +16,7 @@ def main(argv=None):
     c=sub.add_parser('compose')
     c.add_argument('--goal', required=True)
     c.add_argument('--pmu', default=None)
+    c.add_argument('--project', default=None)
     r=sub.add_parser('recommend', help='Plan-only PMU and related catalog references')
     r.add_argument('--goal', required=True)
     r.add_argument('--pmu', default=None)
@@ -32,7 +33,7 @@ def main(argv=None):
             import peos_engine
             problems=peos_engine.validate()
             if problems:raise ValueError('; '.join(problems))
-            output=peos_engine.compose(args.goal,args.pmu)
+            output=peos_engine.compose(args.goal,args.pmu,args.project)
         print(json.dumps(output,ensure_ascii=False,indent=2))
         return 0
     except ValueError as exc:
