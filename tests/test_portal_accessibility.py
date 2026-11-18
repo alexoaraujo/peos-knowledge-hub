@@ -80,6 +80,8 @@ class PortalAccessibilityTests(unittest.TestCase):
         self.assertNotIn('insertAdjacentHTML', preview)
         self.assertIn("PLAN_ONLY", preview)
         self.assertIn("BLOCKED_UNTIL_VERIFIED", preview)
+        self.assertIn("pmuIndex.get(item.id).sha256 !== item.sha256", preview)
+        self.assertIn("step.name !== resultP.get(wf.pmu_id).stages[index]", preview)
         self.assertIn("pmuSelect.disabled = true", preview)
         self.assertIn("fetch('../workflows/manifest.json')", preview)
         self.assertIn("fetch('../pmu/manifest.json')", preview)
