@@ -76,7 +76,7 @@ class RepositorySecurityTests(unittest.TestCase):
 
     def test_npm_advisory_gate_is_read_only_and_has_weekly_coverage(self):
         content = (WORKFLOWS / "peos-npm-audit.yml").read_text(encoding="utf-8")
-        self.assertIn("permissions:\\n  contents: read", content)
+        self.assertIn("permissions:\n  contents: read", content)
         self.assertIn("npm audit --package-lock-only --audit-level=high", content)
         self.assertIn("persist-credentials: false", content)
         self.assertIn("schedule:", content)
