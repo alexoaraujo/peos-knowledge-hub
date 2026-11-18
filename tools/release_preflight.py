@@ -18,7 +18,6 @@ ROOT = Path(__file__).resolve().parents[1]
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
 EVIDENCE_URL = re.compile(r"^https://[^\s/]+/[^\s]+$")
-APPROVAL_RELATIVE = Path("release-authorization/approval.json")
 
 
 def valid_evidence(value):
@@ -110,8 +109,9 @@ def inspect(root=ROOT, commit_sha=None, authorization_path=None):
         pmus = read_json(root / "pmu/manifest.json")
         agents = read_json(root / "agents/manifest.json")
         sha = commit_sha if commit_sha is not None else current_sha(root)
-        approval_path = authorization_path or (root / APPROVAL_RELATIVE)
-        authorization = read_json(approval_path) if approval_path.is_file() else None
+        # Evidence must be supplied separately: putting a dossier in the target
+        # commit would change its SHA and invalidate its own target_sha field.
+        authorization = read_json(authorization_path) if authorization_path is not None and authorization_path.is_file() else None
         return assess(authorization, provenance, pmus, agents, sha)
     except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as exc:
         return ["PREFLIGHT_INPUT_UNAVAILABLE: " + type(exc).__name__]
@@ -123,12 +123,40 @@ def main(argv=None):
                         help="Exit nonzero when any authorization evidence is incomplete")
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--target-sha", default=None)
+    parser.add_argument("--authorization-file", type=Path, default=None,
+                        help="Out-of-tree JSON dossier for the exact candidate commit")
+    parser.add_argument("--acknowledge-reviewed-evidence", action="store_true",
+                        help="Human attests that all linked evidence was independently examined")
     args = parser.parse_args(argv)
-    codes = inspect(args.root, commit_sha=args.target_sha)
+    codes = inspect(args.root, commit_sha=args.target_sha,
+                    authorization_path=args.authorization_file)
+
+    if args.require_evidence:
+        # A dossier committed *inside* the tree it attests is self-referential.
+        if args.authorization_file is not None:
+            try:
+                args.authorization_file.resolve().relative_to(args.root.resolve())
+            except ValueError:
+                pass
+            else:
+                codes.append("AUTHORIZATION_FILE_MUST_BE_EXTERNAL")
+        if args.target_sha is not None:
+            try:
+                actual = current_sha(args.root)
+                if args.target_sha != actual:
+                    codes.append("TARGET_SHA_NOT_CHECKED_OUT")
+            except (OSError, subprocess.CalledProcessError):
+                codes.append("PREFLIGHT_INPUT_UNAVAILABLE")
+        if not args.acknowledge_reviewed_evidence:
+            codes.append("HUMAN_REVIEW_ACKNOWLEDGEMENT_MISSING")
     invalid = any(code.startswith(("INVALID_", "UNEXPECTED_", "PREFLIGHT_INPUT_")) for code in codes)
     print(json.dumps({
         "project": "peos-knowledge-hub",
-        "release_readiness": "BLOCKED" if codes else "EVIDENCE_RECORDED_NEEDS_HUMAN_VERIFICATION",
+        "release_readiness": "BLOCKED" if codes else (
+            "DOCUMENTARY_EVIDENCE_ACKNOWLEDGED_NOT_LEGAL_CERTIFICATION"
+            if args.acknowledge_reviewed_evidence else
+            "EVIDENCE_RECORDED_NEEDS_HUMAN_VERIFICATION"
+        ),
         "blockers": codes,
         "warning": "URLs/claims are not verified: this never grants redistribution rights or WCAG certification",
     }, ensure_ascii=False, sort_keys=True))
