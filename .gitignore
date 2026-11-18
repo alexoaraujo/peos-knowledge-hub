@@ -21,3 +21,7 @@ coverage/
 *.log
 .npmrc
 .pypirc
+
+# Temporary guarded stage lock and swap files
+.peos-stage.lock
+.peos-stage-*

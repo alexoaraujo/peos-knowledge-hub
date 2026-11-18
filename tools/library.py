@@ -482,8 +482,12 @@ def main():
     s.add_argument('--version',required=True);s.add_argument('--reason',required=True)
     args=parser.parse_args()
     try:
-        {'init':command_init,'audit':command_audit,'validate':command_validate,
-         'index':command_index,'compile':command_compile,'stage':command_stage}[args.cmd](args)
+        if args.cmd == 'stage' and __import__('os').environ.get('PEOS_STAGE_PREPARED_CHILD') != '1':
+            from stage_transaction import stage_with_preflight
+            stage_with_preflight(ROOT, args.version, args.reason)
+        else:
+            {'init':command_init,'audit':command_audit,'validate':command_validate,
+             'index':command_index,'compile':command_compile,'stage':command_stage}[args.cmd](args)
     except (ValueError,KeyError,OSError) as exc:
         print('ERROR:',exc,file=sys.stderr);sys.exit(1)
 if __name__=='__main__':main()
