@@ -34,5 +34,7 @@ jobs:
         run: python3 tools/library.py validate
       - name: Validar motor de composição PEOS v2.1
         run: python3 tools/peos_engine.py validate
+      - name: Auditar contratos técnicos dos dez PMUs (editorial permanece pendente)
+        run: python3 tools/audit_pmu_readiness.py
       - name: Documentar pendências de release (não autoriza publicação)
         run: python3 tools/release_preflight.py
