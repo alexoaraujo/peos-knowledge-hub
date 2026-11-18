@@ -8,6 +8,9 @@
 <section aria-labelledby="filters-title"><h2 id="filters-title">Filtrar biblioteca</h2><div class="filters">
 <div class="filter-field"><label for="q">Buscar prompts</label><input type="search" id="q" placeholder="Título, ID, categoria..." autocomplete="off"></div>
 <div class="filter-field filter-field--compact"><label for="ns">Namespace</label><select id="ns"><option value="">Todos os namespaces</option><option value="canonical">Canônico</option><option value="bpd">BPD</option><option value="pmu">PMU</option></select></div>
+<div class="filter-field filter-field--compact"><label for="category">Categoria</label><select id="category"><option value="">Todas as categorias</option></select></div>
+<div class="filter-field filter-field--compact"><label for="group">Grupo</label><select id="group"><option value="">Todos os grupos</option></select></div>
+<div class="filter-field filter-field--compact"><label for="tag">Tag</label><select id="tag"><option value="">Todas as tags</option></select></div>
 <div class="filter-field filter-field--compact"><label for="sort">Ordenar resultados</label><select id="sort"><option value="default">Ordem do catálogo</option><option value="title">Título (A–Z)</option><option value="id">ID (A–Z)</option></select></div>
 <div class="filter-actions"><button type="button" id="clear" disabled>Limpar filtros</button></div>
 </div></section>
@@ -15,4 +18,4 @@
 <div id="load-error" class="error-state" role="alert" hidden>O índice não está disponível. Inicie um servidor local na raiz do repositório com <code>python3 -m http.server 8000</code> e tente novamente. <button type="button" id="retry">Tentar novamente</button></div>
 <div class="results" id="results" aria-label="Resultados"></div><button id="more" type="button" hidden>Exibir mais resultados</button></section>
 <footer>Todos os resultados são referências editoriais. PMUs estão em proposta; composições geram planos, não executam ações. Sem serviços pagos obrigatórios.</footer></main>
-<script defer src="app.js"></script></body></html>
+<script defer src="search.js"></script><script defer src="app.js"></script></body></html>
