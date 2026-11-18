@@ -48,10 +48,20 @@ class RepositorySecurityTests(unittest.TestCase):
             with self.subTest(file=file.name):
                 self.assertNotIn("security-events: write", file.read_text(encoding="utf-8"))
 
+    def test_codeql_init_and_analyze_share_exact_action_sha(self):
+        content = (WORKFLOWS / "peos-codeql-security.yml").read_text(encoding="utf-8")
+        ids = re.findall(
+            r"github/codeql-action/(?:init|analyze)@([0-9a-f]{40})", content
+        )
+        self.assertEqual(len(ids), 2)
+        self.assertEqual(ids[0], ids[1], "CodeQL steps must be updated atomically")
+
     def test_dependabot_monitors_github_actions_without_auto_merge(self):
         config = (ROOT / ".github" / "dependabot.yml").read_text(encoding="utf-8")
         self.assertIn("package-ecosystem: github-actions", config)
         self.assertIn("interval: weekly", config)
+        self.assertIn("codeql-actions:", config)
+        self.assertIn("github/codeql-action/*", config)
         self.assertNotIn("auto-merge", config)
 
     def test_local_credentials_and_build_artifacts_are_ignored(self):
