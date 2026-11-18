@@ -20,6 +20,8 @@ GENERATED_FILES = (
     "catalog/manifest.json",
     "catalog/events.jsonl",
     "hub-portal/catalog.json",
+    "colecoes/programacao-design/INDEX.md",
+    "colecoes/programacao-design/CANDIDATOS_A_NOVOS_PROMPTS.md",
 )
 INPUT_DIRS = ("prompts", "originais", "pmu/prompts")
 INPUT_FILES = (
