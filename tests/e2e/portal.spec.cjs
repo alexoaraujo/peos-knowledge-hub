@@ -82,7 +82,7 @@ test('PMU cards expose canonical dependencies without executing prompts', async 
   await details.locator('summary').click();
   await expect(details.locator('a')).toHaveCount(6);
   await expect(details).toContainText('0001');
-  await expect(details.locator('a').first()).toHaveAttribute('href', /\\.md$/);
+  await expect(details.locator('a').first()).toHaveAttribute('href', /\.md$/);
   await expect(details.locator('a').first()).toHaveAttribute('title', /^SHA-256: [0-9a-f]{64}$/);
   await expect(details).toContainText('plano, não execução');
 });
