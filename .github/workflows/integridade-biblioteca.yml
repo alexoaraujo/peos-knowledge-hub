@@ -34,3 +34,5 @@ jobs:
         run: python3 tools/library.py validate
       - name: Validar motor de composição PEOS v2.1
         run: python3 tools/peos_engine.py validate
+      - name: Documentar pendências de release (não autoriza publicação)
+        run: python3 tools/release_preflight.py
