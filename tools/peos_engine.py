@@ -48,7 +48,10 @@ def select(query):
   score=sum(3 if ' ' in word else 1 for word in words if keyword_matches(q,word))
   if score:rank.append((score,pid))
  return [p for _,p in sorted(rank,key=lambda x:(-x[0],x[1]))]
-def compose(query,preferred=None):
+def compose(query,preferred=None,project=None):
+ if not isinstance(query,str) or not query.strip():raise ValueError('OBJETIVO obrigatório')
+ if len(query)>5000:raise ValueError('OBJETIVO excede limite de 5000 caracteres')
+ if project is not None and (not isinstance(project,str) or len(project)>200):raise ValueError('PROJETO inválido')
  m=load(ROOT/'pmu/manifest.json');byid={x['id']:x for x in m['prompts']}
  if preferred and preferred not in byid:raise ValueError('PMU desconhecido')
  ranked=select(query);chosen=preferred or (ranked[0] if ranked else 'PMU-001')
@@ -56,19 +59,23 @@ def compose(query,preferred=None):
  return {'library_version':'2.1.0','request':query,'pmu_id':chosen,'pmu_version':p['version'],'pmu_sha256':p['sha256'],
   'routing':{'method':'deterministic-keyword','candidates':ranked,'confidence':'heuristic-not-semantic-validation'},
   'canonical_dependencies':[{'id':i,'content_version':canonical[i]['content_version'],'sha256':canonical[i]['content_sha256']} for i in p['refs']],
+  'context':{'required_inputs':p['required_inputs'],
+   'missing_inputs':([k for k in p['required_inputs'] if k=='PROJETO' and not (isinstance(project,str) and project.strip())]),
+   'status':'COMPLETE' if isinstance(project,str) and project.strip() else 'INCOMPLETE',
+   'project':project.strip() if isinstance(project,str) and project.strip() else None},
   'workflow_id':'WF-'+chosen.split('-')[1],
   'steps':[{'name':s,'status':'NOT_STARTED','evidence':None,'gate':'BLOCKED_UNTIL_VERIFIED'} for s in p['stages']],
   'execution_status':'PLAN_ONLY','permissions':'NO_EXTERNAL_MUTATIONS','gates':{f'G{i}':'NOT_EVALUATED' for i in range(7)},
   'notes':['Plano gerado sem execução de ferramentas externas.','Requer avaliação de contexto, autorização e evidências reais.']}
 def main():
  ap=argparse.ArgumentParser();sub=ap.add_subparsers(dest='cmd',required=True)
- sub.add_parser('validate');c=sub.add_parser('compose');c.add_argument('--goal',required=True);c.add_argument('--pmu',default=None);c.add_argument('--output',default=None)
+ sub.add_parser('validate');c=sub.add_parser('compose');c.add_argument('--goal',required=True);c.add_argument('--pmu',default=None);c.add_argument('--project',default=None);c.add_argument('--output',default=None)
  args=ap.parse_args()
  if args.cmd=='validate':
   errors=validate();print('PASS: motor, 10 PMUs, 10 workflows e 659 hashes preservados' if not errors else '\n'.join(errors));return bool(errors)
  errors=validate()
  if errors:print('\n'.join(errors),file=sys.stderr);return 1
- try:out=compose(args.goal,args.pmu)
+ try:out=compose(args.goal,args.pmu,args.project)
  except ValueError as exc:print(str(exc),file=sys.stderr);return 2
  result=json.dumps(out,ensure_ascii=False,indent=2)+'\n'
  if args.output:Path(args.output).write_text(result,encoding='utf-8')
