@@ -1,5 +1,5 @@
 """Testes comportamentais: baseline, adulterações, IDs e release."""
-import json, shutil, subprocess, sys, tempfile, unittest
+import json, os, shutil, subprocess, sys, tempfile, unittest
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -9,7 +9,8 @@ import library
 class IntegrityTests(unittest.TestCase):
     def run_cli(self,base,*args):
         return subprocess.run([sys.executable,str(base/'tools'/'library.py'),*args],
-                              cwd=base,text=True,capture_output=True,check=False)
+                              cwd=base,text=True,encoding='utf-8',capture_output=True,check=False,
+                              env={**os.environ, 'PYTHONIOENCODING':'utf-8'})
     def test_historical_baseline(self):
         data=library.historical_audit()
         self.assertEqual((data['v1_0_count'],data['v1_1_count'],data['preserved_ids']), (273,647,273))
@@ -20,7 +21,7 @@ class IntegrityTests(unittest.TestCase):
         self.assertEqual(library.validate(),[])
     def test_index_determinism(self):
         self.assertEqual(library.write_indexes(library.load(library.MANIFEST),
-               (library.SOURCES/'Biblioteca_Mestre_Prompts_TI_v1.1.md').read_text(),check=True),[])
+               (library.SOURCES/'Biblioteca_Mestre_Prompts_TI_v1.1.md').read_text(encoding='utf-8'),check=True),[])
     def copy_repo(self):
         tmp=tempfile.TemporaryDirectory()
         base=Path(tmp.name)/'repository';shutil.copytree(ROOT,base)
@@ -42,7 +43,7 @@ class IntegrityTests(unittest.TestCase):
     def test_duplicate_id_is_blocked(self):
         base=self.copy_repo()
         m=base/'catalog'/'manifest.json';doc=json.loads(m.read_text(encoding='utf-8'))
-        doc['prompts'].append(dict(doc['prompts'][0]));m.write_text(json.dumps(doc,ensure_ascii=False))
+        doc['prompts'].append(dict(doc['prompts'][0]));m.write_text(json.dumps(doc,ensure_ascii=False),encoding='utf-8')
         r=self.run_cli(base,'validate')
         self.assertNotEqual(r.returncode,0)
         self.assertIn('ID duplicado:',r.stdout)

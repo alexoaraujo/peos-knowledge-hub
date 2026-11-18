@@ -129,7 +129,7 @@ def record_from(entry,body,tax,first_seen,content_version,revision=1,original_id
             'level':entry['level'],'status':'ACTIVE','source_status':entry.get('source_status',''),
             'tags':tags(entry['title']),'verticals':[],
             'first_seen':first_seen,'content_version':content_version,'revision':revision,
-            'content_path':str(locate(entry['id']).relative_to(ROOT)),
+            'content_path':locate(entry['id']).relative_to(ROOT).as_posix(),
             'content_sha256':sha(normalize(body)),
             'replaces':[],'replaced_by':None}
 
@@ -170,14 +170,14 @@ def write_indexes(manifest, source, check=False):
     output['indices-relacoes.json']=json.dumps(other,ensure_ascii=False,indent=2)+'\n'
     problems=[]
     if check:
-        existing=set(str(f.relative_to(INDICES)) for f in INDICES.rglob('*') if f.is_file())
+        existing=set(f.relative_to(INDICES).as_posix() for f in INDICES.rglob('*') if f.is_file())
         if existing!=set(output):problems.append('arquivos de índices divergentes: '+repr(sorted(existing^set(output))[:15]))
         for p,v in output.items():
             target=INDICES / p
             if not target.is_file() or target.read_text(encoding='utf-8')!=v:problems.append(f'índice desatualizado: {p}')
     else:
         for f in INDICES.rglob('*'):
-            if f.is_file() and str(f.relative_to(INDICES)) not in output:f.unlink()
+            if f.is_file() and f.relative_to(INDICES).as_posix() not in output:f.unlink()
         for p,v in output.items():
             target=INDICES/p;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(v,encoding='utf-8')
     return problems
@@ -220,7 +220,7 @@ def validate(check_indexes=True):
         if p['status']=='SUPERSEDED' and not p['replaced_by']:errors.append(f'substituição sem alvo: {key}')
         if p['status']=='ACTIVE' and p['replaced_by']:errors.append(f'ativo com replacement: {key}')
         if key in p.get('replaces',[]):errors.append(f'ID substitui a si mesmo: {key}')
-    actual_files={str(p.relative_to(ROOT)) for p in PROMPTS.rglob('*.md')}
+    actual_files={p.relative_to(ROOT).as_posix() for p in PROMPTS.rglob('*.md')}
     extra=actual_files-path_set
     if extra:errors.append(f'arquivos sem registro no manifesto: {len(extra)}, ex. {sorted(extra)[:4]}')
     if manifest['total_prompts']!=len(pmap):errors.append('contagem no manifesto divergente')
