@@ -1,0 +1,40 @@
+name: PEOS npm advisory audit
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/peos-npm-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/peos-npm-audit.yml'
+  schedule:
+    - cron: '43 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: peos-npm-audit-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: npm advisory audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout pinned, no persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify locked dependency manifest
+        run: |
+          node -e 'const fs=require("fs"); const p=JSON.parse(fs.readFileSync("package.json")); const l=JSON.parse(fs.readFileSync("package-lock.json")); if(l.lockfileVersion!==3 || JSON.stringify(l.packages[""].devDependencies)!==JSON.stringify(p.devDependencies))process.exit(1);'
+      - name: Audit direct and transitive npm packages (high/critical gate)
+        run: npm audit --package-lock-only --audit-level=high
