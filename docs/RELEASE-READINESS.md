@@ -6,14 +6,16 @@
 
 ```bash
 python3 tools/release_preflight.py
-python3 tools/release_preflight.py --require-evidence
+python3 tools/release_preflight.py --require-evidence \\
+  --authorization-file /secure-external-location/approval.json \\
+  --acknowledge-reviewed-evidence
 ```
 
 O primeiro comando verifica a consistência mínima dos três registros de fontes, dos dez PMUs (`PROPOSED`) e dos dez agentes (`PLAN_ONLY`) e informa pendências sem bloquear CI de desenvolvimento. O segundo **falha fechado** na falta de dossiê para o commit exato e se destina a pré-flight manual de uma futura publicação, não à liberação automática.
 
 ## Dossiê necessário
 
-Somente **depois de verificar documentos reais**, o mantenedor poderá criar `release-authorization/approval.json`. O arquivo não existe por padrão. Contrato exigido:
+Somente **depois de verificar documentos reais**, o mantenedor poderá criar um dossiê `approval.json` **fora do checkout do candidato** (por exemplo em uma pasta privada e controlada). O arquivo não existe por padrão. Incluir `approval.json` no mesmo commit que seu campo `target_sha` descreve cria uma **referência circular impossível de satisfazer**, pois o commit muda ao adicionar o documento. A verificação exige `--authorization-file /caminho/fora/do/repo/approval.json`, além de `--acknowledge-reviewed-evidence` para o operador declarar que examinou manualmente os comprovantes. Contrato exigido:
 
 | Propriedade | Valor / evidência esperada |
 | --- | --- |
@@ -46,7 +48,8 @@ O script verifica **estrutura e presença de declarações** e não possui acess
 
 1. O modo solo dispensa **revisor externo**, não direitos autorais, evidências, checks e autorização de publicação.
 2. O repositório **não possui workflow de publicação automática** controlado por este script. Ele precisa ser invocado antes de toda futura criação de release/tag/artefato — e deve ser incorporado a um workflow de release quando esse existir.
-3. A criação de `release-authorization/approval.json` só ocorre após a verificação das evidências. Nenhum dossiê foi criado por esta PR.
-4. Não abrir release enquanto faltarem evidências e não rotular este controle como `LICENSING_APPROVED` ou `WCAG_COMPLIANT` automaticamente.
+3. O dossiê fica **fora do commit auditado**. Nenhuma evidência externa foi criada por esta PR. O modo estrito falha também se o arquivo estiver dentro do checkout ou se `--target-sha` não coincidir com o HEAD real.
+4. `--acknowledge-reviewed-evidence` significa somente que o operador declara ter revisado as fontes: o programa **não abre URLs, não verifica autenticidade de permissões e não certifica WCAG**. A decisão real de publicação permanece do mantenedor.
+5. Não abrir release enquanto faltarem evidências e não rotular este controle como `LICENSING_APPROVED` ou `WCAG_COMPLIANT` automaticamente.
 
 Acompanhar os gates em [#14](https://github.com/alexoaraujo/peos-knowledge-hub/issues/14), direitos em [#2](https://github.com/alexoaraujo/peos-knowledge-hub/issues/2) e acessibilidade em [#8](https://github.com/alexoaraujo/peos-knowledge-hub/issues/8).

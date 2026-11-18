@@ -24,17 +24,19 @@ python3 tools/release_preflight.py
 O último comando emite `release_readiness: BLOCKED` quando faltam evidências. Isso é **esperado**, não um defeito da CI. O modo de bloqueio obrigatório para um futuro processo de release é:
 
 ```bash
-python3 tools/release_preflight.py --require-evidence
+python3 tools/release_preflight.py --require-evidence \\
+  --authorization-file /secure-external-location/approval.json \\
+  --acknowledge-reviewed-evidence
 ```
 
-Este comando retorna código diferente de zero enquanto `release-authorization/approval.json` estiver ausente ou incompleto. **Não** coloque `--require-evidence` em jobs comuns de PR: isso impediria desenvolvimento legítimo antes da homologação. Veja [critérios e contrato do dossiê](docs/RELEASE-READINESS.md).
+Este comando retorna código diferente de zero enquanto faltar um dossiê **externo ao checkout** válido e uma confirmação explícita de revisão humana. Não commitar o dossiê no mesmo commit candidato: isso mudaria o SHA e criaria uma referência circular. Os caminhos mostrados são exemplos, não dossiês existentes. **Não** coloque `--require-evidence` em jobs comuns de PR: isso impediria desenvolvimento legítimo antes da homologação. Veja [critérios e contrato do dossiê](docs/RELEASE-READINESS.md).
 
 ## Gate de publicação (após evidências reais)
 
 1. Confirmar autoria, titularidade, direitos de modificação/redistribuição e atribuição dos três ZIPs; não declarar licença por presunção.
 2. Concluir auditoria manual de teclado, leitor de tela, contraste e viewport, registrando SHA e links (issue #8).
 3. Registrar parecer final de segurança e decisão sobre PMUs `PROPOSED`.
-4. Criar dossiê de autorização com links para **evidências reais**, escopo e SHA; não incluir segredos, documentos privados nem dados pessoais em texto versionado.
+4. Criar dossiê de autorização **fora do repositório do commit candidato** com links para **evidências reais**, escopo e SHA fixado. Nunca publicar segredos, documentos privados nem dados pessoais. A referência ao commit pode ser arquivada separadamente após a homologação.
 5. Executar `--require-evidence` no SHA candidato. **Esse pré-flight verifica completude documental, não autenticidade das evidências nem conformidade jurídica/WCAG.** O mantenedor deve conferir as fontes manualmente.
 6. Somente depois decidir `LICENSE` e `NOTICE` para código e conteúdo, gerar changelog, tag, artefatos e eventual deploy. A operação de release **não está automatizada** neste repositório.
 7. Registrar URL de release, commit, resultados dos checks, decisão de publicação e procedimento de reversão na [issue #14](https://github.com/alexoaraujo/peos-knowledge-hub/issues/14).

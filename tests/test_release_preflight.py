@@ -3,6 +3,7 @@ import importlib.util
 import json
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -112,6 +113,58 @@ class ReleasePreflightTests(unittest.TestCase):
                            cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(p.returncode, 0, p.stderr)
         self.assertEqual(json.loads(p.stdout)["release_readiness"], "BLOCKED")
+
+    def test_strict_requires_separate_file_and_explicit_acknowledgement(self):
+        sha = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=ROOT, encoding="utf-8").strip()
+        dossier = self.valid_record()
+        dossier["target_sha"] = sha
+        dossier["manual_accessibility"]["tested_sha"] = sha
+        dossier["security_review"]["tested_sha"] = sha
+        with tempfile.TemporaryDirectory() as folder:
+            external_file = Path(folder) / "approval.json"
+            external_file.write_text(json.dumps(dossier), encoding="utf-8")
+            cmd = [sys.executable, "tools/release_preflight.py",
+                   "--require-evidence", "--authorization-file", str(external_file)]
+            without_ack = subprocess.run(cmd, cwd=ROOT, capture_output=True,
+                                         text=True, encoding="utf-8")
+            self.assertEqual(without_ack.returncode, 2)
+            self.assertIn("HUMAN_REVIEW_ACKNOWLEDGEMENT_MISSING", without_ack.stdout)
+            # This is only a structural fixture: URLs are intentionally synthetic.
+            with_ack = subprocess.run(cmd + ["--acknowledge-reviewed-evidence"],
+                                      cwd=ROOT, capture_output=True,
+                                      text=True, encoding="utf-8")
+            self.assertEqual(with_ack.returncode, 0, with_ack.stdout + with_ack.stderr)
+            self.assertIn("NOT_LEGAL_CERTIFICATION", with_ack.stdout)
+
+    def test_strict_rejects_in_tree_dossier_and_wrong_sha(self):
+        sha = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], cwd=ROOT, encoding="utf-8").strip()
+        dossier = self.valid_record()
+        dossier["target_sha"] = sha
+        dossier["manual_accessibility"]["tested_sha"] = sha
+        dossier["security_review"]["tested_sha"] = sha
+        with tempfile.TemporaryDirectory(dir=ROOT) as folder:
+            in_tree = Path(folder) / "approval.json"
+            in_tree.write_text(json.dumps(dossier), encoding="utf-8")
+            cmd = [sys.executable, "tools/release_preflight.py",
+                   "--require-evidence", "--authorization-file", str(in_tree),
+                   "--acknowledge-reviewed-evidence"]
+            result = subprocess.run(cmd, cwd=ROOT, capture_output=True,
+                                    text=True, encoding="utf-8")
+            self.assertEqual(result.returncode, 2)
+            self.assertIn("AUTHORIZATION_FILE_MUST_BE_EXTERNAL", result.stdout)
+        with tempfile.TemporaryDirectory() as folder:
+            external_file = Path(folder) / "approval.json"
+            external_file.write_text(json.dumps(dossier), encoding="utf-8")
+            result = subprocess.run([sys.executable, "tools/release_preflight.py",
+                                     "--require-evidence",
+                                     "--authorization-file", str(external_file),
+                                     "--acknowledge-reviewed-evidence",
+                                     "--target-sha", "b" * 40],
+                                    cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
+            self.assertEqual(result.returncode, 2)
+            self.assertIn("TARGET_SHA_NOT_CHECKED_OUT", result.stdout)
 
     def test_strict_mode_fails_closed(self):
         p = subprocess.run([sys.executable, "tools/release_preflight.py", "--require-evidence"],
