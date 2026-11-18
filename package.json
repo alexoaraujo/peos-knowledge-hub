@@ -1,0 +1,14 @@
+{
+  "name": "peos-knowledge-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reproducible browser E2E test dependencies for PEOS Knowledge Hub",
+  "scripts": {
+    "test:e2e": "playwright test --config=playwright.config.cjs",
+    "test:search": "node --test tests/portal_search_benchmark.test.cjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.56.1"
+  }
+}
