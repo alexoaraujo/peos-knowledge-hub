@@ -95,3 +95,41 @@ test('PMU manifest failure degrades safely without blocking catalog', async ({ p
   await expect(page.locator('.item').first()).toContainText('Referências canônicas indisponíveis');
   await expect(page.locator('.item details')).toHaveCount(0);
 });
+
+test('plan preview selects PMU and displays gated workflow with canonical links', async ({ page }) => {
+  await page.goto(url);
+  await expect(page.locator('#plan-pmu')).toBeEnabled();
+  await page.locator('#plan-pmu').selectOption('PMU-007');
+  await page.locator('#plan-goal').fill('Auditar segurança de dependências');
+  await page.getByRole('button', { name: 'Visualizar plano' }).click();
+  await expect(page.locator('#plan-output')).toBeVisible();
+  await expect(page.locator('#plan-output')).toContainText('PMU-007');
+  await expect(page.locator('#plan-output')).toContainText('WF-007');
+  await expect(page.locator('#plan-output')).toContainText('PLAN_ONLY');
+  await expect(page.locator('#plan-output')).toContainText('BLOCKED_UNTIL_VERIFIED');
+  const links = page.locator('#plan-output a');
+  const pmu = require('../../pmu/manifest.json').prompts.find(p => p.id === 'PMU-007');
+  expect(pmu).toBeTruthy();
+  await expect(links).toHaveCount(pmu.refs.length);
+  await expect(links.first()).toHaveAttribute('href', /\.md$/);
+  await expect(links.first()).toHaveAttribute('title', /^SHA-256: [a-f0-9]{64}$/);
+  await expect(page.locator('#plan-message')).toContainText('nenhuma ação executada');
+});
+
+test('preview fails closed when workflow manifest cannot load but catalog remains available', async ({ page }) => {
+  await page.route('**/workflows/manifest.json', route => route.abort());
+  await page.goto(url);
+  await expect(page.locator('#plan-submit')).toBeDisabled();
+  await expect(page.locator('#plan-output')).toBeHidden();
+  await expect(page.locator('#plan-message')).toContainText('Contratos não verificados');
+  await expect(page.locator('#result-count')).toHaveText('797 resultado(s); exibindo 40.');
+});
+
+test('preview requires a nonempty goal and never claims completed gates', async ({ page }) => {
+  await page.goto(url);
+  await expect(page.locator('#plan-pmu')).toBeEnabled();
+  await page.locator('#plan-goal').fill('   ');
+  await page.getByRole('button', {name: 'Visualizar plano'}).click();
+  await expect(page.locator('#plan-output')).toBeHidden();
+  await expect(page.locator('#plan-message')).toContainText('Informe um objetivo válido');
+});
