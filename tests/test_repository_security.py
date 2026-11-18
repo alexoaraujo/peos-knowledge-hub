@@ -24,6 +24,36 @@ class RepositorySecurityTests(unittest.TestCase):
                 self.assertIn("permissions:\n  contents: read", data)
                 self.assertNotIn("pull_request_target", data)
 
+    def test_checkout_never_persists_token_in_git_config(self):
+        for file in sorted(WORKFLOWS.glob("*.yml")):
+            lines = file.read_text(encoding="utf-8").splitlines()
+            for index, line in enumerate(lines):
+                if "uses: actions/checkout@" in line:
+                    with self.subTest(file=file.name, line=index + 1):
+                        self.assertIn(
+                            "persist-credentials: false",
+                            "\\n".join(lines[index + 1:index + 5]),
+                        )
+
+    def test_codeql_has_exact_needed_upload_permission(self):
+        codeql = WORKFLOWS / "peos-codeql-security.yml"
+        content = codeql.read_text(encoding="utf-8")
+        self.assertIn("  security-events: write", content)
+        self.assertIn("  actions: read", content)
+        self.assertIn("matrix:", content)
+        self.assertIn("python, javascript-typescript", content)
+        for file in sorted(WORKFLOWS.glob("*.yml")):
+            if file == codeql:
+                continue
+            with self.subTest(file=file.name):
+                self.assertNotIn("security-events: write", file.read_text(encoding="utf-8"))
+
+    def test_dependabot_monitors_github_actions_without_auto_merge(self):
+        config = (ROOT / ".github" / "dependabot.yml").read_text(encoding="utf-8")
+        self.assertIn("package-ecosystem: github-actions", config)
+        self.assertIn("interval: weekly", config)
+        self.assertNotIn("auto-merge", config)
+
     def test_local_credentials_and_build_artifacts_are_ignored(self):
         patterns = set((ROOT / ".gitignore").read_text(encoding="utf-8").splitlines())
         for pattern in (".env", ".env.*", "node_modules/", "test-results/",
