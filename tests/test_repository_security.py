@@ -74,6 +74,18 @@ class RepositorySecurityTests(unittest.TestCase):
         self.assertIn("github/codeql-action/*", config)
         self.assertNotIn("auto-merge", config)
 
+    def test_npm_advisory_gate_is_read_only_and_has_weekly_coverage(self):
+        content = (WORKFLOWS / "peos-npm-audit.yml").read_text(encoding="utf-8")
+        self.assertIn("permissions:\n  contents: read", content)
+        self.assertIn("npm audit --package-lock-only --audit-level=high", content)
+        self.assertIn("persist-credentials: false", content)
+        self.assertIn("schedule:", content)
+        self.assertIn("workflow_dispatch:", content)
+        for name in ("package.json", "package-lock.json"):
+            with self.subTest(name=name):
+                self.assertEqual(content.count("      - '" + name + "'"), 2)
+        self.assertNotIn("pull_request_target", content)
+
     def test_local_credentials_and_build_artifacts_are_ignored(self):
         patterns = set((ROOT / ".gitignore").read_text(encoding="utf-8").splitlines())
         for pattern in (".env", ".env.*", "node_modules/", "test-results/",
