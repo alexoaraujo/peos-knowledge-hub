@@ -4,6 +4,7 @@ const byId = id => document.getElementById(id);
 const ui = {q:byId('q'),ns:byId('ns'),category:byId('category'),group:byId('group'),tag:byId('tag'),sort:byId('sort'),results:byId('results'),count:byId('result-count'),stats:byId('stats'),more:byId('more'),clear:byId('clear'),error:byId('load-error')};
 const search = window.PEOSSearch;
 let list = [], indexed = [], filtered = [], visible = 0;
+let pmuReferenceState = 'loading', pmuReferences = new Map();
 const PAGE_SIZE = 40;
 
 function safePromptPath(value) {
@@ -27,6 +28,46 @@ function appendPrompt(p) {
     const link = document.createElement('a');
     link.href = path; link.textContent = 'Abrir prompt original';
     article.append(link);
+  }
+  if (p.namespace === 'pmu') {
+    const metadata = document.createElement('p');
+    if (pmuReferenceState !== 'ready') {
+      metadata.textContent = pmuReferenceState === 'error'
+        ? 'Referências canônicas indisponíveis; consulte o manifesto PMU.'
+        : 'Carregando referências canônicas...';
+      article.append(metadata);
+    } else {
+      const refs = pmuReferences.get(p.id);
+      if (!refs) {
+        metadata.textContent = 'Referências canônicas não verificadas.';
+        article.append(metadata);
+      } else {
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = 'Referências canônicas (' + refs.length + ') · plano, não execução';
+        details.append(summary);
+        const entries = document.createElement('ul');
+        for (const ref of refs) {
+          const item = list.find(e => e.namespace === 'canonical' && e.id === ref);
+          const destination = item && safePromptPath(item.path);
+          if (!destination || !/^[0-9a-f]{64}$/.test(item.sha256)) continue;
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = destination;
+          a.textContent = ref + ' · ' + item.title;
+          a.title = 'SHA-256: ' + item.sha256;
+          li.append(a);
+          entries.append(li);
+        }
+        if (entries.children.length === refs.length) {
+          details.append(entries);
+          article.append(details);
+        } else {
+          metadata.textContent = 'Referências incompletas; confira o manifesto PMU.';
+          article.append(metadata);
+        }
+      }
+    }
   }
   ui.results.append(article);
 }
@@ -94,6 +135,27 @@ function load() {
     addStat('PMUs',data.summary.by_namespace.pmu);
     addStat('Workflows',data.summary.total_workflows);
     render();
+    fetch('../pmu/manifest.json').then(response => {
+      if (!response.ok) throw Error('HTTP ' + response.status);
+      return response.json();
+    }).then(manifest => {
+      if (!Array.isArray(manifest.prompts) || manifest.prompts.length !== 10) throw Error('Manifesto PMU inválido');
+      const items = new Map();
+      for (const entry of manifest.prompts) {
+        if (!/^PMU-[0-9]{3}$/.test(entry.id) || !Array.isArray(entry.refs) ||
+            entry.refs.length === 0 || entry.refs.some(ref => !/^[0-9]{4}$/.test(ref))) {
+          throw Error('Referência PMU inválida');
+        }
+        if (items.has(entry.id)) throw Error('PMU duplicado');
+        items.set(entry.id, entry.refs);
+      }
+      pmuReferences = items;
+      pmuReferenceState = 'ready';
+      render();
+    }).catch(() => {
+      pmuReferenceState = 'error';
+      render();
+    });
   }).catch(() => {
     ui.count.textContent = 'Não foi possível carregar o catálogo.';
     ui.error.hidden = false;
