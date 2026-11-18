@@ -88,6 +88,14 @@ class PortalAccessibilityTests(unittest.TestCase):
         self.assertNotIn('eval(', preview)
         self.assertNotIn('new Function(', preview)
 
+    def test_pmu_card_plan_navigation_cannot_bypass_contracts(self):
+        preview = (PORTAL / 'plan-preview.js').read_text(encoding='utf-8')
+        self.assertIn("new CustomEvent('peos:select-pmu'", self.js)
+        self.assertIn("document.addEventListener('peos:select-pmu'", preview)
+        self.assertIn("pmuSelect.disabled || !workflows.has(selected)", preview)
+        self.assertIn("output.hidden = true", preview)
+        self.assertIn("goal.focus()", preview)
+
     def test_progressive_loading_and_responsive_states(self):
         self.assertIn('PAGE_SIZE = 40', self.js)
         self.assertIn('showMore()', self.js)
