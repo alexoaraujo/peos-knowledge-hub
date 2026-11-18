@@ -1,39 +1,39 @@
-# PEOS — Segurança da cadeia de dependências e análise de código
+# PEOS — Segurança da cadeia de dependências e evidências
 
-## Escopo e referências
+## Baseline técnico verificado em 18/11/2026
 
-Este conjunto trata a superfície Python/JavaScript e os workflows do GitHub Actions **sem alterar prompts, manifests, snapshots, release ou credenciais**.
-
-## Controles implementados
-
-| Controle | Implementação | Limite |
+| Controle | Estado confirmado | Limite da evidência |
 | --- | --- | --- |
-| Análise estática | `.github/workflows/peos-codeql-security.yml`: CodeQL em Python e JavaScript/TypeScript, consultas `security-extended` | Deve executar e reportar resultados no Code Scanning; não substitui pentest ou revisão manual |
-| Supply chain de Actions | `.github/dependabot.yml`: atualizações semanais, três PRs simultâneas no máximo | Não audita npm sem manifesto e lockfile |
-| Imutabilidade das Actions | Todas as referências `uses` fixadas em commit SHA de 40 caracteres | SHA correto não garante origem segura ou ausência de vulnerabilidades |
-| Credenciais de checkout | `persist-credentials: false` nos oito workflows existentes e no novo CodeQL | Token ainda tem permissões de leitura; o CodeQL recebe `security-events: write` para publicar SARIF |
-| Testes de política | `tests/test_repository_security.py`: limita ações, permissões e credenciais | Não substitui auditoria dos próprios provedores |
+| CodeQL | `.github/workflows/peos-codeql-security.yml` analisa Python e JavaScript/TypeScript; `init` e `analyze` fixados no mesmo SHA `33d7b85da1a04171e211befe2c739303b9a4c066` (v4.39.3) | Execução SUCCESS e upload SARIF não demonstram ausência de alertas abertos |
+| GitHub Actions | Ações com pin SHA de 40 caracteres; `actions/checkout` v7.0.1 no SHA `3d3c42e5aac5ba805825da76410c181273ba90b1` | Pin reduz mutabilidade, mas não substitui análise de origem e advisories |
+| Credenciais | Checkouts usam `persist-credentials: false`; workflows declaram `contents: read`; CodeQL recebe `security-events: write` e `actions: read` | A permissão efetiva do token de cada execução depende também das políticas da plataforma |
+| Dependências npm | `package.json` privado, `package-lock.json` v3 e `npm ci --ignore-scripts --no-audit --no-fund` no E2E | `--no-audit` dispensa a auditoria npm durante instalação; consultar alertas separadamente |
+| Dependabot | Atualizações semanais para `github-actions` e `npm`, sem auto-merge configurado | PRs do Dependabot não substituem verificação de alertas ativos |
+| Navegador | Chromium E2E, axe-core e benchmark; `@playwright/test` v1.65.1 verificado na `main` | Testes automatizados não constituem homologação manual integral WCAG |
 
-### CodeQL
+## Governança observada
 
-O SHA `8aad20d150bbac5944a9f9d289da16a4b0d87c1e` foi verificado como commit do tag `github/codeql-action/v4.36.2`. A nova análise tem dois jobs, um Python e um JavaScript/TypeScript, e dispara para PRs de código, atualizações da `main`, agenda semanal e execução manual.
+A ruleset [`protect-main`](https://github.com/alexoaraujo/peos-knowledge-hub/rules/27506105) ID `27506105` está ativa para `refs/heads/main`, sem bypass actors, com histórico linear, restrição a force-push/exclusão, PR obrigatória e política de mantenedor único (`required_approving_review_count: 0`). Os quatro checks obrigatórios efetivos são:
 
-A permissão `security-events: write` é necessária para o upload; os demais workflows continuam sem essa permissão. Não marcar `SAST PASS` até confirmar a execução real e consultar os alertas.
+- `Canonical integrity (windows-latest)`
+- `Canonical integrity (ubuntu-latest)`
+- `integridade`
+- `validate`
 
-### Dependabot
+CodeQL e Chromium E2E executam em seus escopos, **mas não integram essa lista de required checks**. Antes de promover qualquer job com filtro de `paths` a required check, verificar a semântica de skipped/pendente e assegurar um check estável em todas as PRs; um required check não acionado pode bloquear a integração indefinidamente. Alterações administrativas na ruleset exigem permissão específica e não foram aplicadas nesta auditoria.
 
-O monitoramento semanal cobre exclusivamente `package-ecosystem: github-actions`. Não faz merge automático. A configuração não prova que alertas de segurança, secret scanning ou políticas administrativas de Code Security já estão habilitados; confirmar esses recursos na interface do GitHub e anexar evidências.
+## Endurecimento desta rodada
 
-## Pendências P1 da próxima rodada
+CodeQL passa a acompanhar também mudanças em `package.json` e `package-lock.json` nos eventos `pull_request` e `push`; um teste de regressão exige os dois gatilhos. Isso amplia a análise estática de PRs de dependências, mas **não é substituto de Dependabot alerts nem `npm audit`**.
 
-1. Criar `package.json` e `package-lock.json` genuíno, resolvido em ambiente de npm confiável, para `@playwright/test` e `@axe-core/playwright`. Trocar a instalação atual sem lock por `npm ci --ignore-scripts` e habilitar Dependabot `npm` **após** o manifesto validado.
-2. Examinar relatórios CodeQL e Dependency Graph; corrigir achados por gravidade, com PRs e checks nos SHAs exatos. Não declarar zero alertas sem inspeção.
-3. Verificar secret scanning com acesso administrativo no repositório; desabilitar divulgação de valores de credenciais em logs, revogar qualquer segredo real detectado, preservar evidência sem dados sensíveis.
-4. Definir se o job `CodeQL` será required status check depois da primeira execução consistente na `main`. **Não torná-lo obrigatório antes**, para evitar bloqueio indefinido.
-5. Validar no runner a matriz CodeQL para Python/JavaScript. Se o GitHub não permitir Code Scanning por política/permissão, registrar o bloqueio e preservar a CI anterior sem bypass.
+## Controles sem comprovação de leitura
 
-## Gate de publicação
+Os endpoints de Code Scanning alerts, Dependabot alerts, Secret Scanning alerts e configurações administrativas de GitHub Actions não puderam ser consultados pelo conector desta sessão. A consulta direta à proteção clássica da branch retornou `403`; a ruleset foi lida por endpoint autorizado. Portanto, **não declarar zero vulnerabilidades, zero segredos expostos ou retenção global conforme** sem evidência adicional.
 
-A análise de segurança **não autoriza** republicação dos três ZIPs nem o release em rascunho. Direitos [#2](https://github.com/alexoaraujo/peos-knowledge-hub/issues/2), acessibilidade manual [#8](https://github.com/alexoaraujo/peos-knowledge-hub/issues/8), PMUs editoriais [#17](https://github.com/alexoaraujo/peos-knowledge-hub/issues/17) e roadmap [#14](https://github.com/alexoaraujo/peos-knowledge-hub/issues/14) seguem como fontes de decisão.
+Para concluir a [issue #26](https://github.com/alexoaraujo/peos-knowledge-hub/issues/26), registrar por canal seguro: contagem/IDs e severidades dos alertas abertos, triagem e remediação de high/critical, configuração efetiva de secret scanning/push protection se disponível, política de retenção da Actions e permissões efetivas de fork/token. Não colar valores de segredos ou tokens em issues públicas.
 
-Referências técnicas: [configuração CodeQL no GitHub](https://docs.github.com/en/code-security/how-tos/find-and-fix-vulnerabilities/secure-your-code/configuring-advanced-setup-for-code-scanning), [atualizações Dependabot](https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-version-updates/configuring-dependabot-version-updates).
+O artefato de falha do Chromium está limitado no workflow a `retention-days: 7`; esta configuração **não prova** a retenção global de logs nem configurações de outros artefatos. Evidências devem incluir run ID, SHA, data UTC, escopo e resultado.
+
+## Gate de publicação separado
+
+CI bem-sucedido não autoriza redistribuição de material de terceiros. Manter os gates de direitos [#2](https://github.com/alexoaraujo/peos-knowledge-hub/issues/2), acessibilidade manual [#8](https://github.com/alexoaraujo/peos-knowledge-hub/issues/8), PMUs editoriais [#17](https://github.com/alexoaraujo/peos-knowledge-hub/issues/17) e roadmap [#14](https://github.com/alexoaraujo/peos-knowledge-hub/issues/14) independentes da engenharia de segurança.

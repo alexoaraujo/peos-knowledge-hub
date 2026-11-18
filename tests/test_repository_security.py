@@ -56,6 +56,16 @@ class RepositorySecurityTests(unittest.TestCase):
         self.assertEqual(len(ids), 2)
         self.assertEqual(ids[0], ids[1], "CodeQL steps must be updated atomically")
 
+    def test_codeql_runs_when_npm_manifest_or_lockfile_changes(self):
+        content = (WORKFLOWS / "peos-codeql-security.yml").read_text(encoding="utf-8")
+        for manifest in ("package.json", "package-lock.json"):
+            with self.subTest(manifest=manifest):
+                self.assertEqual(
+                    content.count("      - '" + manifest + "'"),
+                    2,
+                    "Both pull_request and push must include npm changes",
+                )
+
     def test_dependabot_monitors_github_actions_without_auto_merge(self):
         config = (ROOT / ".github" / "dependabot.yml").read_text(encoding="utf-8")
         self.assertIn("package-ecosystem: github-actions", config)

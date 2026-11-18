@@ -25,9 +25,9 @@ A publicação pública com licença declarada continua bloqueada pelas provas d
 
 ## Verificações adicionais de supply chain
 
-- [`peos-codeql-security.yml`](.github/workflows/peos-codeql-security.yml) analisa Python e JavaScript com CodeQL fixado no commit da versão 4.36.2; resultados dependem de Code Scanning habilitado e da permissão concedida pelo GitHub. A configuração de workflow **não prova execução concluída**.
-- [`.github/dependabot.yml`](.github/dependabot.yml) verifica atualizações semanais de GitHub Actions e abre PRs. Não há merge automático.
-- O workflow Chromium ainda instala `@playwright/test` e `@axe-core/playwright` sem um `package-lock.json`; as dependências transitivas podem variar. Tratar lockfile com `npm ci` e inventário de dependências como melhoria P1 futura, sem gerar lockfile manualmente ou fingir um npm audit realizado.
+- [`peos-codeql-security.yml`](.github/workflows/peos-codeql-security.yml) analisa Python e JavaScript com CodeQL v4.39.3 com SHA compartilhado em init/analyze; resultados SARIF de execuções concluídas não comprovam ausência de alertas em aberto. O workflow também cobre alterações em manifests npm.
+- [`.github/dependabot.yml`](.github/dependabot.yml) verifica atualizações semanais de GitHub Actions e npm e abre PRs. Não há merge automático.
+- O workflow Chromium utiliza `package-lock.json` v3 e `npm ci --ignore-scripts --no-audit --no-fund`; `@playwright/test` está na versão 1.65.1. O uso de `--no-audit` significa que a instalação não executa uma auditoria npm; a revisão dos alertas reais permanece pendente na issue #26.
 - Nenhum check está autorizado a imprimir valores de secrets. O uso de `persist-credentials: false` reduz a exposição acidental do token de checkout, mas não substitui regras de permissão, rotação, SAST ou secret scanning nativo.
 
 Ver [plano de segurança e cadeia de dependências](docs/SECURITY-SUPPLY-CHAIN.md).
