@@ -119,6 +119,20 @@
     output.hidden = false;
     message.textContent = 'Prévia gerada localmente: nenhuma ação executada ou aprovada.';
   }
+  document.addEventListener('peos:select-pmu', event => {
+    const selected = event.detail && event.detail.pmuId;
+    if (typeof selected !== 'string' || !pmus.has(selected) ||
+        pmuSelect.disabled || !workflows.has(selected)) {
+      message.textContent = 'Plano indisponível: contratos do PMU ainda não verificados.';
+      return;
+    }
+    pmuSelect.value = selected;
+    output.replaceChildren();
+    output.hidden = true;
+    message.textContent = 'PMU ' + selected + ' selecionado. Informe o objetivo para visualizar o plano.';
+    document.getElementById('plan-preview').scrollIntoView({ block: 'start' });
+    goal.focus();
+  });
   form.addEventListener('submit', preview);
   Promise.all([
     fetch('../pmu/manifest.json').then(r => { if (!r.ok) throw Error('PMU'); return r.json(); }),

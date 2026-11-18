@@ -159,3 +159,32 @@ test('preview rejects workflow stage diverging from PMU source', async ({ page }
   await expect(page.locator('#plan-message')).toContainText('Contratos não verificados');
   await expect(page.locator('#result-count')).toHaveText('797 resultado(s); exibindo 40.');
 });
+
+test('PMU card navigates to its PLAN_ONLY preview without submitting a plan', async ({ page }) => {
+  await page.goto(url);
+  await expect(page.locator('#plan-pmu')).toBeEnabled();
+  await page.locator('#ns').selectOption('pmu');
+  await page.locator('#q').fill('PMU-007');
+  await expect(page.locator('.item')).toHaveCount(1);
+  await page.getByRole('button', { name: 'Visualizar plano deste PMU' }).click();
+  await expect(page.locator('#plan-pmu')).toHaveValue('PMU-007');
+  await expect(page.locator('#plan-goal')).toBeFocused();
+  await expect(page.locator('#plan-output')).toBeHidden();
+  await expect(page.locator('#plan-message')).toContainText('Informe o objetivo');
+  await page.locator('#plan-goal').fill('Analisar segurança e dependências');
+  await page.getByRole('button', {name:'Visualizar plano', exact:true}).click();
+  await expect(page.locator('#plan-output')).toContainText('WF-007');
+  await expect(page.locator('#plan-output')).toContainText('BLOCKED_UNTIL_VERIFIED');
+});
+
+test('PMU card never bypasses unavailable plan contracts', async ({ page }) => {
+  await page.route('**/workflows/manifest.json', route => route.abort());
+  await page.goto(url);
+  await expect(page.locator('#plan-submit')).toBeDisabled();
+  await page.locator('#ns').selectOption('pmu');
+  await page.locator('#q').fill('PMU-001');
+  await page.getByRole('button', { name:'Visualizar plano deste PMU' }).click();
+  await expect(page.locator('#plan-output')).toBeHidden();
+  await expect(page.locator('#plan-submit')).toBeDisabled();
+  await expect(page.locator('#plan-message')).toContainText('Plano indisponível');
+});

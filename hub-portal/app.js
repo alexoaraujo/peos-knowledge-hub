@@ -69,6 +69,16 @@ function appendPrompt(p) {
       }
     }
   }
+  if (p.namespace === 'pmu') {
+    const planButton = document.createElement('button');
+    planButton.type = 'button';
+    planButton.className = 'pmu-plan-action';
+    planButton.textContent = 'Visualizar plano deste PMU';
+    planButton.addEventListener('click', () => {
+      document.dispatchEvent(new CustomEvent('peos:select-pmu', { detail: { pmuId: p.id } }));
+    });
+    article.append(planButton);
+  }
   ui.results.append(article);
 }
 function showMore() {
