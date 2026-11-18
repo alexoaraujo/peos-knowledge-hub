@@ -108,7 +108,9 @@ test('plan preview selects PMU and displays gated workflow with canonical links'
   await expect(page.locator('#plan-output')).toContainText('PLAN_ONLY');
   await expect(page.locator('#plan-output')).toContainText('BLOCKED_UNTIL_VERIFIED');
   const links = page.locator('#plan-output a');
-  await expect(links).toHaveCount(6);
+  const pmu = require('../../pmu/manifest.json').prompts.find(p => p.id === 'PMU-007');
+  expect(pmu).toBeTruthy();
+  await expect(links).toHaveCount(pmu.refs.length);
   await expect(links.first()).toHaveAttribute('href', /\.md$/);
   await expect(links.first()).toHaveAttribute('title', /^SHA-256: [a-f0-9]{64}$/);
   await expect(page.locator('#plan-message')).toContainText('nenhuma ação executada');
