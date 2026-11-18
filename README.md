@@ -47,4 +47,12 @@ O `compose` herda a classificação heurística v2.1, produz JSON `PLAN_ONLY` e 
 
 ## Integração e publicação
 
-O repositório de destino é `alexoaraujo/peos-knowledge-hub`. Commits, merges, políticas de branch e CI **não estão comprovados** por este pacote local; devem ser validados no GitHub real. Não inserir senhas, chaves privadas nem dados pessoais no catálogo.
+O repositório público [`alexoaraujo/peos-knowledge-hub`](https://github.com/alexoaraujo/peos-knowledge-hub) já possui integrações e CI verificadas no GitHub. A cadeia técnica #12 → #6 → #7 → #9 → #10 → #11 foi integrada por squash, com integridade Windows/Linux, testes Python/Node, Chromium E2E, benchmark e auditoria **automatizada** axe-core.
+
+- **Governança solo:** `protect-main`, Pull Request e quatro checks GitHub Actions obrigatórios; aprovação externa não exigida.
+- **Gate de publicação bloqueado:** [direitos/licenciamento de fontes, issue #2](https://github.com/alexoaraujo/peos-knowledge-hub/issues/2); ausência de licença explícita nos ZIPs não equivale a permissão de redistribuição.
+- **Acessibilidade:** [auditoria manual, issue #8](https://github.com/alexoaraujo/peos-knowledge-hub/issues/8) ainda aberta. axe-core automatizado não equivale a certificação WCAG.
+- **PMUs:** 10 entradas `PROPOSED`; agentes seguem `PLAN_ONLY`, sem execução externa.
+- **Acompanhamento:** [roadmap auditável, issue #14](https://github.com/alexoaraujo/peos-knowledge-hub/issues/14) e [roadmap técnico](docs/HUB_ROADMAP.md).
+
+Não inserir senhas, chaves privadas nem dados pessoais no catálogo. A integração técnica do MVP não autoriza release com licenças não comprovadas.
