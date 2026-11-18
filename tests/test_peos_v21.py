@@ -20,8 +20,11 @@ class PEOSv21Tests(unittest.TestCase):
  def test_router_recognizes_api_at_word_boundary(self):
   self.assertIn('PMU-005',pe.select('Criar API REST'))
   self.assertIn('PMU-005',pe.select('API-rest'))
+  self.assertIn('PMU-005',pe.select('Criar APIs REST'))
+  self.assertIn('PMU-005',pe.select('Integrar full-stack'))
  def test_router_recognizes_auth0_and_rbac(self):
   self.assertIn('PMU-007',pe.select('Configurar Auth0 com RBAC'))
+  self.assertIn('PMU-007',pe.select('Implementar OAuth2 e RBAC'))
  def test_router_matches_phrases_with_extra_spaces(self):
   self.assertIn('PMU-005',pe.select('Integração full   stack'))
  def test_router_preserves_existing_specialist_selection(self):
