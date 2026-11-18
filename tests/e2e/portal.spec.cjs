@@ -70,3 +70,28 @@ test('fetch failure exposes retry and recovers without hard reload', async ({ pa
   await expect(page.locator('#result-count')).toHaveText('797 resultado(s); exibindo 40.');
   await expect(page.locator('#load-error')).toBeHidden();
 });
+
+test('PMU cards expose canonical dependencies without executing prompts', async ({ page }) => {
+  await page.goto(url);
+  await page.locator('#ns').selectOption('pmu');
+  await page.locator('#q').fill('PMU-001');
+  await expect(page.locator('.item')).toHaveCount(1);
+  await expect(page.locator('.item')).toContainText('Status: PROPOSED');
+  const details = page.locator('.item details');
+  await expect(details).toBeVisible();
+  await details.locator('summary').click();
+  await expect(details.locator('a')).toHaveCount(6);
+  await expect(details).toContainText('0001');
+  await expect(details.locator('a').first()).toHaveAttribute('href', /\\.md$/);
+  await expect(details.locator('a').first()).toHaveAttribute('title', /^SHA-256: [0-9a-f]{64}$/);
+  await expect(details).toContainText('plano, não execução');
+});
+
+test('PMU manifest failure degrades safely without blocking catalog', async ({ page }) => {
+  await page.route('**/pmu/manifest.json', route => route.abort());
+  await page.goto(url);
+  await page.locator('#ns').selectOption('pmu');
+  await expect(page.locator('#result-count')).toHaveText('10 resultado(s); exibindo 10.');
+  await expect(page.locator('.item').first()).toContainText('Referências canônicas indisponíveis');
+  await expect(page.locator('.item details')).toHaveCount(0);
+});
