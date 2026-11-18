@@ -35,8 +35,8 @@ jobs:
           node --version
           npm --version
           python3 --version
-      - name: Install pinned Playwright test runner
-        run: npm install --no-save --package-lock=false --ignore-scripts @playwright/test@1.56.1 @axe-core/playwright@4.14.0
+      - name: Install locked Playwright test dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Install Chromium and Linux system dependencies
         run: npx playwright install --with-deps chromium
       - name: Check browser test code syntax
