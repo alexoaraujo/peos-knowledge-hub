@@ -13,6 +13,20 @@ class PEOSv21Tests(unittest.TestCase):
  def test_gate_not_faked(self):self.assertTrue(all(x=='NOT_EVALUATED' for x in pe.compose('segurança')['gates'].values()))
  def test_dependencies_pinned(self):
   result=pe.compose('full stack');self.assertTrue(result['canonical_dependencies']);self.assertTrue(all(len(x['sha256'])==64 for x in result['canonical_dependencies']))
+ def test_router_rejects_false_positive_embedded_api_word(self):
+  self.assertEqual(pe.select('capivara'),[])
+  self.assertEqual(pe.select('apicultura'),[])
+  self.assertEqual(pe.compose('capivara')['pmu_id'],'PMU-001')
+ def test_router_recognizes_api_at_word_boundary(self):
+  self.assertIn('PMU-005',pe.select('Criar API REST'))
+  self.assertIn('PMU-005',pe.select('API-rest'))
+ def test_router_recognizes_auth0_and_rbac(self):
+  self.assertIn('PMU-007',pe.select('Configurar Auth0 com RBAC'))
+ def test_router_matches_phrases_with_extra_spaces(self):
+  self.assertIn('PMU-005',pe.select('Integração full   stack'))
+ def test_router_preserves_existing_specialist_selection(self):
+  self.assertEqual(pe.compose('auditoria integral do projeto')['pmu_id'],'PMU-003')
+  self.assertEqual(pe.compose('wireframe UX e design')['pmu_id'],'PMU-006')
  def test_unknown_pmu_rejected(self):
   with self.assertRaises(ValueError):pe.compose('teste','PMU-999')
  def test_tamper_detection(self):
