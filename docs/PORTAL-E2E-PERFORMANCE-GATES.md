@@ -1,7 +1,7 @@
 # PEOS — Browser E2E & Search Performance Gate (BPD-065/066, BPD-088..095)
 
 ## Contexto
-Esta feature deriva da branch `feat/hub-advanced-faceted-search` (PR #9), que deriva de `feat/hub-portal-accessibility-ux` (PR #7). A revisão deve respeitar a ordem **#7 → #9 → PR E2E**, sem rebase de `main` sobre uma base ainda não aprovada.
+Dependências cumpridas: PR #7 e PR #9 já foram integradas à `main` (`3755bdc2b1a9221cccef1ed7be0bb410e64e0394` e `f6a1069b5beb7289359aa21891758836f6334514`). Esta PR de testes E2E foi sincronizada e passa a comparar diretamente com `main`, preservando somente suas cinco alterações.
 
 ## Aplicação dos prompts
 - **BPD-088/089/090/091/092**: estratégia e testes automatizados E2E reais em Chromium, além dos testes unitários existentes
