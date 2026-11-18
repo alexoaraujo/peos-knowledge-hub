@@ -24,3 +24,12 @@ button:disabled{opacity:.55;cursor:not-allowed}
 .item details ul{margin:.65rem 0 0;padding-left:1.4rem}
 .item details li{margin:.4rem 0;overflow-wrap:anywhere}
 .item details summary:focus-visible{outline:3px solid #86dbcb;outline-offset:3px}
+
+/* PLAN_ONLY interactive preview; no mutation or backend operation. */
+.plan-preview{border:1px solid #55617a;border-radius:14px;padding:1.2rem;background:#151f34;margin:1rem 0 2rem}
+.plan-preview h2{font-size:1.35rem}
+.plan-preview #plan-output{border-top:1px solid #55617a;margin-top:1rem;padding-top:1rem}
+.plan-preview #plan-output h3,.plan-preview #plan-output h4{color:#f4f7fb}
+.plan-preview #plan-output li{margin:.55rem 0;overflow-wrap:anywhere}
+.plan-preview #plan-output a{color:#a3e8f5;text-decoration:underline;text-underline-offset:3px}
+.plan-preview #plan-output a:focus-visible{outline:3px solid #86dbcb;outline-offset:3px}
