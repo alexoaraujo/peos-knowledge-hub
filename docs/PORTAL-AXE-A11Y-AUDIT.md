@@ -9,7 +9,7 @@ BPD-065/066 (auditar e corrigir acessibilidade), BPD-088/091/092 (testes E2E), B
 - Estado sem resultados em viewport mobile 375px
 
 ## Execução
-A mesma CI da PR #10 instala `@playwright/test@1.56.1` e `@axe-core/playwright@4.14.0`, ambos gratuitos, e realiza `npx playwright test --config=playwright.config.cjs` em `ubuntu-24.04`.
+Dependência atendida: a PR #10 de testes E2E foi integrada à `main` pelo commit `4ca24bc9fab14f6072aab51041383c532921d26d`. Esta PR usa a mesma CI com `@playwright/test@1.56.1` e `@axe-core/playwright@4.14.0`, ambos gratuitos, e executa `npx playwright test --config=playwright.config.cjs` em `ubuntu-24.04`.
 
 ## Gates
 - [ ] Zero violações detectadas nas regras automatizadas selecionadas
