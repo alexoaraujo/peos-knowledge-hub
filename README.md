@@ -27,12 +27,18 @@ python3 tools/peos_engine.py validate
 python3 -m hub.cli stats
 python3 -m hub.cli search --query 'segurança' --limit 5
 python3 -m hub.cli compose --goal 'criar projeto de software com CI e testes'
+python3 -m hub.cli recommend --goal 'auditar segurança' --limit 5
 python3 tools/build_hub_index.py --check
 python3 -m http.server 8000
 # abra http://localhost:8000/hub-portal/
 ```
 
 O `compose` herda a classificação heurística v2.1, produz JSON `PLAN_ONLY` e não altera GitHub, banco de dados ou sistemas externos. O portal é estático, funciona sem backend e usa o índice gerado em `hub-portal/catalog.json`.
+
+
+### Recomendar prompts relacionados (modo somente leitura)
+
+O comando `hub.cli recommend` integra o roteamento determinístico de PMUs com o catálogo de 797 entradas. Ele retorna o plano `PLAN_ONLY`, as referências canônicas reais (ID, caminho e SHA-256) selecionadas pelo manifesto do PMU e sugestões lexicais relacionadas com namespace e status editorial preservados. A recomendação **não** executa prompts, não aprova gates e **não** autoriza a redistribuição dos textos de origem. O limite de resultados relacionados é de 1 a 20; a escolha de PMU pode ser fixada usando `--pmu PMU-007`.
 
 ## Documentação
 
