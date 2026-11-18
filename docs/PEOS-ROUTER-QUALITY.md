@@ -9,7 +9,8 @@ A versão inicial do roteador `tools/peos_engine.py` usava `norm(keyword) in nor
 - Usar limites de palavra Unicode para palavras-chave, preservando busca de expressões com espaços (inclusive espaços repetidos).
 - Manter a priorização existente por pontuação `3` para expressões e `1` para termos simples, com desempate por ID.
 - Manter o fallback `PMU-001` quando não houver correspondência.
-- Reconhecer explicitamente `Auth0` no vocabulário de segurança para não depender de correspondência por prefixo `auth`.
+- Reconhecer explicitamente `Auth0` e `OAuth/OAuth2` no vocabulário de segurança para não depender de correspondência por prefixo `auth`.
+- Manter variações frequentes como `APIs`, `full-stack` e plurais de frontend/backend sem reintroduzir coincidências acidentais.
 - Preservar `PLAN_ONLY`, `NO_EXTERNAL_MUTATIONS` e a política de gates não avaliados; não modificar textos originais, hashes ou PMUs.
 
 ## Casos cobertos por testes
@@ -18,8 +19,8 @@ A versão inicial do roteador `tools/peos_engine.py` usava `norm(keyword) in nor
 | --- | --- |
 | `capivara` ou `apicultura` | Sem match de `api`; fallback PMU-001 |
 | `Criar API REST` | PMU-005 |
-| `API-rest` | PMU-005 |
-| `Configurar Auth0 com RBAC` | PMU-007 |
+| `API-rest` ou `Criar APIs REST` | PMU-005 |
+| `Configurar Auth0 com RBAC` ou `Implementar OAuth2 e RBAC` | PMU-007 |
 | `Integração full   stack` | PMU-005 |
 | `auditoria integral do projeto` | PMU-003 |
 | `wireframe UX e design` | PMU-006 |
