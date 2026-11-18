@@ -133,3 +133,29 @@ test('preview requires a nonempty goal and never claims completed gates', async 
   await expect(page.locator('#plan-output')).toBeHidden();
   await expect(page.locator('#plan-message')).toContainText('Informe um objetivo válido');
 });
+
+test('preview rejects PMU metadata hash mismatch against catalog', async ({ page }) => {
+  await page.route('**/pmu/manifest.json', async route => {
+    const response = await route.fetch();
+    const data = await response.json();
+    data.prompts[0].sha256 = '0'.repeat(64);
+    await route.fulfill({response, json: data});
+  });
+  await page.goto(url);
+  await expect(page.locator('#plan-submit')).toBeDisabled();
+  await expect(page.locator('#plan-message')).toContainText('Contratos não verificados');
+  await expect(page.locator('#result-count')).toHaveText('797 resultado(s); exibindo 40.');
+});
+
+test('preview rejects workflow stage diverging from PMU source', async ({ page }) => {
+  await page.route('**/workflows/manifest.json', async route => {
+    const response = await route.fetch();
+    const data = await response.json();
+    data.workflows[0].steps[0].name = 'Etapa inconsistente';
+    await route.fulfill({response, json: data});
+  });
+  await page.goto(url);
+  await expect(page.locator('#plan-submit')).toBeDisabled();
+  await expect(page.locator('#plan-message')).toContainText('Contratos não verificados');
+  await expect(page.locator('#result-count')).toHaveText('797 resultado(s); exibindo 40.');
+});

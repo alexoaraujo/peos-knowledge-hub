@@ -32,11 +32,22 @@
       e.namespace === 'canonical' && /^[0-9]{4}$/.test(e.id) &&
       /^[0-9a-f]{64}$/.test(e.sha256)).map(e => [e.id, e]));
     if (entries.size !== 659) throw Error('Catálogo canônico inválido');
+    const pmuIndex = new Map(catalog.entries.filter(e =>
+      e.namespace === 'pmu' && /^PMU-0(?:0[1-9]|10)$/.test(e.id) &&
+      /^[0-9a-f]{64}$/.test(e.sha256)).map(e => [e.id, e]));
+    if (pmuIndex.size !== 10) throw Error('Índice PMU incompleto');
     const resultP = new Map(), resultW = new Map();
     for (const item of p.prompts) {
       if (!/^PMU-0(?:0[1-9]|10)$/.test(item.id) || item.status !== 'PROPOSED' ||
+          !/^[0-9a-f]{64}$/.test(item.sha256) ||
+          !pmuIndex.has(item.id) || pmuIndex.get(item.id).sha256 !== item.sha256 ||
+          pmuIndex.get(item.id).status !== item.status ||
           !Array.isArray(item.refs) || !item.refs.length ||
-          item.refs.some(id => !entries.has(id)) || resultP.has(item.id)) {
+          new Set(item.refs).size !== item.refs.length ||
+          item.refs.some(id => !entries.has(id)) ||
+          !Array.isArray(item.stages) || item.stages.length !== 6 ||
+          item.stages.some(name => typeof name !== 'string' || !name.trim()) ||
+          resultP.has(item.id)) {
         throw Error('PMU ou referências inválidas');
       }
       resultP.set(item.id, item);
@@ -44,9 +55,14 @@
     for (const wf of w.workflows) {
       if (!/^WF-0(?:0[1-9]|10)$/.test(wf.id) || !resultP.has(wf.pmu_id) ||
           wf.id !== 'WF-' + wf.pmu_id.slice(4) ||
-          !Array.isArray(wf.steps) || !wf.steps.length ||
-          wf.steps.some(step => typeof step.name !== 'string' ||
-            !/^G[0-6]$/.test(step.required_gate) || step.evidence_required !== true) ||
+          wf.version !== resultP.get(wf.pmu_id).version ||
+          !Array.isArray(wf.steps) ||
+          wf.steps.length !== resultP.get(wf.pmu_id).stages.length ||
+          wf.steps.some((step, index) =>
+            step.id !== 'S' + String(index + 1).padStart(2, '0') ||
+            step.name !== resultP.get(wf.pmu_id).stages[index] ||
+            step.required_gate !== 'G' + index ||
+            step.evidence_required !== true) ||
           resultW.has(wf.pmu_id)) {
         throw Error('Workflow sem gates de evidência');
       }
