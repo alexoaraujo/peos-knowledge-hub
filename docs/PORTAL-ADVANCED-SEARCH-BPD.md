@@ -1,7 +1,7 @@
 # Pesquisa avançada do PEOS Knowledge Hub — execução BPD
 
 ## Dependência
-Esta mudança parte da branch `feat/hub-portal-accessibility-ux` (PR #7) e não deve ser integrada diretamente em `main` antes de sua revisão.
+Dependência atendida: a PR #7 foi integrada à `main` pelo commit `3755bdc2b1a9221cccef1ed7be0bb410e64e0394`. Esta PR #9 foi sincronizada com a `main`, preservando o diff restrito à pesquisa avançada. A integração exige novos checks no HEAD atual.
 
 ## Prompts aplicados
 - **BPD-046, 047, 048, 049, 050**: evolução incremental do frontend estático, filtro e estado
