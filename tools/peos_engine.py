@@ -11,9 +11,9 @@ KEYWORDS={
  'PMU-002':['criar projeto','novo projeto','do zero','mvp','requisitos','planejamento'],
  'PMU-003':['auditoria','auditar','revisar integral','diagnostico','360'],
  'PMU-004':['continuar','continue','retomar','pendencias','proximo gate'],
- 'PMU-005':['full stack','frontend','backend','api','implementar modulo'],
+ 'PMU-005':['full stack','full-stack','frontend','frontends','backend','backends','api','apis','implementar modulo'],
  'PMU-006':['design','ux','ui','wireframe','acessibilidade','prototipo'],
- 'PMU-007':['seguranca','compliance','rbac','rls','auth','auth0','ameaca'],
+ 'PMU-007':['seguranca','compliance','rbac','rls','auth','auth0','oauth','oauth2','ameaca'],
  'PMU-008':['dados','data pipeline','machine learning','inteligencia artificial','llm'],
  'PMU-009':['devops','sre','deploy','release','ci/cd','observabilidade'],
  'PMU-010':['migracao','modernizacao','legado','refatorar','cutover']}
