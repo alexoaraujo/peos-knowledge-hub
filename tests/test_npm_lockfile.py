@@ -26,6 +26,8 @@ class NpmLockfileTests(unittest.TestCase):
         dependabot = (ROOT / ".github/dependabot.yml").read_text(encoding="utf-8")
         self.assertIn("npm ci --ignore-scripts --no-audit --no-fund", workflow)
         self.assertNotIn("--package-lock=false", workflow)
+        self.assertEqual(workflow.count("      - 'package.json'"), 2)
+        self.assertEqual(workflow.count("      - 'package-lock.json'"), 2)
         self.assertIn("package-ecosystem: npm", dependabot)
 
 

@@ -6,6 +6,8 @@ on:
       - 'tests/e2e/**'
       - 'tests/portal_search_benchmark.test.cjs'
       - 'playwright.config.cjs'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/portal-browser-e2e.yml'
   push:
     branches: [main]
@@ -14,6 +16,8 @@ on:
       - 'tests/e2e/**'
       - 'tests/portal_search_benchmark.test.cjs'
       - 'playwright.config.cjs'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/portal-browser-e2e.yml'
   workflow_dispatch:
 
