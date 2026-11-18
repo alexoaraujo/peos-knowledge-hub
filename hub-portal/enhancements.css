@@ -17,3 +17,10 @@ button:disabled{opacity:.55;cursor:not-allowed}
 #more{display:block;margin:1.5rem auto}
 @media(max-width:640px){main{padding:1.5rem 1rem}.filters{display:grid;grid-template-columns:minmax(0,1fr)}.filter-field,.filter-field--compact{width:100%}.results{grid-template-columns:minmax(0,1fr)}.stat{flex:1 1 130px;min-width:0}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Read-only PMU reference disclosure, keyboard accessible by native <details>. */
+.item details{margin-top:.75rem;border-top:1px solid #55617a;padding-top:.65rem}
+.item summary{color:#a3e8f5;cursor:pointer;font-weight:600}
+.item details ul{margin:.65rem 0 0;padding-left:1.4rem}
+.item details li{margin:.4rem 0;overflow-wrap:anywhere}
+.item details summary:focus-visible{outline:3px solid #86dbcb;outline-offset:3px}

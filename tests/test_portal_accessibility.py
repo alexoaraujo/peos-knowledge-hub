@@ -63,6 +63,14 @@ class PortalAccessibilityTests(unittest.TestCase):
         self.assertIn('safePromptPath', self.js)
         self.assertIn("s === '..'", self.js)
 
+    def test_pmu_references_remain_local_and_fail_closed(self):
+        self.assertIn("fetch('../pmu/manifest.json')", self.js)
+        self.assertIn("pmuReferenceState = 'error'", self.js)
+        self.assertIn("safePromptPath(item.path)", self.js)
+        self.assertIn("Referências canônicas indisponíveis", self.js)
+        self.assertIn("SHA-256: ", self.js)
+        self.assertIn(".item details summary:focus-visible", self.css)
+
     def test_progressive_loading_and_responsive_states(self):
         self.assertIn('PAGE_SIZE = 40', self.js)
         self.assertIn('showMore()', self.js)
