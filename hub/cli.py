@@ -16,10 +16,17 @@ def main(argv=None):
     c=sub.add_parser('compose')
     c.add_argument('--goal', required=True)
     c.add_argument('--pmu', default=None)
+    r=sub.add_parser('recommend', help='Plan-only PMU and related catalog references')
+    r.add_argument('--goal', required=True)
+    r.add_argument('--pmu', default=None)
+    r.add_argument('--limit', type=int, default=10)
     args=p.parse_args(argv)
     try:
         if args.cmd=='stats': output=catalog.stats()
         elif args.cmd=='search': output=catalog.search(args.query,args.namespace,args.limit)
+        elif args.cmd=='recommend':
+            from .recommend import recommend
+            output=recommend(args.goal,args.limit,args.pmu)
         else:
             sys.path.insert(0,str(catalog.ROOT/'tools'))
             import peos_engine
