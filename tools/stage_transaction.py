@@ -88,6 +88,32 @@ def _replace(path, content):
             tmp.unlink(missing_ok=True)
 
 
+
+def promote_generated(root, backup, prepared):
+    """Promote selected outputs; restore already changed files if promotion fails."""
+    done = []
+    try:
+        for name in sorted(prepared):
+            target = root / name
+            if prepared[name] is None:
+                target.unlink(missing_ok=True)
+            else:
+                _replace(target, prepared[name])
+            done.append(name)
+    except BaseException:
+        rollback_errors = []
+        for name in reversed(done):
+            try:
+                if backup[name] is None:
+                    (root / name).unlink(missing_ok=True)
+                else:
+                    _replace(root / name, backup[name])
+            except OSError as exc:
+                rollback_errors.append(f"{name}: {exc}")
+        if rollback_errors:
+            raise RuntimeError("Partial rollback; restore from Git: " + "; ".join(rollback_errors))
+        raise
+
 def stage_with_preflight(root, version, reason):
     root = Path(root).resolve()
     lock = root / ".peos-stage.lock"
@@ -137,28 +163,7 @@ def stage_with_preflight(root, version, reason):
                 raise ValueError("No versioned output changes were produced")
             backup = {p: before[p].read_bytes() if p in before else None for p in changed}
             prepared = {p: staged[p].read_bytes() if p in staged else None for p in changed}
-            done = []
-            try:
-                for p in changed:
-                    target = root / p
-                    if prepared[p] is None:
-                        target.unlink(missing_ok=True)
-                    else:
-                        _replace(target, prepared[p])
-                    done.append(p)
-            except BaseException:
-                rollback_errors = []
-                for p in reversed(done):
-                    try:
-                        if backup[p] is None:
-                            (root / p).unlink(missing_ok=True)
-                        else:
-                            _replace(root / p, backup[p])
-                    except OSError as exc:
-                        rollback_errors.append(f"{p}: {exc}")
-                if rollback_errors:
-                    raise RuntimeError("Partial rollback; restore from Git: " + "; ".join(rollback_errors))
-                raise
+            promote_generated(root, backup, prepared)
             print(output.rstrip())
             print(f"STAGE PREFLIGHT PASS: validated and promoted {len(changed)} generated files")
             print("NOTE: best-effort rollback on errors; use Git for recovery after abrupt termination")
