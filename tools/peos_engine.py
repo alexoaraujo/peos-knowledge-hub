@@ -40,8 +40,8 @@ def validate():
  return errors
 def keyword_matches(normalized_query, keyword):
  """Match whole words/phrases, never arbitrary substrings (e.g. api in capivara)."""
- pattern=r'(?<!\\w)'+re.escape(norm(keyword)).replace(r'\\ ',r'\\s+')+r'(?!\\w)'
- return re.search(pattern,normalized_query) is not None
+ pattern = r'(?<!\w)' + re.escape(norm(keyword)).replace(r'\ ', r'\s+') + r'(?!\w)'
+ return re.search(pattern, normalized_query) is not None
 def select(query):
  q=norm(query);rank=[]
  for pid,words in KEYWORDS.items():
