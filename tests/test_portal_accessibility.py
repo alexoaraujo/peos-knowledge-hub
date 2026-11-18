@@ -51,7 +51,7 @@ class PortalAccessibilityTests(unittest.TestCase):
         self.assertIn('aria-live="polite"', self.html)
 
     def test_assets_are_local_and_present(self):
-        self.assertEqual(self.parser.scripts, ['search.js', 'app.js'])
+        self.assertEqual(self.parser.scripts, ['search.js', 'app.js', 'plan-preview.js'])
         self.assertIn('enhancements.css', self.parser.links)
         for asset in self.parser.scripts + self.parser.links:
             self.assertTrue((PORTAL / asset).is_file(), asset)
@@ -70,6 +70,21 @@ class PortalAccessibilityTests(unittest.TestCase):
         self.assertIn("Referências canônicas indisponíveis", self.js)
         self.assertIn("SHA-256: ", self.js)
         self.assertIn(".item details summary:focus-visible", self.css)
+
+    def test_plan_preview_has_accessible_controls_and_no_execution(self):
+        self.assertTrue({'plan-goal', 'plan-pmu'}.issubset(self.parser.labels))
+        self.assertTrue({'plan-form', 'plan-submit', 'plan-message', 'plan-output'}.issubset(self.parser.ids))
+        self.assertIn('id="plan-message" role="status"', self.html)
+        preview = (PORTAL / 'plan-preview.js').read_text(encoding='utf-8')
+        self.assertNotIn('innerHTML', preview)
+        self.assertNotIn('insertAdjacentHTML', preview)
+        self.assertIn("PLAN_ONLY", preview)
+        self.assertIn("BLOCKED_UNTIL_VERIFIED", preview)
+        self.assertIn("pmuSelect.disabled = true", preview)
+        self.assertIn("fetch('../workflows/manifest.json')", preview)
+        self.assertIn("fetch('../pmu/manifest.json')", preview)
+        self.assertNotIn('eval(', preview)
+        self.assertNotIn('new Function(', preview)
 
     def test_progressive_loading_and_responsive_states(self):
         self.assertIn('PAGE_SIZE = 40', self.js)
